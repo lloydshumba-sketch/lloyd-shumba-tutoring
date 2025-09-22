@@ -31,6 +31,21 @@
             border-radius: 9999px;
             border: 2px solid white;
         }
+        .design-line-container {
+            position: relative;
+            overflow: hidden;
+        }
+        .design-line {
+            position: absolute;
+            height: 4px;
+            background-color: black;
+        }
+        .design-line.red {
+            background-color: #ef4444;
+        }
+        .design-line.white {
+            background-color: white;
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -42,7 +57,7 @@
                 <div class="ls-logo">LS</div>
                 <div class="flex flex-col">
                     <h1 class="text-3xl font-bold text-gray-900">Lloyd Shumba</h1>
-                    <p class="text-sm text-gray-600">ACCA Tutoring Services</p>
+                    <p class="text-sm text-gray-600">Expert Tutor - Professional Qualifications</p>
                 </div>
             </div>
             <nav>
@@ -57,14 +72,27 @@
     <main class="container mx-auto px-4 py-8">
 
         <!-- Hero Section -->
-        <section class="text-center my-12 bg-white p-8 rounded-lg shadow-md">
-            <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Your Expert ACCA Tutor</h2>
-            <p class="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
-                With extensive experience in the field, my goal is to guide you to success in your ACCA examinations. I provide specialized tutoring for key papers, ensuring you have the knowledge and skills to pass with confidence.
-            </p>
-            <a href="#contact" class="inline-block bg-red-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-red-700 transition duration-300">
-                Book a Session
-            </a>
+        <section class="text-center my-12 bg-white p-8 rounded-lg shadow-md design-line-container">
+            <!-- Design lines -->
+            <div class="design-line black top-0 left-0 w-1/4"></div>
+            <div class="design-line red top-0 right-0 w-1/4"></div>
+            <div class="design-line black bottom-0 left-0 w-1/4"></div>
+            <div class="design-line red bottom-0 right-0 w-1/4"></div>
+
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12">
+                <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-lg">
+                    <img src="https://placehold.co/500x500/000000/FFFFFF?text=Lloyd" alt="Lloyd Shumba" class="w-full h-full object-cover">
+                </div>
+                <div class="text-center md:text-left">
+                    <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Your Expert ACCA Tutor</h2>
+                    <p class="text-lg text-gray-600 mb-6 max-w-2xl mx-auto md:mx-0">
+                        With extensive experience in the field, my goal is to guide you to success in your ACCA examinations. I provide specialized tutoring for key papers, ensuring you have the knowledge and skills to pass with confidence.
+                    </p>
+                    <a href="#contact" class="inline-block bg-red-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-red-700 transition duration-300">
+                        Book a Session
+                    </a>
+                </div>
+            </div>
         </section>
 
         <!-- Services Section -->
@@ -72,24 +100,29 @@
             <h3 class="text-3xl font-bold text-center text-gray-900 mb-6">Papers I Teach</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">SBR - Strategic Business Reporting</h4>
-                    <p class="text-gray-600">Expert guidance on the principles of financial reporting and ethical considerations.</p>
+                    <img src="https://placehold.co/100x100/e53e3e/ffffff?text=SBR" alt="SBR" class="w-24 h-24 mx-auto mb-4 rounded-full">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2 text-center">SBR - Strategic Business Reporting</h4>
+                    <p class="text-gray-600 text-center">Expert guidance on the principles of financial reporting and ethical considerations.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">AAA - Advanced Audit and Assurance</h4>
-                    <p class="text-gray-600">In-depth preparation for advanced audit concepts and professional judgment.</p>
+                    <img src="https://placehold.co/100x100/d53a3a/ffffff?text=AAA" alt="AAA" class="w-24 h-24 mx-auto mb-4 rounded-full">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2 text-center">AAA - Advanced Audit and Assurance</h4>
+                    <p class="text-gray-600 text-center">In-depth preparation for advanced audit concepts and professional judgment.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">ATX - Advanced Taxation</h4>
-                    <p class="text-gray-600">Comprehensive support for advanced tax planning and compliance.</p>
+                    <img src="https://placehold.co/100x100/c53333/ffffff?text=ATX" alt="ATX" class="w-24 h-24 mx-auto mb-4 rounded-full">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2 text-center">ATX - Advanced Taxation</h4>
+                    <p class="text-gray-600 text-center">Comprehensive support for advanced tax planning and compliance.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">AA - Audit and Assurance</h4>
-                    <p class="text-gray-600">Foundational tutoring to help you understand the audit process and principles.</p>
+                    <img src="https://placehold.co/100x100/b52e2e/ffffff?text=AA" alt="AA" class="w-24 h-24 mx-auto mb-4 rounded-full">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2 text-center">AA - Audit and Assurance</h4>
+                    <p class="text-gray-600 text-center">Foundational tutoring to help you understand the audit process and principles.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">FR - Financial Reporting</h4>
-                    <p class="text-gray-600">Essential knowledge of financial accounting and reporting standards.</p>
+                    <img src="https://placehold.co/100x100/a52929/ffffff?text=FR" alt="FR" class="w-24 h-24 mx-auto mb-4 rounded-full">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2 text-center">FR - Financial Reporting</h4>
+                    <p class="text-gray-600 text-center">Essential knowledge of financial accounting and reporting standards.</p>
                 </div>
             </div>
         </section>
@@ -125,6 +158,25 @@
             <p class="text-center text-gray-600 max-w-lg">
                 As a tutor with extensive experience in the field, I am dedicated to helping you achieve your goals in the ACCA qualification.
             </p>
+        </section>
+        
+        <!-- Pass Rates Section -->
+        <section id="pass-rates" class="my-12 bg-white p-8 rounded-lg shadow-md">
+            <h3 class="text-3xl font-bold text-center text-gray-900 mb-6">Student Pass Rates</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-red-600 text-white p-6 rounded-lg text-center shadow-md">
+                    <p class="text-4xl font-extrabold mb-2">75%</p>
+                    <p class="font-semibold text-lg">AAA Pass Rate</p>
+                </div>
+                <div class="bg-red-600 text-white p-6 rounded-lg text-center shadow-md">
+                    <p class="text-4xl font-extrabold mb-2">78%</p>
+                    <p class="font-semibold text-lg">SBR Pass Rate</p>
+                </div>
+                <div class="bg-red-600 text-white p-6 rounded-lg text-center shadow-md">
+                    <p class="text-4xl font-extrabold mb-2">72%</p>
+                    <p class="font-semibold text-lg">ATX Pass Rate</p>
+                </div>
+            </div>
         </section>
 
         <!-- Student Reviews Section -->
@@ -185,7 +237,7 @@
             </p>
             
             <!-- Contact Form (Placeholder - requires backend for functionality) -->
-            <form class="space-y-4 max-w-lg mx-auto mb-8">
+            <form class="space-y-4 max-w-lg mx-auto">
                 <div>
                     <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg bg-gray-900 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-600">
                 </div>
@@ -199,7 +251,6 @@
                     Send Message
                 </button>
             </form>
-            <p class="text-sm italic text-gray-400">Note: This form is for visual purposes. A Django backend would be required to handle submissions.</p>
 
             <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 mt-8">
                 <a href="mailto:lloyd.shumba@excelbusinessschool.uk" class="flex items-center space-x-2 text-red-400 hover:text-red-500 transition duration-300">
@@ -211,13 +262,13 @@
                 <div class="flex flex-col space-y-2">
                     <div class="flex items-center space-x-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 0C5.373 0 0 5.373 0 12c0 6.002 4.397 10.957 10.123 11.83a.994.994 0 001.18-.847c.18-.75-.06-1.554-.2-2.196-.13-.642-.26-1.39-.2-2.09.06-.7.3-1.4.52-2.1l-.04-.01c-.13-.37-.25-.76-.38-1.15-.13-.39-.24-.79-.37-1.19a.999.999 0 01-.13-.25c-.15-.43-.3-.87-.45-1.3l-.01-.02a.99.99 0 01-.22-.64c-.06-.31-.1-.63-.15-.95-.06-.32-.1-.65-.16-.97-.05-.31-.1-.63-.14-.95a.999.999 0 01-.2-.61c-.05-.31-.08-.63-.12-.95-.03-.32-.06-.65-.09-.97-.02-.32-.03-.65-.05-.97-.01-.32-.02-.65-.03-.97-.01-.32-.01-.65-.02-.97a.999.999 0 01-.03-.66c-.01-.33-.02-.66-.03-.99-.01-.32-.02-.65-.03-.97a.999.999 0 01-.01-.66c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99V0z" />
+                            <path d="M12 0C5.373 0 0 5.373 0 12c0 6.002 4.397 10.957 10.123 11.83a.994.994 0 001.18-.847c.18-.75-.06-1.554-.2-2.196-.13-.642-.26-1.39-.2-2.09.06-.7.3-1.4.52-2.1l-.04-.01c-.13-.37-.25-.76-.38-1.15-.13-.39-.24-.79-.37-1.19a.999.999 0 01-.13-.25c-.15-.43-.3-.87-.45-1.3l-.01-.02a.99.99 0 01-.22-.64c-.06-.31-.1-.63-.15-.95-.06-.32-.1-.65-.16-.97-.05-.31-.1-.63-.14-.95a.999.999 0 01-.2-.61c-.05-.31-.08-.63-.12-.95-.03-.32-.06-.65-.09-.97-.02-.32-.03-.65-.05-.97-.01-.32-.02-.65-.03-.97-.01-.32-.01-.65-.02-.97a.999.999 0 01-.03-.66c-.01-.33-.02-.66-.03-.99-.01-.32-.02-.65-.03-.97a.999.999 0 01-.01-.66c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99V0z" />
                         </svg>
                         <span>+260 975 899 280</span>
                     </div>
                     <div class="flex items-center space-x-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 0C5.373 0 0 5.373 0 12c0 6.002 4.397 10.957 10.123 11.83a.994.994 0 001.18-.847c.18-.75-.06-1.554-.2-2.196-.13-.642-.26-1.39-.2-2.09.06-.7.3-1.4.52-2.1l-.04-.01c-.13-.37-.25-.76-.38-1.15-.13-.39-.24-.79-.37-1.19a.999.999 0 01-.13-.25c-.15-.43-.3-.87-.45-1.3l-.01-.02a.99.99 0 01-.22-.64c-.06-.31-.1-.63-.15-.95-.06-.32-.1-.65-.16-.97-.05-.31-.1-.63-.14-.95a.999.999 0 01-.2-.61c-.05-.31-.08-.63-.12-.95-.03-.32-.06-.65-.09-.97-.02-.32-.03-.65-.05-.97-.01-.32-.02-.65-.03-.97-.01-.32-.01-.65-.02-.97a.999.999 0 01-.03-.66c-.01-.33-.02-.66-.03-.99-.01-.32-.02-.65-.03-.97a.999.999 0 01-.01-.66c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99V0z" />
+                            <path d="M12 0C5.373 0 0 5.373 0 12c0 6.002 4.397 10.957 10.123 11.83a.994.994 0 001.18-.847c.18-.75-.06-1.554-.2-2.196-.13-.642-.26-1.39-.2-2.09.06-.7.3-1.4.52-2.1l-.04-.01c-.13-.37-.25-.76-.38-1.15-.13-.39-.24-.79-.37-1.19a.999.999 0 01-.13-.25c-.15-.43-.3-.87-.45-1.3l-.01-.02a.99.99 0 01-.22-.64c-.06-.31-.1-.63-.15-.95-.06-.32-.1-.65-.16-.97-.05-.31-.1-.63-.14-.95a.999.999 0 01-.2-.61c-.05-.31-.08-.63-.12-.95-.03-.32-.06-.65-.09-.97-.02-.32-.03-.65-.05-.97-.01-.32-.02-.65-.03-.97-.01-.32-.01-.65-.02-.97a.999.999 0 01-.03-.66c-.01-.33-.02-.66-.03-.99-.01-.32-.02-.65-.03-.97a.999.999 0 01-.01-.66c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99V0z" />
                         </svg>
                         <span>+263 783 776 685</span>
                     </div>
