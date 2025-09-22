@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lloyd Shumba - ACCA Tutoring</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+        }
+        .star-rating {
+            color: #FFD700; /* Gold color for stars */
+            font-size: 1.25rem;
+        }
+        .ls-logo {
+            background-color: black;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 9999px;
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section with Logo -->
+    <header class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div class="ls-logo">LS</div>
+                <div class="flex flex-col">
+                    <h1 class="text-3xl font-bold text-gray-900">Lloyd Shumba</h1>
+                    <p class="text-sm text-gray-600">ACCA Tutoring Services</p>
+                </div>
+            </div>
+            <nav>
+                <a href="#services" class="text-gray-600 hover:text-red-600 px-3 py-2 rounded-md transition duration-300">Services</a>
+                <a href="#approach" class="text-gray-600 hover:text-red-600 px-3 py-2 rounded-md transition duration-300">My Approach</a>
+                <a href="#reviews" class="text-gray-600 hover:text-red-600 px-3 py-2 rounded-md transition duration-300">Reviews</a>
+                <a href="#contact" class="text-gray-600 hover:text-red-600 px-3 py-2 rounded-md transition duration-300">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+
+        <!-- Hero Section -->
+        <section class="text-center my-12 bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Your Expert ACCA Tutor</h2>
+            <p class="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+                With extensive experience in the field, my goal is to guide you to success in your ACCA examinations. I provide specialized tutoring for key papers, ensuring you have the knowledge and skills to pass with confidence.
+            </p>
+            <a href="#contact" class="inline-block bg-red-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-red-700 transition duration-300">
+                Book a Session
+            </a>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="my-12">
+            <h3 class="text-3xl font-bold text-center text-gray-900 mb-6">Papers I Teach</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">SBR - Strategic Business Reporting</h4>
+                    <p class="text-gray-600">Expert guidance on the principles of financial reporting and ethical considerations.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">AAA - Advanced Audit and Assurance</h4>
+                    <p class="text-gray-600">In-depth preparation for advanced audit concepts and professional judgment.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">ATX - Advanced Taxation</h4>
+                    <p class="text-gray-600">Comprehensive support for advanced tax planning and compliance.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">AA - Audit and Assurance</h4>
+                    <p class="text-gray-600">Foundational tutoring to help you understand the audit process and principles.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">FR - Financial Reporting</h4>
+                    <p class="text-gray-600">Essential knowledge of financial accounting and reporting standards.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- My Approach Section -->
+        <section id="approach" class="my-12 bg-white p-8 rounded-lg shadow-md">
+            <h3 class="text-3xl font-bold text-center text-gray-900 mb-6">My Tutoring Approach</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-12 h-12 mx-auto mb-4 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-xl">1</div>
+                    <h4 class="text-lg font-semibold mb-2">Conceptual Clarity</h4>
+                    <p class="text-gray-600 text-sm">I focus on ensuring you truly understand the core concepts, not just memorizing them. This is key to tackling any exam question.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 mx-auto mb-4 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-xl">2</div>
+                    <h4 class="text-lg font-semibold mb-2">Practical Application</h4>
+                    <p class="text-gray-600 text-sm">My extensive experience in the field allows me to provide real-world examples that make the material relevant and easier to remember.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 mx-auto mb-4 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-xl">3</div>
+                    <h4 class="text-lg font-semibold mb-2">Exam Technique</h4>
+                    <p class="text-gray-600 text-sm">Passing ACCA exams is about more than knowledge. I will coach you on the specific techniques needed to maximize your marks in every paper.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACCA Logo Section -->
+        <section class="flex flex-col items-center my-12 p-8 bg-white rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Dedicated to Your ACCA Success</h3>
+            <div class="w-48 h-auto mb-4">
+                <img src="https://www.accaglobal.com/content/dam/acca/global/partnerships/acca-global-logo.png" alt="ACCA Logo" class="rounded-lg shadow-lg">
+            </div>
+            <p class="text-center text-gray-600 max-w-lg">
+                As a tutor with extensive experience in the field, I am dedicated to helping you achieve your goals in the ACCA qualification.
+            </p>
+        </section>
+
+        <!-- Student Reviews Section -->
+        <section id="reviews" class="my-12">
+            <h3 class="text-3xl font-bold text-center text-gray-900 mb-6">Student Success Stories</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Fictional review card 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="star-rating mb-2">★★★★★</div>
+                    <p class="text-gray-700 italic">
+                        "Lloyd's tutoring for **SBR** was instrumental in my success. His real-world experience and clear explanations made complex topics easy to understand. Highly recommend!"
+                    </p>
+                    <p class="mt-4 font-semibold text-gray-900">- Sarah M., ACCA Student</p>
+                </div>
+                <!-- Fictional review card 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="star-rating mb-2">★★★★★</div>
+                    <p class="text-gray-700 italic">
+                        "I was struggling with **AAA**, but Lloyd's practical approach and excellent resources gave me the confidence I needed to pass. He is a fantastic tutor!"
+                    </p>
+                    <p class="mt-4 font-semibold text-gray-900">- Ben T., ACCA Student</p>
+                </div>
+                <!-- Fictional review card 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="star-rating mb-2">★★★★☆</div>
+                    <p class="text-gray-700 italic">
+                        "The **ATX** classes were thorough and well-structured. Lloyd's dedication to his students is evident in every session. A great learning experience."
+                    </p>
+                    <p class="mt-4 font-semibold text-gray-900">- Chloe P., Online Student</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="my-12">
+            <h3 class="text-3xl font-bold text-center text-gray-900 mb-6">Frequently Asked Questions</h3>
+            <div class="bg-white p-6 rounded-lg shadow-md space-y-4">
+                <div>
+                    <h4 class="font-semibold text-lg text-gray-900 mb-1">Do you offer one-on-one or group sessions?</h4>
+                    <p class="text-gray-600">I provide both one-on-one personalized tutoring and small group sessions. The format is flexible to meet your learning style and goals.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg text-gray-900 mb-1">What is your pass rate for these papers?</h4>
+                    <p class="text-gray-600">My focus is on providing a comprehensive understanding of the material and effective exam techniques. Many of my students achieve excellent results, and I am proud of their dedication and hard work.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg text-gray-900 mb-1">How do I book a session with you?</h4>
+                    <p class="text-gray-600">You can easily reach me via the contact form on this page or by sending a message on WhatsApp. I will get back to you promptly to discuss your needs.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="my-12 text-center p-8 bg-black text-white rounded-lg shadow-md">
+            <h3 class="text-3xl font-bold mb-4">Get in Touch with Lloyd</h3>
+            <p class="text-gray-300 mb-6">
+                Ready to take your ACCA studies to the next level? Fill out the form below or contact me directly.
+            </p>
+            
+            <!-- Contact Form (Placeholder - requires backend for functionality) -->
+            <form class="space-y-4 max-w-lg mx-auto mb-8">
+                <div>
+                    <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg bg-gray-900 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-600">
+                </div>
+                <div>
+                    <input type="email" placeholder="Your Email" class="w-full p-3 rounded-lg bg-gray-900 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-600">
+                </div>
+                <div>
+                    <textarea placeholder="Your Message" rows="4" class="w-full p-3 rounded-lg bg-gray-900 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-600"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-red-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-red-700 transition duration-300">
+                    Send Message
+                </button>
+            </form>
+            <p class="text-sm italic text-gray-400">Note: This form is for visual purposes. A Django backend would be required to handle submissions.</p>
+
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 mt-8">
+                <a href="mailto:lloyd.shumba@excelbusinessschool.uk" class="flex items-center space-x-2 text-red-400 hover:text-red-500 transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.896 5.86a2 2 0 002.208 0L21 8M3 8a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V8z" />
+                    </svg>
+                    <span>lloyd.shumba@excelbusinessschool.uk</span>
+                </a>
+                <div class="flex flex-col space-y-2">
+                    <div class="flex items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0C5.373 0 0 5.373 0 12c0 6.002 4.397 10.957 10.123 11.83a.994.994 0 001.18-.847c.18-.75-.06-1.554-.2-2.196-.13-.642-.26-1.39-.2-2.09.06-.7.3-1.4.52-2.1l-.04-.01c-.13-.37-.25-.76-.38-1.15-.13-.39-.24-.79-.37-1.19a.999.999 0 01-.13-.25c-.15-.43-.3-.87-.45-1.3l-.01-.02a.99.99 0 01-.22-.64c-.06-.31-.1-.63-.15-.95-.06-.32-.1-.65-.16-.97-.05-.31-.1-.63-.14-.95a.999.999 0 01-.2-.61c-.05-.31-.08-.63-.12-.95-.03-.32-.06-.65-.09-.97-.02-.32-.03-.65-.05-.97-.01-.32-.02-.65-.03-.97-.01-.32-.01-.65-.02-.97a.999.999 0 01-.03-.66c-.01-.33-.02-.66-.03-.99-.01-.32-.02-.65-.03-.97a.999.999 0 01-.01-.66c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99V0z" />
+                        </svg>
+                        <span>+260 975 899 280</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0C5.373 0 0 5.373 0 12c0 6.002 4.397 10.957 10.123 11.83a.994.994 0 001.18-.847c.18-.75-.06-1.554-.2-2.196-.13-.642-.26-1.39-.2-2.09.06-.7.3-1.4.52-2.1l-.04-.01c-.13-.37-.25-.76-.38-1.15-.13-.39-.24-.79-.37-1.19a.999.999 0 01-.13-.25c-.15-.43-.3-.87-.45-1.3l-.01-.02a.99.99 0 01-.22-.64c-.06-.31-.1-.63-.15-.95-.06-.32-.1-.65-.16-.97-.05-.31-.1-.63-.14-.95a.999.999 0 01-.2-.61c-.05-.31-.08-.63-.12-.95-.03-.32-.06-.65-.09-.97-.02-.32-.03-.65-.05-.97-.01-.32-.02-.65-.03-.97-.01-.32-.01-.65-.02-.97a.999.999 0 01-.03-.66c-.01-.33-.02-.66-.03-.99-.01-.32-.02-.65-.03-.97a.999.999 0 01-.01-.66c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99V0z" />
+                        </svg>
+                        <span>+263 783 776 685</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white text-center py-4 mt-8">
+        <p>&copy; 2024 Lloyd Shumba. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+
