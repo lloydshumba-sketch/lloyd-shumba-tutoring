@@ -1,2 +1,2 @@
-# lloyd-shumba-tutoring
-Personal website for ACCA tutoring services 
+#   Excel-Business-School
+Designed to make you happy 
