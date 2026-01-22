@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetables | Excel Business School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#2D0A0A',    // Executive Maroon
+                            primary: '#691818', // Heritage Maroon
+                            accent: '#C5A059',  // Gold Leaf
+                            light: '#F9F5F0',   // Cream White
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .vibrant-gradient {
+            background: linear-gradient(135deg, #2D0A0A 0%, #691818 100%);
+        }
+        .gold-shimmer {
+            background: linear-gradient(45deg, #C5A059 0%, #e6c888 50%, #C5A059 100%);
+            background-size: 200% auto;
+            transition: 0.5s;
+        }
+        .gold-shimmer:hover {
+            background-position: right center;
+        }
+    </style>
+</head>
+<body class="bg-brand-light text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+
+    <nav class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <img src="excel-logo.png" alt="Excel Business School" class="h-10 w-auto object-contain">
+                <span class="font-bold text-brand-dark text-lg tracking-tight">Excel Business School</span>
+            </a>
+            
+            <a href="index.html" class="text-sm font-bold text-brand-primary hover:text-brand-dark transition flex items-center bg-red-50 px-4 py-2 rounded-full border border-red-100 hover:border-brand-primary/20">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Home
+            </a>
+        </div>
+    </nav>
+
+    <main class="flex-grow flex items-center justify-center py-12 px-4 relative overflow-hidden">
+        
+        <div class="absolute top-0 left-0 w-full h-96 vibrant-gradient skew-y-3 origin-top-left transform -translate-y-20 z-0"></div>
+        <div class="absolute bottom-0 right-0 w-64 h-64 bg-brand-accent/10 rounded-full blur-3xl z-0"></div>
+
+        <div class="container max-w-5xl relative z-10">
+            
+            <div class="text-center mb-12">
+                <span class="inline-block py-1 px-3 rounded-full bg-brand-accent/20 text-brand-accent border border-brand-accent/30 font-bold tracking-widest uppercase text-xs mb-4 backdrop-blur-sm">
+                    Academic Calendar
+                </span>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white drop-shadow-lg">
+                    March 2026 Session
+                </h1>
+                <p class="text-red-100 mt-4 text-lg max-w-2xl mx-auto font-light">
+                    Your roadmap to success. Download the official schedule for AAA, ATX, and SBR below.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-2xl shadow-brand-dark/20 overflow-hidden border border-gray-100 transform hover:-translate-y-1 transition duration-500">
+                
+                <div class="h-2 bg-brand-accent w-full"></div>
+
+                <div class="flex flex-col md:flex-row">
+                    
+                    <div class="md:w-1/3 bg-gray-50 p-10 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-gray-100 relative overflow-hidden group">
+                        <div class="absolute inset-0 bg-brand-primary/5 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                        
+                        <div class="w-28 h-28 bg-white rounded-2xl flex items-center justify-center text-5xl text-brand-primary shadow-lg border border-brand-primary/10 relative z-10 group-hover:scale-110 transition duration-500">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <p class="mt-6 font-bold text-gray-400 text-xs uppercase tracking-widest">PDF Format</p>
+                    </div>
+
+                    <div class="md:w-2/3 p-10 md:p-14 flex flex-col justify-center">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h2 class="text-3xl font-bold text-brand-dark mb-2">Timetables March 2026 Session</h2>
+                                <p class="text-brand-primary font-medium text-sm mb-6">Official Release • Updated Jan 2026</p>
+                            </div>
+                            <span class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full border border-green-200">Active</span>
+                        </div>
+
+                        <p class="text-gray-600 mb-8 leading-relaxed">
+                            This document contains the complete schedule for Live Tuition, Revision Bootcamps, and Mock Exams. Please adhere to Central Africa Time (CAT).
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="March_2026_Timetable.pdf" download class="gold-shimmer text-brand-dark font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition flex items-center justify-center gap-3 text-lg border border-brand-accent/30 w-full sm:w-auto">
+                                <i class="fas fa-cloud-download-alt text-xl"></i> 
+                                Download Timetable
+                            </a>
+                            
+                            <a href="index.html#contact" class="px-8 py-4 text-gray-500 font-semibold hover:text-brand-primary hover:bg-gray-50 rounded-xl transition text-center border border-transparent hover:border-gray-200 w-full sm:w-auto">
+                                Contact Admin
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12 text-gray-400 text-xs">
+                &copy; 2026 Excel Business School. Secure Document.
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
