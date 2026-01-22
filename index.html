@@ -19,10 +19,10 @@
                     },
                     colors: {
                         brand: {
-                            dark: '#0f172a',
-                            primary: '#1e40af', // Professional Blue
-                            accent: '#dc2626',  // Red for CTA
-                            light: '#f8fafc'
+                            dark: '#2D0A0A',    // Very Dark Maroon (Text/Footer)
+                            primary: '#691818', // The Logo's Maroon (Main Color)
+                            accent: '#C5A059',  // The Logo's Gold (Buttons/Highlights)
+                            light: '#FDFBF7'    // Warm Paper White (Background)
                         }
                     }
                 }
@@ -30,92 +30,99 @@
         }
     </script>
     <style>
+        /* Custom Pattern for Hero Section */
         .hero-pattern {
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-color: #FDFBF7;
+            background-image: radial-gradient(#691818 0.5px, transparent 0.5px), radial-gradient(#691818 0.5px, #FDFBF7 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            opacity: 0.05;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-slate-800 antialiased">
+<body class="bg-brand-light text-slate-800 antialiased">
 
-    <div class="bg-brand-dark text-white text-xs md:text-sm py-2">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-            <div class="space-x-4 mb-2 md:mb-0">
+    <div class="bg-brand-dark text-white text-xs md:text-sm py-3 border-b border-brand-accent">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-2">
+            <div class="flex flex-wrap justify-center gap-4">
                 <span><i class="fas fa-user-graduate text-brand-accent mr-1"></i> 500+ Students Passed</span>
                 <span><i class="fas fa-smile text-brand-accent mr-1"></i> 98% Happy Clients</span>
                 <span><i class="fas fa-star text-brand-accent mr-1"></i> 5-Star Reviews</span>
             </div>
-            <div class="flex space-x-4">
-                <a href="#" class="hover:text-brand-accent transition"><i class="fab fa-whatsapp"></i> Support</a>
-                <a href="#" class="hover:text-brand-accent transition"><i class="fas fa-envelope"></i> Email Us</a>
+            <div class="flex space-x-4 opacity-90">
+                <a href="#contact" class="hover:text-brand-accent transition"><i class="fab fa-whatsapp"></i> WhatsApp Support</a>
+                <a href="mailto:lloyd.shumba@excelbusinessschool.uk" class="hover:text-brand-accent transition"><i class="fas fa-envelope"></i> Email Us</a>
             </div>
         </div>
     </div>
 
     <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <div class="bg-brand-primary text-white font-bold text-xl w-10 h-10 flex items-center justify-center rounded-lg">
-                    E
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-3">
+                <img src="excel-logo.png" alt="Excel Business School" class="h-16 w-auto object-contain">
+                <div class="hidden">
+                    <h1 class="text-xl font-bold text-brand-primary tracking-tight leading-none">EXCEL</h1>
+                    <p class="text-[10px] text-gray-500 uppercase tracking-widest font-semibold">Business School</p>
                 </div>
-                <div>
-                    <h1 class="text-xl font-bold text-brand-dark tracking-tight leading-none">EXCEL</h1>
-                    <p class="text-xs text-gray-500 uppercase tracking-widest">Business School</p>
-                </div>
-            </div>
+            </a>
             
-            <div class="hidden md:flex space-x-8 font-medium text-gray-600">
-                <a href="#home" class="hover:text-brand-primary transition">Home</a>
-                <a href="#blueprint" class="hover:text-brand-primary transition">Why Us</a>
-                <a href="#tutors" class="hover:text-brand-primary transition">Tutors</a>
-                <a href="#pricing" class="hover:text-brand-primary transition">Fees</a>
-                <a href="#policies" class="hover:text-brand-primary transition">Policies</a>
+            <div class="hidden md:flex space-x-8 font-medium text-gray-700">
+                <a href="#home" class="hover:text-brand-primary hover:bg-gray-50 px-3 py-2 rounded-md transition">Home</a>
+                <a href="#blueprint" class="hover:text-brand-primary hover:bg-gray-50 px-3 py-2 rounded-md transition">Why Us</a>
+                <a href="#tutors" class="hover:text-brand-primary hover:bg-gray-50 px-3 py-2 rounded-md transition">Tutors</a>
+                <a href="#pricing" class="hover:text-brand-primary hover:bg-gray-50 px-3 py-2 rounded-md transition">Fees</a>
             </div>
 
-            <a href="#contact" class="hidden md:inline-block bg-brand-accent hover:bg-red-700 text-white font-semibold py-2 px-6 rounded-full transition duration-300 shadow-lg shadow-red-500/30">
+            <a href="#contact" class="hidden md:inline-block bg-brand-primary hover:bg-brand-dark text-white font-semibold py-2.5 px-6 rounded-full transition duration-300 shadow-lg shadow-brand-primary/30 transform hover:-translate-y-0.5 border border-brand-accent">
                 Enroll Now
             </a>
             
-            <button class="md:hidden text-gray-600">
-                <i class="fas fa-bars text-2xl"></i>
+            <button class="md:hidden text-brand-primary text-2xl">
+                <i class="fas fa-bars"></i>
             </button>
         </div>
     </nav>
 
-    <section id="home" class="relative bg-white overflow-hidden hero-pattern pt-16 pb-24 lg:pt-32">
-        <div class="container mx-auto px-4">
+    <section id="home" class="relative pt-16 pb-24 lg:pt-32 overflow-hidden">
+        <div class="absolute inset-0 z-0 hero-pattern"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-1/2 z-10">
-                    <div class="inline-block bg-blue-50 text-brand-primary font-bold px-4 py-1 rounded-full text-sm mb-6 border border-blue-100">
-                        🚀 Admissions Open for 2026
+                <div class="lg:w-1/2">
+                    <div class="inline-flex items-center gap-2 bg-red-50 text-brand-primary font-bold px-4 py-1.5 rounded-full text-sm mb-6 border border-red-100 shadow-sm">
+                        <span class="animate-pulse w-2 h-2 bg-brand-accent rounded-full"></span>
+                        Admissions Open for 2026
                     </div>
-                    <h1 class="text-5xl lg:text-7xl font-extrabold text-brand-dark mb-6 leading-tight">
+                    <h1 class="text-5xl lg:text-7xl font-extrabold text-brand-dark mb-6 leading-[1.1]">
                         Designed to make <br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-blue-400">you happy.</span>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-red-700 to-brand-accent">you happy.</span>
                     </h1>
                     <p class="text-lg text-gray-600 mb-8 max-w-lg leading-relaxed">
-                        Join the elite circle of ACCA professionals. We don't just teach textbooks; we provide a blueprint for career success with flexible online learning.
+                        We don't just teach textbooks; we provide a blueprint for ACCA success. Join the school where student happiness meets exam excellence.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#pricing" class="bg-brand-primary text-white font-bold py-4 px-8 rounded-lg shadow-xl hover:bg-blue-800 transition text-center">
+                        <a href="#pricing" class="bg-brand-primary text-white font-bold py-4 px-8 rounded-lg shadow-xl hover:bg-brand-dark transition text-center border-b-4 border-brand-dark">
                             View Fee Structure
                         </a>
-                        <a href="#tutors" class="bg-white text-brand-dark border border-gray-300 font-bold py-4 px-8 rounded-lg hover:bg-gray-50 transition text-center flex items-center justify-center gap-2">
-                            <i class="fas fa-play-circle text-brand-accent"></i> Meet The Tutors
+                        <a href="#tutors" class="bg-white text-brand-primary border-2 border-brand-primary font-bold py-4 px-8 rounded-lg hover:bg-red-50 transition text-center flex items-center justify-center gap-2">
+                            <i class="fas fa-user-tie text-brand-primary"></i> Meet The Tutors
                         </a>
                     </div>
                 </div>
+                
                 <div class="lg:w-1/2 relative">
-                    <div class="absolute -top-10 -right-10 w-72 h-72 bg-brand-accent opacity-10 rounded-full blur-3xl"></div>
-                    <div class="absolute -bottom-10 -left-10 w-72 h-72 bg-brand-primary opacity-10 rounded-full blur-3xl"></div>
-                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Students Happy" class="rounded-2xl shadow-2xl relative z-10 border-4 border-white transform hover:scale-[1.01] transition duration-500">
+                    <div class="absolute -top-10 -right-10 w-72 h-72 bg-brand-accent opacity-20 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-10 -left-10 w-72 h-72 bg-brand-primary opacity-20 rounded-full blur-3xl"></div>
+                    
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Happy Students" class="rounded-2xl shadow-2xl relative z-10 border-4 border-white transform hover:scale-[1.01] transition duration-500">
                     
                     <div class="absolute bottom-10 -left-6 bg-white p-4 rounded-lg shadow-xl z-20 flex items-center gap-3 animate-bounce" style="animation-duration: 3s;">
-                        <div class="bg-green-100 p-2 rounded-full">
-                            <i class="fas fa-check text-green-600"></i>
+                        <div class="bg-brand-accent/20 p-2.5 rounded-full">
+                            <i class="fas fa-check text-brand-primary"></i>
                         </div>
                         <div>
-                            <p class="text-xs text-gray-500">Pass Rate</p>
-                            <p class="font-bold text-brand-dark">Top Tier</p>
+                            <p class="text-xs text-gray-500 font-medium">Pass Rate</p>
+                            <p class="font-bold text-brand-dark text-lg">Top Tier</p>
                         </div>
                     </div>
                 </div>
@@ -123,78 +130,81 @@
         </div>
     </section>
 
-    <section id="blueprint" class="py-20 bg-brand-dark text-white relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-brand-accent to-brand-primary"></div>
+    <section id="blueprint" class="py-20 bg-brand-primary text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-accent via-white to-brand-accent"></div>
+        <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'13\' cy=\'13\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E');"></div>
 
         <div class="container mx-auto px-4 relative z-10">
             <div class="text-center mb-16">
-                <span class="text-brand-accent font-bold tracking-wider uppercase text-sm">The Blueprint</span>
-                <h2 class="text-3xl md:text-5xl font-bold mt-2">Why Choose Excel Business School?</h2>
-                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Our teaching blueprint is designed with one goal: helping you qualify as soon as possible.</p>
+                <span class="text-brand-accent font-bold tracking-wider uppercase text-sm bg-white/10 px-3 py-1 rounded-full">The Methodology</span>
+                <h2 class="text-3xl md:text-5xl font-bold mt-4">The Teaching Blueprint</h2>
+                <p class="text-white/80 mt-4 max-w-2xl mx-auto">Why do our students pass? Because we follow a strict 11-point success system.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition border border-white/10">
-                    <div class="w-12 h-12 bg-brand-primary rounded-lg flex items-center justify-center mb-4 text-xl">🚀</div>
-                    <h3 class="font-bold text-xl mb-2">Fast-Track Qualification</h3>
-                    <p class="text-gray-400 text-sm">Passionate commitment to helping you qualify as soon as possible. We are your cheerleaders until you pass.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-black/20 p-6 rounded-xl hover:bg-black/30 transition border border-white/10 group">
+                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 text-xl group-hover:scale-110 transition shadow-lg text-brand-primary">❤️</div>
+                    <h3 class="font-bold text-xl mb-2 text-brand-accent">Committed to You</h3>
+                    <p class="text-white/80 text-sm">I am passionately committed to helping you qualify as soon as possible. I will be your cheerleader until you pass.</p>
                 </div>
-                 <div class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition border border-white/10">
-                    <div class="w-12 h-12 bg-brand-primary rounded-lg flex items-center justify-center mb-4 text-xl">📚</div>
-                    <h3 class="font-bold text-xl mb-2">Intensive Learning</h3>
-                    <p class="text-gray-400 text-sm">Lecture sessions 3x per week minimum (1.5hr - 3hr duration). Includes draft lecture notes to reinforce discussions.</p>
+                <div class="bg-black/20 p-6 rounded-xl hover:bg-black/30 transition border border-white/10 group">
+                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 text-xl group-hover:scale-110 transition shadow-lg text-brand-primary">📅</div>
+                    <h3 class="font-bold text-xl mb-2 text-brand-accent">Frequent Sessions</h3>
+                    <p class="text-white/80 text-sm">Lecture sessions held at least 3 times per week. Consistent engagement keeps you on track.</p>
                 </div>
-                 <div class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition border border-white/10">
-                    <div class="w-12 h-12 bg-brand-primary rounded-lg flex items-center justify-center mb-4 text-xl">📝</div>
-                    <h3 class="font-bold text-xl mb-2">Technical Mastery</h3>
-                    <p class="text-gray-400 text-sm">We guide you through technical articles and facilitate extensive practice with past papers and marking schemes.</p>
+                <div class="bg-black/20 p-6 rounded-xl hover:bg-black/30 transition border border-white/10 group">
+                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 text-xl group-hover:scale-110 transition shadow-lg text-brand-primary">📚</div>
+                    <h3 class="font-bold text-xl mb-2 text-brand-accent">Concise Notes</h3>
+                    <p class="text-white/80 text-sm">Textbooks are outdated! I provide draft lecture notes and concise, easy-to-follow materials to reinforce discussions.</p>
                 </div>
-                <div class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition border border-white/10">
-                    <div class="w-12 h-12 bg-brand-accent rounded-lg flex items-center justify-center mb-4 text-xl">🎥</div>
-                    <h3 class="font-bold text-xl mb-2">Flexible Access</h3>
-                    <p class="text-gray-400 text-sm">Live Zoom lectures (usually 7pm-10pm). Missed a class? Access our <strong>online portal with pre-recorded lectures</strong> anytime.</p>
+                <div class="bg-black/20 p-6 rounded-xl hover:bg-black/30 transition border border-white/10 group">
+                    <div class="w-12 h-12 bg-brand-accent rounded-lg flex items-center justify-center mb-4 text-xl group-hover:scale-110 transition shadow-lg text-brand-dark">💻</div>
+                    <h3 class="font-bold text-xl mb-2 text-brand-accent">Online Portal</h3>
+                    <p class="text-white/80 text-sm">Missed a live session? Access our online portal with pre-recorded lectures to catch up anytime.</p>
                 </div>
-                <div class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition border border-white/10">
-                    <div class="w-12 h-12 bg-brand-primary rounded-lg flex items-center justify-center mb-4 text-xl">🔍</div>
-                    <h3 class="font-bold text-xl mb-2">Personalized Feedback</h3>
-                    <p class="text-gray-400 text-sm">We dedicate time to review your mock exams and provide real-time feedback. Revision is an area where we do not compromise.</p>
+                <div class="bg-black/20 p-6 rounded-xl hover:bg-black/30 transition border border-white/10 group">
+                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 text-xl group-hover:scale-110 transition shadow-lg text-brand-primary">📰</div>
+                    <h3 class="font-bold text-xl mb-2 text-brand-accent">Technical Mastery</h3>
+                    <p class="text-white/80 text-sm">I guide you through technical articles to deepen your understanding beyond standard notes.</p>
                 </div>
-                <div class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition border border-white/10">
-                    <div class="w-12 h-12 bg-brand-primary rounded-lg flex items-center justify-center mb-4 text-xl">💼</div>
-                    <h3 class="font-bold text-xl mb-2">Real-World Skills</h3>
-                    <p class="text-gray-400 text-sm">Our students excel in careers. We currently work alongside former students who are now qualified. You can be next.</p>
+                <div class="bg-black/20 p-6 rounded-xl hover:bg-black/30 transition border border-white/10 group">
+                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 text-xl group-hover:scale-110 transition shadow-lg text-brand-primary">🎯</div>
+                    <h3 class="font-bold text-xl mb-2 text-brand-accent">Focused Revision</h3>
+                    <p class="text-white/80 text-sm">Extensive practice with past papers and marking schemes. Revision is an area where I do not compromise.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="tutors" class="py-20 bg-gray-50">
+    <section id="tutors" class="py-20 bg-brand-light">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-bold text-brand-dark">Meet Our Experts</h2>
-                <p class="text-gray-600 mt-4">Learn from those who have mastered the field.</p>
+                <h2 class="text-3xl md:text-5xl font-bold text-brand-dark">Meet Our Expert</h2>
+                <div class="w-24 h-1 bg-brand-primary mx-auto mt-4 rounded"></div>
             </div>
 
-            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
-                <div class="md:w-2/5 relative">
+            <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row border border-gray-100">
+                <div class="md:w-2/5 relative h-96 md:h-auto">
                     <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lloyd Shumba" class="w-full h-full object-cover">
-                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-6">
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-brand-primary to-transparent p-6">
                         <h3 class="text-white font-bold text-2xl">Lloyd Shumba</h3>
-                        <p class="text-gray-300 text-sm">Lead Tutor & Mentor</p>
+                        <p class="text-brand-accent text-sm font-semibold">Advocate & Lead Tutor</p>
                     </div>
                 </div>
                 <div class="md:w-3/5 p-8 md:p-12 flex flex-col justify-center">
                     <div class="mb-6">
-                        <i class="fas fa-quote-left text-brand-primary text-4xl opacity-20"></i>
-                        <h4 class="text-2xl font-bold text-brand-dark mb-4">"I will be your cheerleader until you pass."</h4>
-                        <p class="text-gray-600 leading-relaxed mb-4">
-                            With years of experience in SBR, AAA, and ATX, I focus on practical application and exam technique. My classes are designed for working professionals, held in the evenings via Zoom, ensuring you can balance work and study.
+                        <i class="fas fa-quote-left text-brand-primary text-4xl opacity-20 block mb-4"></i>
+                        <h4 class="text-2xl font-bold text-brand-dark mb-4">"I facilitate real-world skills."</h4>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            My goal is to guide you to success. I currently work alongside some of my former students who are now qualified. You can achieve the same success.
+                            I offer personalized feedback—if you write your own past exam paper, I dedicate time from my busy schedule to review your work.
                         </p>
-                        <ul class="space-y-2 text-sm text-gray-600">
-                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Expert in International & UK Streams</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Proven track record of student success</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Dedicated mentorship approach</li>
-                        </ul>
+                        <div class="grid grid-cols-2 gap-4 text-sm text-gray-700">
+                            <div class="flex items-center"><i class="fas fa-check-circle text-brand-accent mr-2"></i> AAA Expert (INT & UK)</div>
+                            <div class="flex items-center"><i class="fas fa-check-circle text-brand-accent mr-2"></i> ATX Specialist</div>
+                            <div class="flex items-center"><i class="fas fa-check-circle text-brand-accent mr-2"></i> SBR Strategist</div>
+                            <div class="flex items-center"><i class="fas fa-check-circle text-brand-accent mr-2"></i> 24/7 WhatsApp Support</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -204,17 +214,19 @@
     <section class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-bold text-brand-dark">Our Courses</h2>
+                <h2 class="text-3xl font-bold text-brand-dark">Papers We Teach</h2>
+                <p class="text-gray-500 mt-2">Specialized guidance for advanced papers</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="group rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition duration-300">
-                    <div class="h-48 overflow-hidden">
+                    <div class="h-48 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="SBR" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-0 right-0 bg-brand-primary text-white text-xs font-bold px-3 py-1 m-4 rounded shadow-md">POPULAR</div>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-brand-dark mb-2">SBR - Strategic Business Reporting</h3>
-                        <p class="text-gray-600 text-sm mb-4">Master financial reporting principles and ethical considerations.</p>
-                        <span class="text-brand-primary font-bold text-sm">View Details &rarr;</span>
+                        <p class="text-gray-600 text-sm mb-4">Master financial reporting principles and ethical considerations with real-world examples.</p>
+                        <a href="#contact" class="text-brand-primary font-bold text-sm hover:text-brand-accent transition">Enquire Now &rarr;</a>
                     </div>
                 </div>
                 <div class="group rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition duration-300">
@@ -223,8 +235,8 @@
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-brand-dark mb-2">AAA - Advanced Audit & Assurance</h3>
-                        <p class="text-gray-600 text-sm mb-4">Available in International (INT) and United Kingdom (UK) versions.</p>
-                        <span class="text-brand-primary font-bold text-sm">View Details &rarr;</span>
+                        <p class="text-gray-600 text-sm mb-4">Available in both <strong>International (INT)</strong> and <strong>United Kingdom (UK)</strong> versions.</p>
+                        <a href="#contact" class="text-brand-primary font-bold text-sm hover:text-brand-accent transition">Enquire Now &rarr;</a>
                     </div>
                 </div>
                 <div class="group rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition duration-300">
@@ -233,87 +245,82 @@
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-brand-dark mb-2">ATX - Advanced Taxation</h3>
-                        <p class="text-gray-600 text-sm mb-4">Specialized UK version focusing on advanced tax planning.</p>
-                        <span class="text-brand-primary font-bold text-sm">View Details &rarr;</span>
+                        <p class="text-gray-600 text-sm mb-4">Specialized <strong>United Kingdom (UK)</strong> version focusing on advanced tax planning.</p>
+                        <a href="#contact" class="text-brand-primary font-bold text-sm hover:text-brand-accent transition">Enquire Now &rarr;</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="pricing" class="py-20 bg-slate-50">
+    <section id="pricing" class="py-20 bg-brand-light border-t border-gray-200">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <span class="text-brand-accent font-bold tracking-wider uppercase text-sm">Investment</span>
-                <h2 class="text-4xl font-bold text-brand-dark mt-2">Course Fees & Plans</h2>
-                <p class="text-gray-600 mt-4">Transparent pricing. Prompt payments unlock exclusive discounts.</p>
-                <p class="text-xs text-gray-500 mt-2 italic">*Fees cover the entire exam period (Live sessions + Portal Access + Mentorship)</p>
+                <span class="text-brand-primary font-bold tracking-wider uppercase text-sm">Flexible Investment</span>
+                <h2 class="text-4xl font-bold text-brand-dark mt-2">Course Fees</h2>
+                <p class="text-gray-600 mt-4 max-w-xl mx-auto">Fees cover the entire exam period (Sep-Dec or similar cycles). Prompt payments unlock cheaper rates.</p>
             </div>
 
-            <div class="flex flex-col lg:flex-row gap-8 justify-center">
+            <div class="flex flex-col lg:flex-row gap-8 justify-center items-start">
                 
-                <div class="lg:w-1/3 bg-white rounded-2xl shadow-xl border-t-4 border-brand-accent overflow-hidden relative">
-                    <div class="absolute top-0 right-0 bg-brand-accent text-white text-xs font-bold px-3 py-1 rounded-bl-lg">BEST VALUE</div>
+                <div class="lg:w-1/3 w-full bg-white rounded-2xl shadow-xl border-t-4 border-brand-accent overflow-hidden relative transform lg:-translate-y-4">
+                    <div class="absolute top-0 right-0 bg-brand-accent text-brand-dark text-xs font-bold px-3 py-1 rounded-bl-lg uppercase">Best Value</div>
                     <div class="p-8">
-                        <h3 class="text-2xl font-bold text-brand-dark mb-2">Prompt Payment</h3>
-                        <p class="text-gray-500 text-sm mb-6">One-time payment for maximum savings.</p>
+                        <h3 class="text-2xl font-bold text-brand-dark mb-1">Prompt Payment</h3>
+                        <p class="text-brand-primary text-sm font-semibold mb-6">Paid by Deadline (e.g. Aug 30)</p>
                         
-                        <div class="space-y-4 mb-6">
-                            <div class="flex justify-between items-center border-b pb-2">
-                                <span class="font-medium">AAA (INT)</span>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex justify-between items-center border-b border-gray-100 pb-3">
+                                <span class="text-gray-600 font-medium">AAA (International)</span>
                                 <span class="text-2xl font-bold text-brand-primary">$170</span>
                             </div>
-                            <div class="flex justify-between items-center border-b pb-2">
-                                <span class="font-medium">AAA (UK)</span>
+                            <div class="flex justify-between items-center border-b border-gray-100 pb-3">
+                                <span class="text-gray-600 font-medium">AAA (UK Version)</span>
                                 <span class="text-2xl font-bold text-brand-primary">$185</span>
                             </div>
-                            <div class="flex justify-between items-center border-b pb-2">
-                                <span class="font-medium">ATX (UK)</span>
+                            <div class="flex justify-between items-center border-b border-gray-100 pb-3">
+                                <span class="text-gray-600 font-medium">ATX (UK Version)</span>
                                 <span class="text-2xl font-bold text-brand-primary">$160</span>
                             </div>
-                            <div class="flex justify-between items-center border-b pb-2">
-                                <span class="font-medium">SBR / Others</span>
-                                <span class="text-2xl font-bold text-brand-primary">$170</span>
-                            </div>
                         </div>
-                        <ul class="text-sm text-gray-600 space-y-2 mb-8">
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Discounted Rate Applied</li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Full Course Access</li>
-                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Notes & Recordings</li>
+
+                        <ul class="text-sm text-gray-500 space-y-3 mb-8">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> <strong>Live Zoom Lectures</strong></li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> <strong>Marking & Feedback</strong></li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> <strong>Simplified Notes</strong></li>
                         </ul>
-                        <a href="#contact" class="block w-full bg-brand-accent text-white text-center font-bold py-3 rounded-lg hover:bg-red-700 transition">Pay Now</a>
+
+                        <a href="#contact" class="block w-full bg-brand-primary text-white text-center font-bold py-3.5 rounded-lg hover:bg-brand-dark transition shadow-lg">Secure Discount</a>
                     </div>
                 </div>
 
-                <div class="lg:w-1/3 bg-white rounded-2xl shadow-xl border-t-4 border-brand-primary overflow-hidden">
+                <div class="lg:w-1/3 w-full bg-white rounded-2xl shadow-lg border-t-4 border-gray-300 overflow-hidden">
                     <div class="p-8">
-                        <h3 class="text-2xl font-bold text-brand-dark mb-2">Installment Plan</h3>
-                        <p class="text-gray-500 text-sm mb-6">Flexible options. Split into 3 monthly payments.</p>
+                        <h3 class="text-2xl font-bold text-brand-dark mb-1">Installment Plan</h3>
+                        <p class="text-gray-500 text-sm mb-6">Split into 3 Monthly Payments</p>
                         
-                        <div class="space-y-4 mb-6">
-                            <div class="flex justify-between items-center border-b pb-2">
-                                <span class="font-medium">AAA (INT)</span>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex justify-between items-center border-b border-gray-100 pb-3">
+                                <span class="text-gray-600 font-medium">AAA (International)</span>
                                 <span class="text-xl font-bold text-gray-700">$180</span>
                             </div>
-                            <div class="flex justify-between items-center border-b pb-2">
-                                <span class="font-medium">AAA (UK)</span>
+                            <div class="flex justify-between items-center border-b border-gray-100 pb-3">
+                                <span class="text-gray-600 font-medium">AAA (UK Version)</span>
                                 <span class="text-xl font-bold text-gray-700">$200</span>
                             </div>
-                            <div class="flex justify-between items-center border-b pb-2">
-                                <span class="font-medium">ATX (UK)</span>
+                            <div class="flex justify-between items-center border-b border-gray-100 pb-3">
+                                <span class="text-gray-600 font-medium">ATX (UK Version)</span>
                                 <span class="text-xl font-bold text-gray-700">$175</span>
                             </div>
-                            <div class="flex justify-between items-center border-b pb-2">
-                                <span class="font-medium">SBR / Others</span>
-                                <span class="text-xl font-bold text-gray-700">$185</span>
-                            </div>
                         </div>
-                        <ul class="text-sm text-gray-600 space-y-2 mb-8">
-                            <li class="flex items-center"><i class="fas fa-check text-brand-primary mr-2"></i> 3 Monthly Installments</li>
-                            <li class="flex items-center"><i class="fas fa-check text-brand-primary mr-2"></i> Easier on Cashflow</li>
-                            <li class="flex items-center"><i class="fas fa-check text-brand-primary mr-2"></i> Full Course Access</li>
+
+                        <ul class="text-sm text-gray-500 space-y-3 mb-8">
+                            <li class="flex items-center"><i class="fas fa-check text-brand-primary mr-3"></i> 3 Flexible Payments</li>
+                            <li class="flex items-center"><i class="fas fa-check text-brand-primary mr-3"></i> Full Portal Access</li>
+                            <li class="flex items-center"><i class="fas fa-check text-brand-primary mr-3"></i> Same Great Support</li>
                         </ul>
-                        <a href="#contact" class="block w-full bg-brand-primary text-white text-center font-bold py-3 rounded-lg hover:bg-blue-900 transition">Choose Plan</a>
+
+                        <a href="#contact" class="block w-full bg-white border-2 border-brand-dark text-brand-dark text-center font-bold py-3 rounded-lg hover:bg-brand-dark hover:text-white transition">Choose Installments</a>
                     </div>
                 </div>
 
@@ -321,30 +328,48 @@
         </div>
     </section>
 
-    <section class="py-20 bg-brand-dark text-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Success Stories</h2>
+    <section class="py-20 bg-brand-dark text-white relative">
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-3xl font-bold text-center mb-12">Student Success Stories</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
-                    <div class="flex text-yellow-400 mb-4">
+                <div class="bg-white/5 p-8 rounded-xl backdrop-blur-sm border border-brand-accent/30">
+                    <div class="flex text-brand-accent mb-4 text-sm">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="italic mb-4">"Lloyd's real-world examples in AAA made the difference. I didn't just memorize; I understood. Passed on my first attempt!"</p>
-                    <p class="font-bold">- Sarah M.</p>
+                    <p class="italic mb-6 text-gray-300 leading-relaxed">"Mr. Shumba's teaching blueprint works. I struggled with AAA for years, but his focus on exam technique and 'no compromise' revision sessions got me over the line."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-brand-primary rounded-full flex items-center justify-center font-bold text-white border border-brand-accent">S</div>
+                        <div class="ml-3">
+                            <p class="font-bold text-brand-accent">Sarah M.</p>
+                            <p class="text-xs text-gray-400">ACCA Affiliate</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
-                    <div class="flex text-yellow-400 mb-4">
+                <div class="bg-white/5 p-8 rounded-xl backdrop-blur-sm border border-brand-accent/30">
+                    <div class="flex text-brand-accent mb-4 text-sm">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="italic mb-4">"The Zoom classes are perfect for my work schedule. The recordings helped me catch up when I had overtime. Excellent structure."</p>
-                    <p class="font-bold">- David K.</p>
+                    <p class="italic mb-6 text-gray-300 leading-relaxed">"The Zoom classes starting at 7pm were perfect for my job. The recordings saved me when I had to work late. Highly recommended!"</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-brand-primary rounded-full flex items-center justify-center font-bold text-white border border-brand-accent">D</div>
+                        <div class="ml-3">
+                            <p class="font-bold text-brand-accent">David K.</p>
+                            <p class="text-xs text-gray-400">Student</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
-                    <div class="flex text-yellow-400 mb-4">
+                <div class="bg-white/5 p-8 rounded-xl backdrop-blur-sm border border-brand-accent/30">
+                    <div class="flex text-brand-accent mb-4 text-sm">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     </div>
-                    <p class="italic mb-4">"ATX is a beast, but Mr. Shumba simplified it. The draft notes are gold. Highly recommend Excel Business School."</p>
-                    <p class="font-bold">- Tariro C.</p>
+                    <p class="italic mb-6 text-gray-300 leading-relaxed">"Simple, concise notes. No heavy textbooks. Just what you need to pass. Excel Business School is the best decision I made."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-brand-primary rounded-full flex items-center justify-center font-bold text-white border border-brand-accent">T</div>
+                        <div class="ml-3">
+                            <p class="font-bold text-brand-accent">Tariro C.</p>
+                            <p class="text-xs text-gray-400">Student</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -356,33 +381,42 @@
                 <div>
                     <h3 class="text-2xl font-bold text-brand-dark mb-6">Frequently Asked Questions</h3>
                     <div class="space-y-4">
-                        <details class="bg-white p-4 rounded-lg shadow-sm cursor-pointer">
-                            <summary class="font-semibold">How are classes delivered?</summary>
-                            <p class="mt-2 text-gray-600">Classes are held online via Zoom Workplace. Recordings are available on our portal if you miss a session.</p>
+                        <details class="bg-white p-4 rounded-lg shadow-sm cursor-pointer group">
+                            <summary class="font-semibold text-gray-800 list-none flex justify-between items-center">
+                                How are classes delivered?
+                                <span class="text-brand-primary group-open:rotate-180 transition"><i class="fas fa-chevron-down"></i></span>
+                            </summary>
+                            <p class="mt-3 text-gray-600 leading-relaxed">Lectures are held online through Zoom Workplace. Recordings are available on the portal if you miss a session.</p>
                         </details>
-                        <details class="bg-white p-4 rounded-lg shadow-sm cursor-pointer">
-                            <summary class="font-semibold">Do I need to buy textbooks?</summary>
-                            <p class="mt-2 text-gray-600">No! Textbooks are often outdated. We provide concise, simplified notes and guide you through technical articles.</p>
+                        <details class="bg-white p-4 rounded-lg shadow-sm cursor-pointer group">
+                            <summary class="font-semibold text-gray-800 list-none flex justify-between items-center">
+                                Do I need textbooks?
+                                <span class="text-brand-primary group-open:rotate-180 transition"><i class="fas fa-chevron-down"></i></span>
+                            </summary>
+                            <p class="mt-3 text-gray-600 leading-relaxed">No! Textbooks are outdated. I personally provide concise, easy-to-follow notes for everything I teach.</p>
                         </details>
-                        <details class="bg-white p-4 rounded-lg shadow-sm cursor-pointer">
-                            <summary class="font-semibold">What is the schedule?</summary>
-                            <p class="mt-2 text-gray-600">We design the schedule for working professionals. Classes mostly start at 7pm and end around 10pm. Minimum 3 sessions per subject per week.</p>
+                        <details class="bg-white p-4 rounded-lg shadow-sm cursor-pointer group">
+                            <summary class="font-semibold text-gray-800 list-none flex justify-between items-center">
+                                What is the class schedule?
+                                <span class="text-brand-primary group-open:rotate-180 transition"><i class="fas fa-chevron-down"></i></span>
+                            </summary>
+                            <p class="mt-3 text-gray-600 leading-relaxed">Designed for working professionals. Classes mostly start at 7pm and wrap up around 10pm. Each subject has a minimum of 3 sessions per week.</p>
                         </details>
                     </div>
                 </div>
                 
                 <div class="space-y-8">
-                    <div>
-                        <h4 class="font-bold text-brand-dark mb-2">Terms & Conditions</h4>
-                        <p class="text-gray-600">By enrolling in Excel Business School, students agree to conduct themselves professionally during online sessions. Sharing of login credentials or course materials is strictly prohibited and will result in immediate termination of access.</p>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-brand-primary">
+                        <h4 class="font-bold text-brand-dark mb-2 flex items-center"><i class="fas fa-file-contract mr-2 text-brand-primary"></i> Terms & Conditions</h4>
+                        <p class="text-gray-600 leading-relaxed">By enrolling, students agree to maintain professional conduct during Zoom sessions. Sharing login credentials or distributing course notes is strictly prohibited and results in immediate termination.</p>
                     </div>
-                    <div>
-                        <h4 class="font-bold text-brand-dark mb-2">Refund Policy</h4>
-                        <p class="text-gray-600">We offer a satisfaction guarantee. However, due to the digital nature of our content, refunds are only processed if requested within 7 days of the first lecture, provided no course materials have been downloaded. After this period, no refunds can be issued.</p>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-brand-primary">
+                        <h4 class="font-bold text-brand-dark mb-2 flex items-center"><i class="fas fa-undo mr-2 text-brand-primary"></i> Refund Policy</h4>
+                        <p class="text-gray-600 leading-relaxed">We offer a satisfaction guarantee. Refunds are processed if requested within 7 days of the first lecture, provided no materials were downloaded. No refunds after 7 days.</p>
                     </div>
-                    <div>
-                        <h4 class="font-bold text-brand-dark mb-2">Privacy Policy</h4>
-                        <p class="text-gray-600">We respect your privacy. Your contact details (email, phone) are used solely for course communication and WhatsApp support groups. We do not sell your data to third parties.</p>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-brand-primary">
+                        <h4 class="font-bold text-brand-dark mb-2 flex items-center"><i class="fas fa-shield-alt mr-2 text-brand-primary"></i> Privacy Policy</h4>
+                        <p class="text-gray-600 leading-relaxed">We respect your privacy. Contact details (email/phone) are used solely for course communication and WhatsApp groups. We do not sell data.</p>
                     </div>
                 </div>
             </div>
@@ -390,63 +424,68 @@
     </section>
 
     <section id="contact" class="py-20 bg-white">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <div class="bg-brand-primary rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
-                <div class="p-10 md:w-1/2 text-white">
-                    <h2 class="text-3xl font-bold mb-4">Get Started Today</h2>
-                    <p class="mb-8 opacity-90">Ready to pass your exams? Send us a message to book your spot or ask a question.</p>
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-envelope text-brand-accent"></i>
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="bg-brand-primary rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row border-4 border-brand-primary">
+                <div class="p-10 md:w-1/2 text-white flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-4">Get Started Today</h2>
+                        <p class="mb-8 opacity-90 text-red-100">Ready to pass your exams? Send us a message to book your spot or ask a question.</p>
+                    </div>
+                    <div class="space-y-6">
+                        <a href="mailto:lloyd.shumba@excelbusinessschool.uk" class="flex items-center space-x-4 hover:text-brand-accent transition">
+                            <div class="w-10 h-10 bg-brand-dark rounded-full flex items-center justify-center border border-brand-accent"><i class="fas fa-envelope"></i></div>
                             <span>lloyd.shumba@excelbusinessschool.uk</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <i class="fab fa-whatsapp text-green-400 text-xl"></i>
+                        </a>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 bg-brand-dark rounded-full flex items-center justify-center border border-brand-accent"><i class="fab fa-whatsapp"></i></div>
                             <span>+260 975 899 280</span>
                         </div>
-                        <div class="flex items-center space-x-3">
-                            <i class="fab fa-whatsapp text-green-400 text-xl"></i>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 bg-brand-dark rounded-full flex items-center justify-center border border-brand-accent"><i class="fab fa-whatsapp"></i></div>
                             <span>+263 783 776 685</span>
                         </div>
                     </div>
                 </div>
-                <div class="bg-white p-10 md:w-1/2">
-                    <form class="space-y-4">
+                
+                <div class="bg-brand-light p-10 md:w-1/2">
+                    <form class="space-y-5">
                         <div>
-                            <label class="block text-sm font-medium text-gray-700">Name</label>
-                            <input type="text" class="w-full mt-1 p-3 border rounded-lg focus:ring-2 focus:ring-brand-primary outline-none" placeholder="John Doe">
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Full Name</label>
+                            <input type="text" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none transition" placeholder="John Doe">
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700">Email</label>
-                            <input type="email" class="w-full mt-1 p-3 border rounded-lg focus:ring-2 focus:ring-brand-primary outline-none" placeholder="john@example.com">
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Email Address</label>
+                            <input type="email" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none transition" placeholder="john@example.com">
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700">Course Interest</label>
-                            <select class="w-full mt-1 p-3 border rounded-lg focus:ring-2 focus:ring-brand-primary outline-none">
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Interested Subject</label>
+                            <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none transition bg-white">
                                 <option>Select a course...</option>
-                                <option>SBR - Strategic Business Reporting</option>
                                 <option>AAA - Advanced Audit & Assurance</option>
                                 <option>ATX - Advanced Taxation</option>
+                                <option>SBR - Strategic Business Reporting</option>
                             </select>
                         </div>
-                        <button class="w-full bg-brand-dark text-white font-bold py-3 rounded-lg hover:bg-gray-800 transition">Send Message</button>
+                        <button class="w-full bg-brand-dark text-white font-bold py-4 rounded-lg hover:bg-black transition shadow-lg transform active:scale-95 border border-brand-accent">
+                            Send Message
+                        </button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-gray-400 py-12 text-sm">
+    <footer class="bg-brand-dark text-gray-400 py-12 text-sm border-t-4 border-brand-accent">
         <div class="container mx-auto px-4 text-center">
-            <div class="mb-4">
-                <span class="text-2xl font-bold text-white tracking-tight">EXCEL</span>
-                <span class="text-xs uppercase ml-2">Business School</span>
+            <div class="mb-6 flex items-center justify-center space-x-2">
+                <img src="excel-logo.png" alt="Excel Business School" class="h-12 w-auto grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition">
             </div>
-            <p class="mb-6">&copy; 2024 Excel Business School. All Rights Reserved.</p>
-            <div class="flex justify-center space-x-6">
-                <a href="#" class="hover:text-white transition">Privacy Policy</a>
-                <a href="#" class="hover:text-white transition">Terms of Service</a>
-                <a href="#" class="hover:text-white transition">Refund Policy</a>
+            <p class="mb-6 max-w-md mx-auto">Helping ACCA students qualify faster with flexible, high-quality online tuition.</p>
+            <p class="mb-8">&copy; 2024 Excel Business School. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-6 text-xs uppercase tracking-widest">
+                <a href="#policies" class="hover:text-brand-accent transition">Privacy</a>
+                <a href="#policies" class="hover:text-brand-accent transition">Terms</a>
+                <a href="#contact" class="hover:text-brand-accent transition">Contact</a>
             </div>
         </div>
     </footer>
