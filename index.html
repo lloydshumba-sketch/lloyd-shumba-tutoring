@@ -6,9 +6,10 @@
     <meta name="description" content="Excel Business School - The #1 Global Provider for ACCA Tuition. Expert AAA, ATX, and SBR mentorship for students in Zimbabwe, UK, and beyond.">
     <title>Excel Business School | Global ACCA Tuition</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <script>
@@ -16,7 +17,8 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
                     },
                     colors: {
                         brand: {
@@ -67,20 +69,9 @@
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         }
         
-        /* DROPDOWN ANIMATIONS */
-        .group:hover .group-hover\:block {
-            display: block;
-            animation: fadeIn 0.2s ease-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* PREMIUM PRELOADER ANIMATION */
+        /* PRELOADER */
         .loader-circle {
-            width: 12px;
-            height: 12px;
+            width: 12px; height: 12px;
             background-color: #691818;
             border-radius: 50%;
             animation: bounce 0.6s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95);
@@ -168,7 +159,8 @@
                     </div>
                 </div>
 
-                <a href="#contact" class="hover:text-brand-primary transition-colors">Contact</a>
+                <a href="#pricing" class="hover:text-brand-primary transition-colors">Fees</a>
+                <a href="#contact" class="hover:text-brand-primary transition-colors">Contact Us</a>
             </div>
 
             <div class="hidden md:flex items-center space-x-3">
@@ -209,7 +201,7 @@
                     <div class="inline-flex items-center gap-2 bg-white text-brand-primary font-bold px-4 py-2 rounded-full text-xs uppercase tracking-widest mb-6 border border-brand-primary/10 shadow-sm">
                         <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span> Taking Applications for 2026
                     </div>
-                    <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold text-brand-dark mb-6 leading-tight tracking-tight">
+                    <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold text-brand-dark mb-6 leading-tight tracking-tight font-serif">
                         Excellence in <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent">ACCA Tuition.</span>
                     </h1>
                     <p class="text-base md:text-lg text-gray-600 mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed font-light">
@@ -234,9 +226,299 @@
         </div>
     </section>
 
+    <section id="services" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 md:mb-16">
+                <span class="text-brand-accent font-bold tracking-wider uppercase text-xs">Our Expertise</span>
+                <h2 class="text-3xl md:text-5xl font-bold mt-2 text-brand-dark font-serif">How We Support You</h2>
+                <div class="w-20 h-1.5 bg-brand-primary mx-auto mt-4 rounded-full opacity-20"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-8 bg-brand-light rounded-2xl hover:bg-white hover:shadow-xl transition duration-300 border border-transparent hover:border-brand-accent/20 group">
+                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 text-2xl text-brand-primary shadow-sm group-hover:scale-110 transition"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3 class="font-bold text-xl text-brand-dark mb-3 font-serif">Live Tuition</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Interactive Zoom sessions scheduled perfectly for working professionals.</p>
+                </div>
+                <div class="p-8 bg-brand-light rounded-2xl hover:bg-white hover:shadow-xl transition duration-300 border border-transparent hover:border-brand-accent/20 group">
+                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 text-2xl text-brand-primary shadow-sm group-hover:scale-110 transition"><i class="fas fa-brain"></i></div>
+                    <h3 class="font-bold text-xl text-brand-dark mb-3 font-serif">Exam Revision</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Intensive past paper practice and technique mastery bootcamps.</p>
+                </div>
+                <div class="p-8 bg-brand-light rounded-2xl hover:bg-white hover:shadow-xl transition duration-300 border border-transparent hover:border-brand-accent/20 group">
+                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 text-2xl text-brand-primary shadow-sm group-hover:scale-100 transition"><i class="fas fa-user-tie"></i></div>
+                    <h3 class="font-bold text-xl text-brand-dark mb-3 font-serif">Mentorship</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">One-on-one career guidance from qualified advocates.</p>
+                </div>
+                <div class="p-8 bg-brand-light rounded-2xl hover:bg-white hover:shadow-xl transition duration-300 border border-transparent hover:border-brand-accent/20 group">
+                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 text-2xl text-brand-primary shadow-sm group-hover:scale-110 transition"><i class="fas fa-infinity"></i></div>
+                    <h3 class="font-bold text-xl text-brand-dark mb-3 font-serif">24/7 Support</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Continuous WhatsApp support. Your questions answered, anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blueprint" class="py-16 md:py-24 bg-gray-50 relative overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <span class="text-brand-accent font-bold tracking-wider uppercase text-xs">The Methodology</span>
+                    <h2 class="text-3xl md:text-5xl font-bold mt-2 text-brand-dark font-serif">The Teaching Blueprint</h2>
+                </div>
+                <p class="text-gray-500 max-w-md mt-4 md:mt-0 text-sm md:text-base">Our proprietary 11-point system designed to ensure you qualify in record time.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover-effect group">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-brand-primary text-xl group-hover:bg-brand-primary group-hover:text-white transition-colors"><i class="fas fa-heart"></i></div>
+                        <span class="text-xs font-bold text-gray-300">01</span>
+                    </div>
+                    <h3 class="font-bold text-lg text-brand-dark mb-2 font-serif">Passionately Committed</h3>
+                    <p class="text-gray-600 text-sm">We are your cheerleaders. We are committed to helping you qualify as soon as possible.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover-effect group">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-brand-primary text-xl group-hover:bg-brand-primary group-hover:text-white transition-colors"><i class="fas fa-calendar-check"></i></div>
+                        <span class="text-xs font-bold text-gray-300">02</span>
+                    </div>
+                    <h3 class="font-bold text-lg text-brand-dark mb-2 font-serif">Frequent Sessions</h3>
+                    <p class="text-gray-600 text-sm">Lecture sessions are held at least 3 times per week to keep momentum high.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover-effect group">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-brand-primary text-xl group-hover:bg-brand-primary group-hover:text-white transition-colors"><i class="fas fa-file-alt"></i></div>
+                        <span class="text-xs font-bold text-gray-300">03</span>
+                    </div>
+                    <h3 class="font-bold text-lg text-brand-dark mb-2 font-serif">Concise Notes</h3>
+                    <p class="text-gray-600 text-sm">Modern, draft lecture notes that are easy to digest and focus on exam relevance.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover-effect group">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-12 h-12 rounded-full bg-brand-accent/10 flex items-center justify-center text-brand-accent text-xl group-hover:bg-brand-accent group-hover:text-white transition-colors"><i class="fas fa-laptop-code"></i></div>
+                        <span class="text-xs font-bold text-gray-300">04</span>
+                    </div>
+                    <h3 class="font-bold text-lg text-brand-dark mb-2 font-serif">Online Portal</h3>
+                    <p class="text-gray-600 text-sm">Secure access to pre-recorded lectures 24/7. Never miss a beat.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover-effect group">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-brand-primary text-xl group-hover:bg-brand-primary group-hover:text-white transition-colors"><i class="fas fa-newspaper"></i></div>
+                        <span class="text-xs font-bold text-gray-300">05</span>
+                    </div>
+                    <h3 class="font-bold text-lg text-brand-dark mb-2 font-serif">Technical Mastery</h3>
+                    <p class="text-gray-600 text-sm">Guided walkthroughs of technical articles to ensure deep syllabus understanding.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover-effect group">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-brand-primary text-xl group-hover:bg-brand-primary group-hover:text-white transition-colors"><i class="fas fa-bullseye"></i></div>
+                        <span class="text-xs font-bold text-gray-300">06</span>
+                    </div>
+                    <h3 class="font-bold text-lg text-brand-dark mb-2 font-serif">Focused Revision</h3>
+                    <p class="text-gray-600 text-sm">Extensive past paper practice. We drill exam technique until it becomes second nature.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="text-brand-accent font-bold tracking-wider uppercase text-xs">Academic Programs</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mt-2 font-serif">Papers We Teach</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition duration-500 relative">
+                    <div class="h-56 overflow-hidden">
+                        <div class="absolute inset-0 bg-brand-dark/20 group-hover:bg-transparent transition z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop" alt="SBR" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-8">
+                        <div class="text-xs font-bold text-brand-primary mb-2">PROFESSIONAL LEVEL</div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-2 font-serif">Strategic Business Reporting (SBR)</h3>
+                        <p class="text-gray-600 text-sm mb-4">Master financial reporting principles and ethical considerations.</p>
+                        <a href="#contact" class="inline-flex items-center text-brand-dark font-bold text-sm hover:text-brand-primary transition">Enroll Now <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+                <div class="group rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition duration-500 relative">
+                    <div class="h-56 overflow-hidden">
+                        <div class="absolute inset-0 bg-brand-dark/20 group-hover:bg-transparent transition z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1000&auto=format&fit=crop" alt="AAA" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-8">
+                        <div class="text-xs font-bold text-brand-primary mb-2">PROFESSIONAL LEVEL</div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-2 font-serif">Advanced Audit & Assurance (AAA)</h3>
+                        <p class="text-gray-600 text-sm mb-4">Available in both <strong>International (INT)</strong> and <strong>United Kingdom (UK)</strong> versions.</p>
+                        <a href="#contact" class="inline-flex items-center text-brand-dark font-bold text-sm hover:text-brand-primary transition">Enroll Now <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+                <div class="group rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition duration-500 relative">
+                    <div class="h-56 overflow-hidden">
+                        <div class="absolute inset-0 bg-brand-dark/20 group-hover:bg-transparent transition z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1000&auto=format&fit=crop" alt="ATX" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-8">
+                        <div class="text-xs font-bold text-brand-primary mb-2">PROFESSIONAL LEVEL</div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-2 font-serif">Advanced Taxation (ATX)</h3>
+                        <p class="text-gray-600 text-sm mb-4">Specialized <strong>United Kingdom (UK)</strong> version focusing on advanced tax planning.</p>
+                        <a href="#contact" class="inline-flex items-center text-brand-dark font-bold text-sm hover:text-brand-primary transition">Enroll Now <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sample-lectures" class="py-16 md:py-24 bg-brand-dark relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-primary opacity-20 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand-accent opacity-10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-brand-accent font-bold tracking-wider uppercase text-xs">Lecture Showcase</span>
+                <h2 class="text-3xl md:text-5xl font-bold mt-2 text-white font-serif">Experience the Classroom</h2>
+                <p class="text-gray-400 mt-4 max-w-xl mx-auto">Watch full sample lectures from our latest session to see our teaching methodology in action.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/50 transition duration-300 group">
+                    <div class="h-48 bg-slate-800 relative flex items-center justify-center overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition duration-700">
+                        <div class="w-14 h-14 bg-brand-accent rounded-full flex items-center justify-center text-brand-dark text-xl z-10 shadow-lg group-hover:scale-110 transition"><i class="fab fa-youtube ml-1"></i></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs font-bold text-brand-accent mb-1">AUDIT & ASSURANCE</div>
+                        <h3 class="text-xl font-bold text-white mb-4 font-serif">AAA Sample Lecture</h3>
+                        <a href="https://youtu.be/FJ5maDLwTWw" target="_blank" class="text-white font-semibold text-sm border-b border-brand-accent/50 hover:text-brand-accent transition pb-1">Watch Now <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
+                    </div>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/50 transition duration-300 group">
+                    <div class="h-48 bg-slate-800 relative flex items-center justify-center overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition duration-700">
+                        <div class="w-14 h-14 bg-brand-accent rounded-full flex items-center justify-center text-brand-dark text-xl z-10 shadow-lg group-hover:scale-110 transition"><i class="fab fa-youtube ml-1"></i></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs font-bold text-brand-accent mb-1">ADVANCED TAXATION</div>
+                        <h3 class="text-xl font-bold text-white mb-4 font-serif">ATX (UK) Sample</h3>
+                        <a href="https://youtu.be/AzD2vgtwl7o" target="_blank" class="text-white font-semibold text-sm border-b border-brand-accent/50 hover:text-brand-accent transition pb-1">Watch Now <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
+                    </div>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/50 transition duration-300 group">
+                    <div class="h-48 bg-slate-800 relative flex items-center justify-center overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition duration-700">
+                        <div class="w-14 h-14 bg-brand-accent rounded-full flex items-center justify-center text-brand-dark text-xl z-10 shadow-lg group-hover:scale-110 transition"><i class="fab fa-youtube ml-1"></i></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs font-bold text-brand-accent mb-1">BUSINESS REPORTING</div>
+                        <h3 class="text-xl font-bold text-white mb-4 font-serif">SBR Sample Lecture</h3>
+                        <a href="https://youtu.be/DEO8dsAWi_w" target="_blank" class="text-white font-semibold text-sm border-b border-brand-accent/50 hover:text-brand-accent transition pb-1">Watch Now <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="insights" class="py-16 bg-brand-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="text-brand-accent font-bold tracking-wider uppercase text-xs">Technical Hub</span>
+                <h2 class="text-3xl font-bold text-brand-dark mt-2 font-serif">Expert Insights</h2>
+                <div class="w-20 h-1.5 bg-brand-primary mx-auto mt-4 rounded-full opacity-20"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-600 mr-3"><i class="fas fa-exclamation-triangle"></i></div>
+                        <h3 class="text-xl font-bold text-brand-dark font-serif">Why Students Fail AAA</h3>
+                    </div>
+                    <p class="text-sm text-gray-500 mb-4 italic">Direct from recent Examiner Reports:</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start text-sm text-gray-600">
+                            <i class="fas fa-times-circle text-red-400 mt-1 mr-2"></i>
+                            <span><strong>Rote Learning:</strong> Stating generic risks (e.g., "new client") when the scenario indicates otherwise. Knowledge must be applied to the specific facts.</span>
+                        </li>
+                        <li class="flex items-start text-sm text-gray-600">
+                            <i class="fas fa-times-circle text-red-400 mt-1 mr-2"></i>
+                            <span><strong>Vague Procedures:</strong> Using empty phrases like "check relevant documentation" without specifying *which* document or *why*.</span>
+                        </li>
+                        <li class="flex items-start text-sm text-gray-600">
+                            <i class="fas fa-times-circle text-red-400 mt-1 mr-2"></i>
+                            <span><strong>Missing the Requirement:</strong> Answering "Business Risks" when asked for "Audit Risks".</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-3"><i class="fas fa-newspaper"></i></div>
+                        <h3 class="text-xl font-bold text-brand-dark font-serif">Current Issue: IFRS 18</h3>
+                    </div>
+                    <p class="text-sm text-gray-500 mb-4 italic">Examinable from September 2025:</p>
+                    <div class="space-y-3 text-sm text-gray-600 leading-relaxed">
+                        <p><strong>"Presentation and Disclosure in Financial Statements"</strong> replaces IAS 1. The key change is the new structure of the Statement of Profit or Loss, now categorised into:</p>
+                        <div class="flex gap-2">
+                            <span class="px-2 py-1 bg-gray-100 rounded text-xs font-bold">Operating</span>
+                            <span class="px-2 py-1 bg-gray-100 rounded text-xs font-bold">Investing</span>
+                            <span class="px-2 py-1 bg-gray-100 rounded text-xs font-bold">Financing</span>
+                        </div>
+                        <p class="mt-2">It also introduces mandatory disclosure of <strong>Management Performance Measures (MPMs)</strong> in a single note, ensuring transparency in non-GAAP reporting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-brand-accent font-bold tracking-wider uppercase text-xs">Success Stories</span>
+                <h2 class="text-3xl md:text-5xl font-bold mt-2 text-brand-dark font-serif">What Students Are Saying</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-brand-light p-8 rounded-2xl border border-gray-100 relative group hover:shadow-xl transition">
+                    <i class="fas fa-quote-left text-4xl text-brand-accent/20 absolute top-6 left-6"></i>
+                    <p class="text-gray-600 italic mb-6 relative z-10 pt-4">"The draft lecture notes for AAA were concise and easy to understand. I passed on my first attempt after struggling with other providers."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-brand-dark rounded-full flex items-center justify-center text-white font-bold">JD</div>
+                        <div class="ml-3"><p class="font-bold text-brand-dark text-sm">John D.</p><p class="text-xs text-brand-primary">Audit Associate, UK</p></div>
+                    </div>
+                </div>
+                <div class="bg-brand-light p-8 rounded-2xl border border-gray-100 relative group hover:shadow-xl transition">
+                    <i class="fas fa-quote-left text-4xl text-brand-accent/20 absolute top-6 left-6"></i>
+                    <p class="text-gray-600 italic mb-6 relative z-10 pt-4">"Lloyd's mentorship is unmatched. He doesn't just teach the syllabus; he teaches exam technique. Highly recommended for ATX."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-brand-dark rounded-full flex items-center justify-center text-white font-bold">TM</div>
+                        <div class="ml-3"><p class="font-bold text-brand-dark text-sm">Tariro M.</p><p class="text-xs text-brand-primary">Tax Consultant, Zimbabwe</p></div>
+                    </div>
+                </div>
+                <div class="bg-brand-light p-8 rounded-2xl border border-gray-100 relative group hover:shadow-xl transition">
+                    <i class="fas fa-quote-left text-4xl text-brand-accent/20 absolute top-6 left-6"></i>
+                    <p class="text-gray-600 italic mb-6 relative z-10 pt-4">"The flexibility of the online portal allowed me to study while working full time. SBR finally made sense to me."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-brand-dark rounded-full flex items-center justify-center text-white font-bold">BK</div>
+                        <div class="ml-3"><p class="font-bold text-brand-dark text-sm">Blessing K.</p><p class="text-xs text-brand-primary">Financial Analyst, Zambia</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white border-t border-gray-50">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl font-bold text-brand-dark font-serif">Frequently Asked Questions</h2>
+            </div>
+            <div class="space-y-4">
+                <details class="group bg-brand-light rounded-xl cursor-pointer open:ring-1 open:ring-brand-primary/10">
+                    <summary class="flex justify-between items-center font-medium p-5 list-none text-brand-dark"><span>Do you offer installment plans?</span><span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-brand-accent"></i></span></summary>
+                    <div class="text-gray-600 p-5 pt-0 text-sm leading-relaxed">Yes, we offer a flexible 3-month installment plan for all our courses to help manage your finances while you study.</div>
+                </details>
+                <details class="group bg-brand-light rounded-xl cursor-pointer open:ring-1 open:ring-brand-primary/10">
+                    <summary class="flex justify-between items-center font-medium p-5 list-none text-brand-dark"><span>Are the classes recorded?</span><span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-brand-accent"></i></span></summary>
+                    <div class="text-gray-600 p-5 pt-0 text-sm leading-relaxed">Absolutely. All live sessions are recorded and uploaded to the Student Portal within 24 hours for revision purposes.</div>
+                </details>
+            </div>
+        </div>
+    </section>
+
     <div class="bg-brand-dark py-12 relative overflow-hidden border-t-4 border-brand-accent">
         <div class="absolute inset-0 opacity-5" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg'); background-size: cover; background-position: center;"></div>
-        
         <div class="container mx-auto px-4 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
                 <div class="p-4">
@@ -245,9 +527,7 @@
                     <p class="text-gray-400 text-xs mt-2">Consistent excellence across all papers</p>
                 </div>
                 <div class="p-4">
-                    <div class="text-4xl md:text-5xl font-bold text-white mb-2 flex justify-center items-baseline">
-                        <span class="counter" data-target="1500">0</span><span>+</span>
-                    </div>
+                    <div class="text-4xl md:text-5xl font-bold text-white mb-2 flex justify-center items-baseline"><span class="counter" data-target="1500">0</span><span>+</span></div>
                     <p class="text-brand-accent text-xs font-bold uppercase tracking-widest">Graduates</p>
                     <p class="text-gray-400 text-xs mt-2">Helping you become an ACCA Affiliate</p>
                 </div>
@@ -255,7 +535,7 @@
                     <div class="flex flex-col items-center justify-center">
                         <div class="flex items-center gap-2 mb-3">
                             <i class="fas fa-globe-africa text-3xl text-brand-primary"></i>
-                            <span class="text-2xl font-bold text-white">Global Reach</span>
+                            <span class="text-2xl font-bold text-white font-serif">Global Reach</span>
                         </div>
                         <div class="flex flex-wrap justify-center gap-2">
                             <span class="text-[10px] bg-white/10 px-3 py-1 rounded-full text-gray-300 border border-white/5">Zimbabwe</span>
@@ -269,389 +549,7 @@
         </div>
     </div>
 
-    <section id="services" class="py-16 md:py-24 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12 md:mb-16">
-                <span class="text-brand-accent font-bold tracking-wider uppercase text-xs">Our Expertise</span>
-                <h2 class="text-3xl md:text-5xl font-bold mt-2 text-brand-dark">How We Support You</h2>
-                <div class="w-20 h-1.5 bg-brand-primary mx-auto mt-4 rounded-full opacity-20"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="p-8 bg-brand-light rounded-2xl hover:bg-white hover:shadow-xl transition duration-300 border border-transparent hover:border-brand-accent/20 group">
-                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 text-2xl text-brand-primary shadow-sm group-hover:scale-110 transition"><i class="fas fa-chalkboard-teacher"></i></div>
-                    <h3 class="font-bold text-xl text-brand-dark mb-3">Live Tuition</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Interactive Zoom sessions scheduled perfectly for working professionals.</p>
-                </div>
-                <div class="p-8 bg-brand-light rounded-2xl hover:bg-white hover:shadow-xl transition duration-300 border border-transparent hover:border-brand-accent/20 group">
-                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 text-2xl text-brand-primary shadow-sm group-hover:scale-110 transition"><i class="fas fa-brain"></i></div>
-                    <h3 class="font-bold text-xl text-brand-dark mb-3">Exam Revision</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Intensive past paper practice and technique mastery bootcamps.</p>
-                </div>
-                <div class="p-8 bg-brand-light rounded-2xl hover:bg-white hover:shadow-xl transition duration-300 border border-transparent hover:border-brand-accent/20 group">
-                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 text-2xl text-brand-primary shadow-sm group-hover:scale-100 transition"><i class="fas fa-user-tie"></i></div>
-                    <h3 class="font-bold text-xl text-brand-dark mb-3">Mentorship</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">One-on-one career guidance from qualified advocates.</p>
-                </div>
-                <div class="p-8 bg-brand-light rounded-2xl hover:bg-white hover:shadow-xl transition duration-300 border border-transparent hover:border-brand-accent/20 group">
-                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 text-2xl text-brand-primary shadow-sm group-hover:scale-110 transition"><i class="fas fa-infinity"></i></div>
-                    <h3 class="font-bold text-xl text-brand-dark mb-3">24/7 Support</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Continuous WhatsApp support. Your questions answered, anytime.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="blueprint" class="py-16 md:py-24 bg-gray-50 relative overflow-hidden">
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
-                <div>
-                    <span class="text-brand-accent font-bold tracking-wider uppercase text-xs">The Methodology</span>
-                    <h2 class="text-3xl md:text-5xl font-bold mt-2 text-brand-dark">The 11-Point Blueprint</h2>
-                </div>
-                <p class="text-gray-500 max-w-md mt-4 md:mt-0 text-sm md:text-base">Our proprietary system is designed to remove chance from the equation. We structure your success.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover-effect group">
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-brand-primary text-xl group-hover:bg-brand-primary group-hover:text-white transition-colors"><i class="fas fa-heart"></i></div>
-                        <span class="text-xs font-bold text-gray-300">01</span>
-                    </div>
-                    <h3 class="font-bold text-lg text-brand-dark mb-2">Passionately Committed</h3>
-                    <p class="text-gray-600 text-sm">We are your cheerleaders. We are committed to helping you qualify as soon as possible.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover-effect group">
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-brand-primary text-xl group-hover:bg-brand-primary group-hover:text-white transition-colors"><i class="fas fa-calendar-check"></i></div>
-                        <span class="text-xs font-bold text-gray-300">02</span>
-                    </div>
-                    <h3 class="font-bold text-lg text-brand-dark mb-2">Frequent Sessions</h3>
-                    <p class="text-gray-600 text-sm">Lecture sessions are held at least 3 times per week to keep momentum high.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover-effect group">
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-brand-primary text-xl group-hover:bg-brand-primary group-hover:text-white transition-colors"><i class="fas fa-file-alt"></i></div>
-                        <span class="text-xs font-bold text-gray-300">03</span>
-                    </div>
-                    <h3 class="font-bold text-lg text-brand-dark mb-2">Concise Notes</h3>
-                    <p class="text-gray-600 text-sm">Modern, draft lecture notes that are easy to digest and focus on exam relevance.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover-effect group">
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="w-12 h-12 rounded-full bg-brand-accent/10 flex items-center justify-center text-brand-accent text-xl group-hover:bg-brand-accent group-hover:text-white transition-colors"><i class="fas fa-laptop-code"></i></div>
-                        <span class="text-xs font-bold text-gray-300">04</span>
-                    </div>
-                    <h3 class="font-bold text-lg text-brand-dark mb-2">Online Portal</h3>
-                    <p class="text-gray-600 text-sm">Secure access to pre-recorded lectures 24/7. Never miss a beat.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover-effect group">
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-brand-primary text-xl group-hover:bg-brand-primary group-hover:text-white transition-colors"><i class="fas fa-newspaper"></i></div>
-                        <span class="text-xs font-bold text-gray-300">05</span>
-                    </div>
-                    <h3 class="font-bold text-lg text-brand-dark mb-2">Technical Mastery</h3>
-                    <p class="text-gray-600 text-sm">Guided walkthroughs of technical articles to ensure deep syllabus understanding.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover-effect group">
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-brand-primary text-xl group-hover:bg-brand-primary group-hover:text-white transition-colors"><i class="fas fa-bullseye"></i></div>
-                        <span class="text-xs font-bold text-gray-300">06</span>
-                    </div>
-                    <h3 class="font-bold text-lg text-brand-dark mb-2">Focused Revision</h3>
-                    <p class="text-gray-600 text-sm">Extensive past paper practice. We drill exam technique until it becomes second nature.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="courses" class="py-16 md:py-24 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <span class="text-brand-accent font-bold tracking-wider uppercase text-xs">Academic Programs</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mt-2">Papers We Teach</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="group rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition duration-500 relative">
-                    <div class="h-56 overflow-hidden">
-                        <div class="absolute inset-0 bg-brand-dark/20 group-hover:bg-transparent transition z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop" alt="SBR" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                    </div>
-                    <div class="p-8">
-                        <div class="text-xs font-bold text-brand-primary mb-2">PROFESSIONAL LEVEL</div>
-                        <h3 class="text-xl font-bold text-brand-dark mb-2">Strategic Business Reporting (SBR)</h3>
-                        <p class="text-gray-600 text-sm mb-4">Master financial reporting principles and ethical considerations.</p>
-                        <a href="#contact" class="inline-flex items-center text-brand-dark font-bold text-sm hover:text-brand-primary transition">Enroll Now <i class="fas fa-arrow-right ml-2"></i></a>
-                    </div>
-                </div>
-                <div class="group rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition duration-500 relative">
-                    <div class="h-56 overflow-hidden">
-                        <div class="absolute inset-0 bg-brand-dark/20 group-hover:bg-transparent transition z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1000&auto=format&fit=crop" alt="AAA" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                    </div>
-                    <div class="p-8">
-                        <div class="text-xs font-bold text-brand-primary mb-2">PROFESSIONAL LEVEL</div>
-                        <h3 class="text-xl font-bold text-brand-dark mb-2">Advanced Audit & Assurance (AAA)</h3>
-                        <p class="text-gray-600 text-sm mb-4">Available in both <strong>International (INT)</strong> and <strong>United Kingdom (UK)</strong> versions.</p>
-                        <a href="#contact" class="inline-flex items-center text-brand-dark font-bold text-sm hover:text-brand-primary transition">Enroll Now <i class="fas fa-arrow-right ml-2"></i></a>
-                    </div>
-                </div>
-                <div class="group rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition duration-500 relative">
-                    <div class="h-56 overflow-hidden">
-                        <div class="absolute inset-0 bg-brand-dark/20 group-hover:bg-transparent transition z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1000&auto=format&fit=crop" alt="ATX" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                    </div>
-                    <div class="p-8">
-                        <div class="text-xs font-bold text-brand-primary mb-2">PROFESSIONAL LEVEL</div>
-                        <h3 class="text-xl font-bold text-brand-dark mb-2">Advanced Taxation (ATX)</h3>
-                        <p class="text-gray-600 text-sm mb-4">Specialized <strong>United Kingdom (UK)</strong> version focusing on advanced tax planning.</p>
-                        <a href="#contact" class="inline-flex items-center text-brand-dark font-bold text-sm hover:text-brand-primary transition">Enroll Now <i class="fas fa-arrow-right ml-2"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="sample-lectures" class="py-16 md:py-24 bg-brand-dark relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-primary opacity-20 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
-        <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand-accent opacity-10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
-        
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="text-center mb-16">
-                <span class="text-brand-accent font-bold tracking-wider uppercase text-xs">Lecture Showcase</span>
-                <h2 class="text-3xl md:text-5xl font-bold mt-2 text-white">Experience the Classroom</h2>
-                <p class="text-gray-400 mt-4 max-w-xl mx-auto">Watch full sample lectures from our latest session to see our teaching methodology in action.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/50 transition duration-300 group">
-                    <div class="h-48 bg-slate-800 relative flex items-center justify-center overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition duration-700">
-                        <div class="w-14 h-14 bg-brand-accent rounded-full flex items-center justify-center text-brand-dark text-xl z-10 shadow-lg group-hover:scale-110 transition"><i class="fab fa-youtube ml-1"></i></div>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-xs font-bold text-brand-accent mb-1">AUDIT & ASSURANCE</div>
-                        <h3 class="text-xl font-bold text-white mb-4">AAA Sample Lecture</h3>
-                        <a href="https://youtu.be/FJ5maDLwTWw" target="_blank" class="text-white font-semibold text-sm border-b border-brand-accent/50 hover:text-brand-accent transition pb-1">Watch Now <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
-                    </div>
-                </div>
-                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/50 transition duration-300 group">
-                    <div class="h-48 bg-slate-800 relative flex items-center justify-center overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition duration-700">
-                        <div class="w-14 h-14 bg-brand-accent rounded-full flex items-center justify-center text-brand-dark text-xl z-10 shadow-lg group-hover:scale-110 transition"><i class="fab fa-youtube ml-1"></i></div>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-xs font-bold text-brand-accent mb-1">ADVANCED TAXATION</div>
-                        <h3 class="text-xl font-bold text-white mb-4">ATX (UK) Sample</h3>
-                        <a href="https://youtu.be/AzD2vgtwl7o" target="_blank" class="text-white font-semibold text-sm border-b border-brand-accent/50 hover:text-brand-accent transition pb-1">Watch Now <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
-                    </div>
-                </div>
-                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-brand-accent/50 transition duration-300 group">
-                    <div class="h-48 bg-slate-800 relative flex items-center justify-center overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition duration-700">
-                        <div class="w-14 h-14 bg-brand-accent rounded-full flex items-center justify-center text-brand-dark text-xl z-10 shadow-lg group-hover:scale-110 transition"><i class="fab fa-youtube ml-1"></i></div>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-xs font-bold text-brand-accent mb-1">BUSINESS REPORTING</div>
-                        <h3 class="text-xl font-bold text-white mb-4">SBR Sample Lecture</h3>
-                        <a href="https://youtu.be/DEO8dsAWi_w" target="_blank" class="text-white font-semibold text-sm border-b border-brand-accent/50 hover:text-brand-accent transition pb-1">Watch Now <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="insights" class="py-16 bg-brand-light">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <span class="text-brand-accent font-bold tracking-wider uppercase text-xs">Student Hub</span>
-                <h2 class="text-3xl font-bold text-brand-dark mt-2">Insights & Resources</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <a href="#" class="bg-white p-6 rounded-xl border border-gray-100 hover:border-brand-primary/20 transition group">
-                    <span class="bg-green-100 text-green-800 text-[10px] font-bold px-2 py-1 rounded">EXAM TIP</span>
-                    <h3 class="font-bold text-lg text-brand-dark mt-3 mb-2 group-hover:text-brand-primary transition">Top 5 Reasons Students Fail AAA</h3>
-                    <p class="text-sm text-gray-500">Discover the common pitfalls in Audit risk analysis and how to avoid them.</p>
-                </a>
-                <a href="#" class="bg-white p-6 rounded-xl border border-gray-100 hover:border-brand-primary/20 transition group">
-                    <span class="bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-1 rounded">SBR UPDATE</span>
-                    <h3 class="font-bold text-lg text-brand-dark mt-3 mb-2 group-hover:text-brand-primary transition">Current Issues: What to Expect in 2026</h3>
-                    <p class="text-sm text-gray-500">A breakdown of the latest sustainability reporting standards impacting your exam.</p>
-                </a>
-                <div class="bg-brand-primary p-6 rounded-xl text-white flex flex-col justify-center items-start">
-                    <i class="fas fa-clipboard-check text-3xl mb-3 text-brand-accent"></i>
-                    <h3 class="font-bold text-lg mb-2">Test Your Knowledge</h3>
-                    <p class="text-sm text-white/80 mb-4">Not sure if you are ready? Take our free 5-minute diagnostic quiz.</p>
-                    <button class="bg-white text-brand-primary text-xs font-bold py-2 px-4 rounded hover:bg-brand-accent hover:text-white transition">Start Quiz Now</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <span class="text-brand-accent font-bold tracking-wider uppercase text-xs">Success Stories</span>
-                <h2 class="text-3xl md:text-5xl font-bold mt-2 text-brand-dark">What Students Are Saying</h2>
-                <div class="w-20 h-1.5 bg-brand-primary mx-auto mt-4 rounded-full opacity-20"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-brand-light p-8 rounded-2xl border border-gray-100 relative group hover:shadow-xl transition">
-                    <i class="fas fa-quote-left text-4xl text-brand-accent/20 absolute top-6 left-6"></i>
-                    <p class="text-gray-600 italic mb-6 relative z-10 pt-4">"The draft lecture notes for AAA were concise and easy to understand. I passed on my first attempt after struggling with other providers."</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-brand-dark rounded-full flex items-center justify-center text-white font-bold">JD</div>
-                        <div class="ml-3">
-                            <p class="font-bold text-brand-dark text-sm">John D.</p>
-                            <p class="text-xs text-brand-primary">Audit Associate, UK</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-brand-light p-8 rounded-2xl border border-gray-100 relative group hover:shadow-xl transition">
-                    <i class="fas fa-quote-left text-4xl text-brand-accent/20 absolute top-6 left-6"></i>
-                    <p class="text-gray-600 italic mb-6 relative z-10 pt-4">"Lloyd's mentorship is unmatched. He doesn't just teach the syllabus; he teaches exam technique. Highly recommended for ATX."</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-brand-dark rounded-full flex items-center justify-center text-white font-bold">TM</div>
-                        <div class="ml-3">
-                            <p class="font-bold text-brand-dark text-sm">Tariro M.</p>
-                            <p class="text-xs text-brand-primary">Tax Consultant, Zimbabwe</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-brand-light p-8 rounded-2xl border border-gray-100 relative group hover:shadow-xl transition">
-                    <i class="fas fa-quote-left text-4xl text-brand-accent/20 absolute top-6 left-6"></i>
-                    <p class="text-gray-600 italic mb-6 relative z-10 pt-4">"The flexibility of the online portal allowed me to study while working full time. SBR finally made sense to me."</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-brand-dark rounded-full flex items-center justify-center text-white font-bold">BK</div>
-                        <div class="ml-3">
-                            <p class="font-bold text-brand-dark text-sm">Blessing K.</p>
-                            <p class="text-xs text-brand-primary">Financial Analyst, Zambia</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-16 bg-white border-t border-gray-50">
-        <div class="container mx-auto px-4 max-w-3xl">
-            <div class="text-center mb-10">
-                <h2 class="text-2xl font-bold text-brand-dark">Frequently Asked Questions</h2>
-            </div>
-            <div class="space-y-4">
-                <details class="group bg-brand-light rounded-xl cursor-pointer open:ring-1 open:ring-brand-primary/10">
-                    <summary class="flex justify-between items-center font-medium p-5 list-none text-brand-dark">
-                        <span>Do you offer installment plans?</span>
-                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-brand-accent"></i></span>
-                    </summary>
-                    <div class="text-gray-600 p-5 pt-0 text-sm leading-relaxed">
-                        Yes, we offer a flexible 3-month installment plan for all our courses to help manage your finances while you study.
-                    </div>
-                </details>
-                <details class="group bg-brand-light rounded-xl cursor-pointer open:ring-1 open:ring-brand-primary/10">
-                    <summary class="flex justify-between items-center font-medium p-5 list-none text-brand-dark">
-                        <span>Are the classes recorded?</span>
-                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-brand-accent"></i></span>
-                    </summary>
-                    <div class="text-gray-600 p-5 pt-0 text-sm leading-relaxed">
-                        Absolutely. All live sessions are recorded and uploaded to the Student Portal within 24 hours for revision purposes.
-                    </div>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <section id="pricing" class="py-24 bg-white border-t border-gray-100">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <span class="text-brand-accent font-bold tracking-wider uppercase text-xs">Investment</span>
-                <h2 class="text-4xl font-bold text-brand-dark mt-2">Course Fees</h2>
-                <p class="text-gray-600 mt-4 max-w-xl mx-auto">Transparent pricing for the 2026 academic year.</p>
-            </div>
-            <div class="flex flex-col lg:flex-row gap-8 justify-center items-start">
-                <div class="lg:w-1/3 w-full bg-white rounded-3xl shadow-2xl border border-brand-accent/20 overflow-hidden relative transform lg:-translate-y-4">
-                    <div class="bg-brand-dark p-6 text-center">
-                        <h3 class="text-2xl font-bold text-white mb-1">Prompt Payment</h3>
-                        <p class="text-brand-accent text-sm font-semibold uppercase tracking-widest">Best Value</p>
-                    </div>
-                    <div class="p-8">
-                        <div class="space-y-5 mb-8">
-                            <div class="flex justify-between items-center border-b border-gray-100 pb-3"><span class="text-gray-600 font-medium">AAA (International)</span><span class="text-2xl font-bold text-brand-primary">$180</span></div>
-                            <div class="flex justify-between items-center border-b border-gray-100 pb-3"><span class="text-gray-600 font-medium">AAA (UK Version)</span><span class="text-2xl font-bold text-brand-primary">$185</span></div>
-                            <div class="flex justify-between items-center border-b border-gray-100 pb-3"><span class="text-gray-600 font-medium">ATX (UK Version)</span><span class="text-2xl font-bold text-brand-primary">$175</span></div>
-                        </div>
-                        <a href="#contact" class="block w-full bg-brand-primary text-white text-center font-bold py-4 rounded-xl hover:bg-brand-dark transition shadow-lg">Enroll Now</a>
-                    </div>
-                </div>
-                <div class="lg:w-1/3 w-full bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden">
-                    <div class="bg-gray-50 p-6 text-center">
-                        <h3 class="text-2xl font-bold text-brand-dark mb-1">Installment Plan</h3>
-                        <p class="text-gray-500 text-sm font-semibold uppercase tracking-widest">3 Monthly Payments</p>
-                    </div>
-                    <div class="p-8">
-                        <div class="space-y-5 mb-8">
-                            <div class="flex justify-between items-center border-b border-gray-100 pb-3"><span class="text-gray-600 font-medium">AAA (International)</span><span class="text-xl font-bold text-gray-700">$190</span></div>
-                            <div class="flex justify-between items-center border-b border-gray-100 pb-3"><span class="text-gray-600 font-medium">AAA (UK Version)</span><span class="text-xl font-bold text-gray-700">$200</span></div>
-                            <div class="flex justify-between items-center border-b border-gray-100 pb-3"><span class="text-gray-600 font-medium">ATX (UK Version)</span><span class="text-xl font-bold text-gray-700">$200</span></div>
-                        </div>
-                        <a href="#contact" class="block w-full bg-white border-2 border-brand-dark text-brand-dark text-center font-bold py-4 rounded-xl hover:bg-brand-dark hover:text-white transition">Choose Installments</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-24 bg-gray-50">
-        <div class="container mx-auto px-4 max-w-5xl">
-            <div class="bg-brand-primary rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
-                <div class="p-12 md:w-1/2 text-white flex flex-col justify-between relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
-                    <div class="relative z-10">
-                        <h2 class="text-3xl font-bold mb-4">Secure Your Future</h2>
-                        <p class="mb-10 opacity-90 text-red-100">Ready to pass your 2026 exams? Send us a message to book your spot.</p>
-                        <div class="space-y-8">
-                            <a href="mailto:lloyd.shumba@excelbusinessschool.uk" class="flex items-center space-x-5 hover:text-brand-accent transition group">
-                                <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center border border-white/10 group-hover:bg-brand-accent group-hover:text-brand-primary transition"><i class="fas fa-envelope"></i></div>
-                                <span class="font-medium">lloyd.shumba@excelbusinessschool.uk</span>
-                            </a>
-                            <div class="flex items-center space-x-5">
-                                <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center border border-white/10"><i class="fab fa-whatsapp"></i></div>
-                                <span class="font-medium">+260 975 899 280</span>
-                            </div>
-                            <div class="flex items-center space-x-5">
-                                <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center border border-white/10"><i class="fab fa-whatsapp"></i></div>
-                                <span class="font-medium">+263 783 776 685</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white p-12 md:w-1/2">
-                    <form class="space-y-6">
-                        <div>
-                            <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Full Name</label>
-                            <input type="text" class="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none transition" placeholder="John Doe">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Email Address</label>
-                            <input type="email" class="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none transition" placeholder="john@example.com">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Paper of Interest</label>
-                            <select class="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none transition">
-                                <option>Select a course...</option>
-                                <option>AAA - Advanced Audit & Assurance</option>
-                                <option>ATX - Advanced Taxation</option>
-                                <option>SBR - Strategic Business Reporting</option>
-                            </select>
-                        </div>
-                        <button class="w-full bg-brand-dark text-white font-bold py-4 rounded-xl hover:bg-black transition shadow-xl transform active:scale-95">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-brand-dark text-gray-400 py-16 text-sm border-t-4 border-brand-accent">
+    <footer class="bg-brand-dark text-gray-400 py-16 text-sm border-t border-white/10">
         <div class="container mx-auto px-4 text-center">
             <div class="mb-8 flex items-center justify-center space-x-2">
                 <img src="excel-logo.png" alt="Excel Business School" class="h-16 w-auto grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-500">
