@@ -1,288 +1,455 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lloyd Shumba - ACCA Tutoring</title>
-    <!-- Tailwind CSS for styling -->
+    <title>Excel Business School | ACCA Excellence</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            primary: '#1e40af', // Professional Blue
+                            accent: '#dc2626',  // Red for CTA
+                            light: '#f8fafc'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f7fafc;
-        }
-        .star-rating {
-            color: #FFD700; /* Gold color for stars */
-            font-size: 1.25rem;
-        }
-        .ls-logo {
-            background-color: black;
-            color: white;
-            font-size: 2rem;
-            font-weight: bold;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 3.5rem;
-            height: 3.5rem;
-            border-radius: 9999px;
-            border: 2px solid white;
-        }
-        .design-line-container {
-            position: relative;
-            overflow: hidden;
-        }
-        .design-line {
-            position: absolute;
-            height: 4px;
-            background-color: black;
-        }
-        .design-line.red {
-            background-color: #ef4444;
-        }
-        .design-line.white {
-            background-color: white;
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gray-50 text-slate-800 antialiased">
 
-    <!-- Header Section with Logo -->
-    <header class="bg-white shadow-sm py-4">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <div class="flex items-center space-x-4">
-                <div class="ls-logo">LS</div>
-                <div class="flex flex-col">
-                    <h1 class="text-3xl font-bold text-gray-900">Lloyd Shumba</h1>
-                    <p class="text-sm text-gray-600">Expert Tutor - Professional Qualifications</p>
-                </div>
+    <div class="bg-brand-dark text-white text-xs md:text-sm py-2">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <div class="space-x-4 mb-2 md:mb-0">
+                <span><i class="fas fa-user-graduate text-brand-accent mr-1"></i> 500+ Students Passed</span>
+                <span><i class="fas fa-smile text-brand-accent mr-1"></i> 98% Happy Clients</span>
+                <span><i class="fas fa-star text-brand-accent mr-1"></i> 5-Star Reviews</span>
             </div>
-            <nav>
-                <a href="#services" class="text-gray-600 hover:text-red-600 px-3 py-2 rounded-md transition duration-300">Services</a>
-                <a href="#approach" class="text-gray-600 hover:text-red-600 px-3 py-2 rounded-md transition duration-300">My Approach</a>
-                <a href="#reviews" class="text-gray-600 hover:text-red-600 px-3 py-2 rounded-md transition duration-300">Reviews</a>
-                <a href="#contact" class="text-gray-600 hover:text-red-600 px-3 py-2 rounded-md transition duration-300">Contact</a>
-            </nav>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-brand-accent transition"><i class="fab fa-whatsapp"></i> Support</a>
+                <a href="#" class="hover:text-brand-accent transition"><i class="fas fa-envelope"></i> Email Us</a>
+            </div>
         </div>
-    </header>
+    </div>
 
-    <main class="container mx-auto px-4 py-8">
-
-        <!-- Hero Section -->
-        <section class="text-center my-12 bg-white p-8 rounded-lg shadow-md design-line-container">
-            <!-- Design lines -->
-            <div class="design-line black top-0 left-0 w-1/4"></div>
-            <div class="design-line red top-0 right-0 w-1/4"></div>
-            <div class="design-line black bottom-0 left-0 w-1/4"></div>
-            <div class="design-line red bottom-0 right-0 w-1/4"></div>
-
-            <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12">
-                <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-lg">
-                    <img src="https://placehold.co/500x500/000000/FFFFFF?text=Lloyd" alt="Lloyd Shumba" class="w-full h-full object-cover">
-                </div>
-                <div class="text-center md:text-left">
-                    <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Your Expert ACCA Tutor</h2>
-                    <p class="text-lg text-gray-600 mb-6 max-w-2xl mx-auto md:mx-0">
-                        With extensive experience in the field, my goal is to guide you to success in your ACCA examinations. I provide specialized tutoring for key papers, ensuring you have the knowledge and skills to pass with confidence.
-                    </p>
-                    <a href="#contact" class="inline-block bg-red-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-red-700 transition duration-300">
-                        Book a Session
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services" class="my-12">
-            <h3 class="text-3xl font-bold text-center text-gray-900 mb-6">Papers I Teach</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <img src="https://placehold.co/100x100/e53e3e/ffffff?text=SBR" alt="SBR" class="w-24 h-24 mx-auto mb-4 rounded-full">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2 text-center">SBR - Strategic Business Reporting</h4>
-                    <p class="text-gray-600 text-center">Expert guidance on the principles of financial reporting and ethical considerations.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <img src="https://placehold.co/100x100/d53a3a/ffffff?text=AAA" alt="AAA" class="w-24 h-24 mx-auto mb-4 rounded-full">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2 text-center">AAA - Advanced Audit and Assurance</h4>
-                    <p class="text-gray-600 text-center">In-depth preparation for advanced audit concepts and professional judgment.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <img src="https://placehold.co/100x100/c53333/ffffff?text=ATX" alt="ATX" class="w-24 h-24 mx-auto mb-4 rounded-full">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2 text-center">ATX - Advanced Taxation</h4>
-                    <p class="text-gray-600 text-center">Comprehensive support for advanced tax planning and compliance.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <img src="https://placehold.co/100x100/b52e2e/ffffff?text=AA" alt="AA" class="w-24 h-24 mx-auto mb-4 rounded-full">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2 text-center">AA - Audit and Assurance</h4>
-                    <p class="text-gray-600 text-center">Foundational tutoring to help you understand the audit process and principles.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <img src="https://placehold.co/100x100/a52929/ffffff?text=FR" alt="FR" class="w-24 h-24 mx-auto mb-4 rounded-full">
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2 text-center">FR - Financial Reporting</h4>
-                    <p class="text-gray-600 text-center">Essential knowledge of financial accounting and reporting standards.</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- My Approach Section -->
-        <section id="approach" class="my-12 bg-white p-8 rounded-lg shadow-md">
-            <h3 class="text-3xl font-bold text-center text-gray-900 mb-6">My Tutoring Approach</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="w-12 h-12 mx-auto mb-4 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-xl">1</div>
-                    <h4 class="text-lg font-semibold mb-2">Conceptual Clarity</h4>
-                    <p class="text-gray-600 text-sm">I focus on ensuring you truly understand the core concepts, not just memorizing them. This is key to tackling any exam question.</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-12 h-12 mx-auto mb-4 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-xl">2</div>
-                    <h4 class="text-lg font-semibold mb-2">Practical Application</h4>
-                    <p class="text-gray-600 text-sm">My extensive experience in the field allows me to provide real-world examples that make the material relevant and easier to remember.</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-12 h-12 mx-auto mb-4 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-xl">3</div>
-                    <h4 class="text-lg font-semibold mb-2">Exam Technique</h4>
-                    <p class="text-gray-600 text-sm">Passing ACCA exams is about more than knowledge. I will coach you on the specific techniques needed to maximize your marks in every paper.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ACCA Logo Section -->
-        <section class="flex flex-col items-center my-12 p-8 bg-white rounded-lg shadow-md">
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">Dedicated to Your ACCA Success</h3>
-            <div class="w-48 h-auto mb-4">
-                <img src="https://www.accaglobal.com/content/dam/acca/global/partnerships/acca-global-logo.png" alt="ACCA Logo" class="rounded-lg shadow-lg">
-            </div>
-            <p class="text-center text-gray-600 max-w-lg">
-                As a tutor with extensive experience in the field, I am dedicated to helping you achieve your goals in the ACCA qualification.
-            </p>
-        </section>
-        
-        <!-- Pass Rates Section -->
-        <section id="pass-rates" class="my-12 bg-white p-8 rounded-lg shadow-md">
-            <h3 class="text-3xl font-bold text-center text-gray-900 mb-6">Student Pass Rates</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-red-600 text-white p-6 rounded-lg text-center shadow-md">
-                    <p class="text-4xl font-extrabold mb-2">75%</p>
-                    <p class="font-semibold text-lg">AAA Pass Rate</p>
-                </div>
-                <div class="bg-red-600 text-white p-6 rounded-lg text-center shadow-md">
-                    <p class="text-4xl font-extrabold mb-2">78%</p>
-                    <p class="font-semibold text-lg">SBR Pass Rate</p>
-                </div>
-                <div class="bg-red-600 text-white p-6 rounded-lg text-center shadow-md">
-                    <p class="text-4xl font-extrabold mb-2">72%</p>
-                    <p class="font-semibold text-lg">ATX Pass Rate</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Student Reviews Section -->
-        <section id="reviews" class="my-12">
-            <h3 class="text-3xl font-bold text-center text-gray-900 mb-6">Student Success Stories</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Fictional review card 1 -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="star-rating mb-2">★★★★★</div>
-                    <p class="text-gray-700 italic">
-                        "Lloyd's tutoring for **SBR** was instrumental in my success. His real-world experience and clear explanations made complex topics easy to understand. Highly recommend!"
-                    </p>
-                    <p class="mt-4 font-semibold text-gray-900">- Sarah M., ACCA Student</p>
-                </div>
-                <!-- Fictional review card 2 -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="star-rating mb-2">★★★★★</div>
-                    <p class="text-gray-700 italic">
-                        "I was struggling with **AAA**, but Lloyd's practical approach and excellent resources gave me the confidence I needed to pass. He is a fantastic tutor!"
-                    </p>
-                    <p class="mt-4 font-semibold text-gray-900">- Ben T., ACCA Student</p>
-                </div>
-                <!-- Fictional review card 3 -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="star-rating mb-2">★★★★☆</div>
-                    <p class="text-gray-700 italic">
-                        "The **ATX** classes were thorough and well-structured. Lloyd's dedication to his students is evident in every session. A great learning experience."
-                    </p>
-                    <p class="mt-4 font-semibold text-gray-900">- Chloe P., Online Student</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- FAQ Section -->
-        <section class="my-12">
-            <h3 class="text-3xl font-bold text-center text-gray-900 mb-6">Frequently Asked Questions</h3>
-            <div class="bg-white p-6 rounded-lg shadow-md space-y-4">
-                <div>
-                    <h4 class="font-semibold text-lg text-gray-900 mb-1">Do you offer one-on-one or group sessions?</h4>
-                    <p class="text-gray-600">I provide both one-on-one personalized tutoring and small group sessions. The format is flexible to meet your learning style and goals.</p>
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="bg-brand-primary text-white font-bold text-xl w-10 h-10 flex items-center justify-center rounded-lg">
+                    E
                 </div>
                 <div>
-                    <h4 class="font-semibold text-lg text-gray-900 mb-1">What is your pass rate for these papers?</h4>
-                    <p class="text-gray-600">My focus is on providing a comprehensive understanding of the material and effective exam techniques. Many of my students achieve excellent results, and I am proud of their dedication and hard work.</p>
-                </div>
-                <div>
-                    <h4 class="font-semibold text-lg text-gray-900 mb-1">How do I book a session with you?</h4>
-                    <p class="text-gray-600">You can easily reach me via the contact form on this page or by sending a message on WhatsApp. I will get back to you promptly to discuss your needs.</p>
+                    <h1 class="text-xl font-bold text-brand-dark tracking-tight leading-none">EXCEL</h1>
+                    <p class="text-xs text-gray-500 uppercase tracking-widest">Business School</p>
                 </div>
             </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="my-12 text-center p-8 bg-black text-white rounded-lg shadow-md">
-            <h3 class="text-3xl font-bold mb-4">Get in Touch with Lloyd</h3>
-            <p class="text-gray-300 mb-6">
-                Ready to take your ACCA studies to the next level? Fill out the form below or contact me directly.
-            </p>
             
-            <!-- Contact Form (Placeholder - requires backend for functionality) -->
-            <form class="space-y-4 max-w-lg mx-auto">
-                <div>
-                    <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg bg-gray-900 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-600">
-                </div>
-                <div>
-                    <input type="email" placeholder="Your Email" class="w-full p-3 rounded-lg bg-gray-900 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-600">
-                </div>
-                <div>
-                    <textarea placeholder="Your Message" rows="4" class="w-full p-3 rounded-lg bg-gray-900 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-600"></textarea>
-                </div>
-                <button type="submit" class="w-full bg-red-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-red-700 transition duration-300">
-                    Send Message
-                </button>
-            </form>
+            <div class="hidden md:flex space-x-8 font-medium text-gray-600">
+                <a href="#home" class="hover:text-brand-primary transition">Home</a>
+                <a href="#blueprint" class="hover:text-brand-primary transition">Why Us</a>
+                <a href="#tutors" class="hover:text-brand-primary transition">Tutors</a>
+                <a href="#pricing" class="hover:text-brand-primary transition">Fees</a>
+                <a href="#policies" class="hover:text-brand-primary transition">Policies</a>
+            </div>
 
-            <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 mt-8">
-                <a href="mailto:lloyd.shumba@excelbusinessschool.uk" class="flex items-center space-x-2 text-red-400 hover:text-red-500 transition duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.896 5.86a2 2 0 002.208 0L21 8M3 8a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V8z" />
-                    </svg>
-                    <span>lloyd.shumba@excelbusinessschool.uk</span>
-                </a>
-                <div class="flex flex-col space-y-2">
-                    <div class="flex items-center space-x-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 0C5.373 0 0 5.373 0 12c0 6.002 4.397 10.957 10.123 11.83a.994.994 0 001.18-.847c.18-.75-.06-1.554-.2-2.196-.13-.642-.26-1.39-.2-2.09.06-.7.3-1.4.52-2.1l-.04-.01c-.13-.37-.25-.76-.38-1.15-.13-.39-.24-.79-.37-1.19a.999.999 0 01-.13-.25c-.15-.43-.3-.87-.45-1.3l-.01-.02a.99.99 0 01-.22-.64c-.06-.31-.1-.63-.15-.95-.06-.32-.1-.65-.16-.97-.05-.31-.1-.63-.14-.95a.999.999 0 01-.2-.61c-.05-.31-.08-.63-.12-.95-.03-.32-.06-.65-.09-.97-.02-.32-.03-.65-.05-.97-.01-.32-.02-.65-.03-.97-.01-.32-.01-.65-.02-.97a.999.999 0 01-.03-.66c-.01-.33-.02-.66-.03-.99-.01-.32-.02-.65-.03-.97a.999.999 0 01-.01-.66c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99V0z" />
-                        </svg>
-                        <span>+260 975 899 280</span>
+            <a href="#contact" class="hidden md:inline-block bg-brand-accent hover:bg-red-700 text-white font-semibold py-2 px-6 rounded-full transition duration-300 shadow-lg shadow-red-500/30">
+                Enroll Now
+            </a>
+            
+            <button class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section id="home" class="relative bg-white overflow-hidden hero-pattern pt-16 pb-24 lg:pt-32">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2 z-10">
+                    <div class="inline-block bg-blue-50 text-brand-primary font-bold px-4 py-1 rounded-full text-sm mb-6 border border-blue-100">
+                        🚀 Admissions Open for 2026
                     </div>
-                    <div class="flex items-center space-x-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 0C5.373 0 0 5.373 0 12c0 6.002 4.397 10.957 10.123 11.83a.994.994 0 001.18-.847c.18-.75-.06-1.554-.2-2.196-.13-.642-.26-1.39-.2-2.09.06-.7.3-1.4.52-2.1l-.04-.01c-.13-.37-.25-.76-.38-1.15-.13-.39-.24-.79-.37-1.19a.999.999 0 01-.13-.25c-.15-.43-.3-.87-.45-1.3l-.01-.02a.99.99 0 01-.22-.64c-.06-.31-.1-.63-.15-.95-.06-.32-.1-.65-.16-.97-.05-.31-.1-.63-.14-.95a.999.999 0 01-.2-.61c-.05-.31-.08-.63-.12-.95-.03-.32-.06-.65-.09-.97-.02-.32-.03-.65-.05-.97-.01-.32-.02-.65-.03-.97-.01-.32-.01-.65-.02-.97a.999.999 0 01-.03-.66c-.01-.33-.02-.66-.03-.99-.01-.32-.02-.65-.03-.97a.999.999 0 01-.01-.66c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99v-.01c0-.33 0-.66 0-.99V0z" />
-                        </svg>
-                        <span>+263 783 776 685</span>
+                    <h1 class="text-5xl lg:text-7xl font-extrabold text-brand-dark mb-6 leading-tight">
+                        Designed to make <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-blue-400">you happy.</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 max-w-lg leading-relaxed">
+                        Join the elite circle of ACCA professionals. We don't just teach textbooks; we provide a blueprint for career success with flexible online learning.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#pricing" class="bg-brand-primary text-white font-bold py-4 px-8 rounded-lg shadow-xl hover:bg-blue-800 transition text-center">
+                            View Fee Structure
+                        </a>
+                        <a href="#tutors" class="bg-white text-brand-dark border border-gray-300 font-bold py-4 px-8 rounded-lg hover:bg-gray-50 transition text-center flex items-center justify-center gap-2">
+                            <i class="fas fa-play-circle text-brand-accent"></i> Meet The Tutors
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 relative">
+                    <div class="absolute -top-10 -right-10 w-72 h-72 bg-brand-accent opacity-10 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-10 -left-10 w-72 h-72 bg-brand-primary opacity-10 rounded-full blur-3xl"></div>
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Students Happy" class="rounded-2xl shadow-2xl relative z-10 border-4 border-white transform hover:scale-[1.01] transition duration-500">
+                    
+                    <div class="absolute bottom-10 -left-6 bg-white p-4 rounded-lg shadow-xl z-20 flex items-center gap-3 animate-bounce" style="animation-duration: 3s;">
+                        <div class="bg-green-100 p-2 rounded-full">
+                            <i class="fas fa-check text-green-600"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">Pass Rate</p>
+                            <p class="font-bold text-brand-dark">Top Tier</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
+    <section id="blueprint" class="py-20 bg-brand-dark text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-brand-accent to-brand-primary"></div>
 
-    <!-- Footer Section -->
-    <footer class="bg-gray-800 text-white text-center py-4 mt-8">
-        <p>&copy; 2024 Lloyd Shumba. All Rights Reserved.</p>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-brand-accent font-bold tracking-wider uppercase text-sm">The Blueprint</span>
+                <h2 class="text-3xl md:text-5xl font-bold mt-2">Why Choose Excel Business School?</h2>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Our teaching blueprint is designed with one goal: helping you qualify as soon as possible.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition border border-white/10">
+                    <div class="w-12 h-12 bg-brand-primary rounded-lg flex items-center justify-center mb-4 text-xl">🚀</div>
+                    <h3 class="font-bold text-xl mb-2">Fast-Track Qualification</h3>
+                    <p class="text-gray-400 text-sm">Passionate commitment to helping you qualify as soon as possible. We are your cheerleaders until you pass.</p>
+                </div>
+                 <div class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition border border-white/10">
+                    <div class="w-12 h-12 bg-brand-primary rounded-lg flex items-center justify-center mb-4 text-xl">📚</div>
+                    <h3 class="font-bold text-xl mb-2">Intensive Learning</h3>
+                    <p class="text-gray-400 text-sm">Lecture sessions 3x per week minimum (1.5hr - 3hr duration). Includes draft lecture notes to reinforce discussions.</p>
+                </div>
+                 <div class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition border border-white/10">
+                    <div class="w-12 h-12 bg-brand-primary rounded-lg flex items-center justify-center mb-4 text-xl">📝</div>
+                    <h3 class="font-bold text-xl mb-2">Technical Mastery</h3>
+                    <p class="text-gray-400 text-sm">We guide you through technical articles and facilitate extensive practice with past papers and marking schemes.</p>
+                </div>
+                <div class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition border border-white/10">
+                    <div class="w-12 h-12 bg-brand-accent rounded-lg flex items-center justify-center mb-4 text-xl">🎥</div>
+                    <h3 class="font-bold text-xl mb-2">Flexible Access</h3>
+                    <p class="text-gray-400 text-sm">Live Zoom lectures (usually 7pm-10pm). Missed a class? Access our <strong>online portal with pre-recorded lectures</strong> anytime.</p>
+                </div>
+                <div class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition border border-white/10">
+                    <div class="w-12 h-12 bg-brand-primary rounded-lg flex items-center justify-center mb-4 text-xl">🔍</div>
+                    <h3 class="font-bold text-xl mb-2">Personalized Feedback</h3>
+                    <p class="text-gray-400 text-sm">We dedicate time to review your mock exams and provide real-time feedback. Revision is an area where we do not compromise.</p>
+                </div>
+                <div class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition border border-white/10">
+                    <div class="w-12 h-12 bg-brand-primary rounded-lg flex items-center justify-center mb-4 text-xl">💼</div>
+                    <h3 class="font-bold text-xl mb-2">Real-World Skills</h3>
+                    <p class="text-gray-400 text-sm">Our students excel in careers. We currently work alongside former students who are now qualified. You can be next.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tutors" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-brand-dark">Meet Our Experts</h2>
+                <p class="text-gray-600 mt-4">Learn from those who have mastered the field.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+                <div class="md:w-2/5 relative">
+                    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lloyd Shumba" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-6">
+                        <h3 class="text-white font-bold text-2xl">Lloyd Shumba</h3>
+                        <p class="text-gray-300 text-sm">Lead Tutor & Mentor</p>
+                    </div>
+                </div>
+                <div class="md:w-3/5 p-8 md:p-12 flex flex-col justify-center">
+                    <div class="mb-6">
+                        <i class="fas fa-quote-left text-brand-primary text-4xl opacity-20"></i>
+                        <h4 class="text-2xl font-bold text-brand-dark mb-4">"I will be your cheerleader until you pass."</h4>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            With years of experience in SBR, AAA, and ATX, I focus on practical application and exam technique. My classes are designed for working professionals, held in the evenings via Zoom, ensuring you can balance work and study.
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Expert in International & UK Streams</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Proven track record of student success</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Dedicated mentorship approach</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-brand-dark">Our Courses</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="SBR" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">SBR - Strategic Business Reporting</h3>
+                        <p class="text-gray-600 text-sm mb-4">Master financial reporting principles and ethical considerations.</p>
+                        <span class="text-brand-primary font-bold text-sm">View Details &rarr;</span>
+                    </div>
+                </div>
+                <div class="group rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="AAA" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">AAA - Advanced Audit & Assurance</h3>
+                        <p class="text-gray-600 text-sm mb-4">Available in International (INT) and United Kingdom (UK) versions.</p>
+                        <span class="text-brand-primary font-bold text-sm">View Details &rarr;</span>
+                    </div>
+                </div>
+                <div class="group rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1586486855514-8c633cc6fd38?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="ATX" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">ATX - Advanced Taxation</h3>
+                        <p class="text-gray-600 text-sm mb-4">Specialized UK version focusing on advanced tax planning.</p>
+                        <span class="text-brand-primary font-bold text-sm">View Details &rarr;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="text-brand-accent font-bold tracking-wider uppercase text-sm">Investment</span>
+                <h2 class="text-4xl font-bold text-brand-dark mt-2">Course Fees & Plans</h2>
+                <p class="text-gray-600 mt-4">Transparent pricing. Prompt payments unlock exclusive discounts.</p>
+                <p class="text-xs text-gray-500 mt-2 italic">*Fees cover the entire exam period (Live sessions + Portal Access + Mentorship)</p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-8 justify-center">
+                
+                <div class="lg:w-1/3 bg-white rounded-2xl shadow-xl border-t-4 border-brand-accent overflow-hidden relative">
+                    <div class="absolute top-0 right-0 bg-brand-accent text-white text-xs font-bold px-3 py-1 rounded-bl-lg">BEST VALUE</div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-brand-dark mb-2">Prompt Payment</h3>
+                        <p class="text-gray-500 text-sm mb-6">One-time payment for maximum savings.</p>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="flex justify-between items-center border-b pb-2">
+                                <span class="font-medium">AAA (INT)</span>
+                                <span class="text-2xl font-bold text-brand-primary">$170</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-2">
+                                <span class="font-medium">AAA (UK)</span>
+                                <span class="text-2xl font-bold text-brand-primary">$185</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-2">
+                                <span class="font-medium">ATX (UK)</span>
+                                <span class="text-2xl font-bold text-brand-primary">$160</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-2">
+                                <span class="font-medium">SBR / Others</span>
+                                <span class="text-2xl font-bold text-brand-primary">$170</span>
+                            </div>
+                        </div>
+                        <ul class="text-sm text-gray-600 space-y-2 mb-8">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Discounted Rate Applied</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Full Course Access</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Notes & Recordings</li>
+                        </ul>
+                        <a href="#contact" class="block w-full bg-brand-accent text-white text-center font-bold py-3 rounded-lg hover:bg-red-700 transition">Pay Now</a>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/3 bg-white rounded-2xl shadow-xl border-t-4 border-brand-primary overflow-hidden">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-brand-dark mb-2">Installment Plan</h3>
+                        <p class="text-gray-500 text-sm mb-6">Flexible options. Split into 3 monthly payments.</p>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="flex justify-between items-center border-b pb-2">
+                                <span class="font-medium">AAA (INT)</span>
+                                <span class="text-xl font-bold text-gray-700">$180</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-2">
+                                <span class="font-medium">AAA (UK)</span>
+                                <span class="text-xl font-bold text-gray-700">$200</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-2">
+                                <span class="font-medium">ATX (UK)</span>
+                                <span class="text-xl font-bold text-gray-700">$175</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-2">
+                                <span class="font-medium">SBR / Others</span>
+                                <span class="text-xl font-bold text-gray-700">$185</span>
+                            </div>
+                        </div>
+                        <ul class="text-sm text-gray-600 space-y-2 mb-8">
+                            <li class="flex items-center"><i class="fas fa-check text-brand-primary mr-2"></i> 3 Monthly Installments</li>
+                            <li class="flex items-center"><i class="fas fa-check text-brand-primary mr-2"></i> Easier on Cashflow</li>
+                            <li class="flex items-center"><i class="fas fa-check text-brand-primary mr-2"></i> Full Course Access</li>
+                        </ul>
+                        <a href="#contact" class="block w-full bg-brand-primary text-white text-center font-bold py-3 rounded-lg hover:bg-blue-900 transition">Choose Plan</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-brand-dark text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Success Stories</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic mb-4">"Lloyd's real-world examples in AAA made the difference. I didn't just memorize; I understood. Passed on my first attempt!"</p>
+                    <p class="font-bold">- Sarah M.</p>
+                </div>
+                <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic mb-4">"The Zoom classes are perfect for my work schedule. The recordings helped me catch up when I had overtime. Excellent structure."</p>
+                    <p class="font-bold">- David K.</p>
+                </div>
+                <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="italic mb-4">"ATX is a beast, but Mr. Shumba simplified it. The draft notes are gold. Highly recommend Excel Business School."</p>
+                    <p class="font-bold">- Tariro C.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="policies" class="py-20 bg-gray-100 text-sm">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-brand-dark mb-6">Frequently Asked Questions</h3>
+                    <div class="space-y-4">
+                        <details class="bg-white p-4 rounded-lg shadow-sm cursor-pointer">
+                            <summary class="font-semibold">How are classes delivered?</summary>
+                            <p class="mt-2 text-gray-600">Classes are held online via Zoom Workplace. Recordings are available on our portal if you miss a session.</p>
+                        </details>
+                        <details class="bg-white p-4 rounded-lg shadow-sm cursor-pointer">
+                            <summary class="font-semibold">Do I need to buy textbooks?</summary>
+                            <p class="mt-2 text-gray-600">No! Textbooks are often outdated. We provide concise, simplified notes and guide you through technical articles.</p>
+                        </details>
+                        <details class="bg-white p-4 rounded-lg shadow-sm cursor-pointer">
+                            <summary class="font-semibold">What is the schedule?</summary>
+                            <p class="mt-2 text-gray-600">We design the schedule for working professionals. Classes mostly start at 7pm and end around 10pm. Minimum 3 sessions per subject per week.</p>
+                        </details>
+                    </div>
+                </div>
+                
+                <div class="space-y-8">
+                    <div>
+                        <h4 class="font-bold text-brand-dark mb-2">Terms & Conditions</h4>
+                        <p class="text-gray-600">By enrolling in Excel Business School, students agree to conduct themselves professionally during online sessions. Sharing of login credentials or course materials is strictly prohibited and will result in immediate termination of access.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-brand-dark mb-2">Refund Policy</h4>
+                        <p class="text-gray-600">We offer a satisfaction guarantee. However, due to the digital nature of our content, refunds are only processed if requested within 7 days of the first lecture, provided no course materials have been downloaded. After this period, no refunds can be issued.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-brand-dark mb-2">Privacy Policy</h4>
+                        <p class="text-gray-600">We respect your privacy. Your contact details (email, phone) are used solely for course communication and WhatsApp support groups. We do not sell your data to third parties.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="bg-brand-primary rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
+                <div class="p-10 md:w-1/2 text-white">
+                    <h2 class="text-3xl font-bold mb-4">Get Started Today</h2>
+                    <p class="mb-8 opacity-90">Ready to pass your exams? Send us a message to book your spot or ask a question.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-brand-accent"></i>
+                            <span>lloyd.shumba@excelbusinessschool.uk</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fab fa-whatsapp text-green-400 text-xl"></i>
+                            <span>+260 975 899 280</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fab fa-whatsapp text-green-400 text-xl"></i>
+                            <span>+263 783 776 685</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-10 md:w-1/2">
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Name</label>
+                            <input type="text" class="w-full mt-1 p-3 border rounded-lg focus:ring-2 focus:ring-brand-primary outline-none" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" class="w-full mt-1 p-3 border rounded-lg focus:ring-2 focus:ring-brand-primary outline-none" placeholder="john@example.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Course Interest</label>
+                            <select class="w-full mt-1 p-3 border rounded-lg focus:ring-2 focus:ring-brand-primary outline-none">
+                                <option>Select a course...</option>
+                                <option>SBR - Strategic Business Reporting</option>
+                                <option>AAA - Advanced Audit & Assurance</option>
+                                <option>ATX - Advanced Taxation</option>
+                            </select>
+                        </div>
+                        <button class="w-full bg-brand-dark text-white font-bold py-3 rounded-lg hover:bg-gray-800 transition">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-12 text-sm">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-4">
+                <span class="text-2xl font-bold text-white tracking-tight">EXCEL</span>
+                <span class="text-xs uppercase ml-2">Business School</span>
+            </div>
+            <p class="mb-6">&copy; 2024 Excel Business School. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition">Terms of Service</a>
+                <a href="#" class="hover:text-white transition">Refund Policy</a>
+            </div>
+        </div>
     </footer>
 
 </body>
 </html>
-
