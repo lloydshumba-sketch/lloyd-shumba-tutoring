@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal | Excel Business School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#2D0A0A',    // Very Dark Maroon
+                            primary: '#691818', // Main Logo Maroon
+                            accent: '#C5A059',  // Logo Gold
+                            light: '#FDFBF7'    // Warm Paper White
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-light text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="excel-logo.png" alt="Excel Business School" class="h-12 md:h-16 w-auto object-contain">
+            </a>
+            
+            <div class="flex space-x-4 items-center">
+                <a href="index.html" class="text-gray-600 font-medium hover:text-brand-primary transition hidden md:block">
+                    <i class="fas fa-arrow-left mr-2"></i> Back to Home
+                </a>
+                <span class="bg-brand-primary/10 text-brand-primary px-4 py-2 rounded-full text-sm font-bold border border-brand-primary/20">
+                    <i class="fas fa-lock mr-2"></i> Student Portal
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex-grow flex items-center justify-center p-4 md:p-8">
+        <div class="bg-white rounded-3xl shadow-2xl overflow-hidden max-w-5xl w-full flex flex-col md:flex-row border border-gray-100 min-h-[600px]">
+            
+            <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                <div class="mb-8">
+                    <h1 class="text-3xl font-bold text-brand-dark mb-2">Welcome Back</h1>
+                    <p class="text-gray-500">Please enter your details to access recorded lectures and notes.</p>
+                </div>
+
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Student Email</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                            <input type="email" class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none transition bg-brand-light" placeholder="student@excelbusinessschool.uk">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Password</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                            <input type="password" class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none transition bg-brand-light" placeholder="••••••••">
+                        </div>
+                        <div class="flex justify-between items-center mt-2 text-sm">
+                            <label class="flex items-center text-gray-600 cursor-pointer">
+                                <input type="checkbox" class="mr-2 rounded text-brand-primary focus:ring-brand-primary"> Remember me
+                            </label>
+                            <a href="#" class="text-brand-primary hover:text-brand-accent font-semibold transition">Forgot Password?</a>
+                        </div>
+                    </div>
+
+                    <button type="button" class="w-full bg-brand-primary text-white font-bold py-4 rounded-lg hover:bg-brand-dark transition shadow-lg transform active:scale-95 border-b-4 border-brand-dark">
+                        Access Dashboard <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </form>
+
+                <div class="mt-8 text-center border-t border-gray-100 pt-6">
+                    <p class="text-gray-600 text-sm">
+                        Don't have an account yet? 
+                        <a href="index.html#contact" class="text-brand-primary font-bold hover:text-brand-accent transition">Contact Administration</a>
+                    </p>
+                    <p class="text-xs text-gray-400 mt-2">Access is granted upon course enrollment.</p>
+                </div>
+            </div>
+
+            <div class="md:w-1/2 bg-brand-dark text-white p-8 md:p-12 flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-brand-accent opacity-10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+                <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand-primary opacity-20 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
+                
+                <div class="relative z-10">
+                    <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-6 backdrop-blur-sm border border-white/10">
+                        <i class="fas fa-university text-3xl text-brand-accent"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold mb-4">Your Gateway to Success</h2>
+                    <p class="text-gray-300 leading-relaxed">
+                        Access your comprehensive learning materials, recorded sessions, and exam techniques anytime, anywhere.
+                    </p>
+                </div>
+
+                <div class="relative z-10 space-y-4 mt-8">
+                    <div class="flex items-center space-x-4 bg-white/5 p-4 rounded-xl backdrop-blur-sm border border-white/5">
+                        <div class="w-10 h-10 bg-brand-primary rounded-full flex items-center justify-center text-brand-accent">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Recorded Lectures</h4>
+                            <p class="text-xs text-gray-400">Catch up on missed Zoom sessions</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4 bg-white/5 p-4 rounded-xl backdrop-blur-sm border border-white/5">
+                        <div class="w-10 h-10 bg-brand-primary rounded-full flex items-center justify-center text-brand-accent">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Concise Notes</h4>
+                            <p class="text-xs text-gray-400">Download summarized study materials</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4 bg-white/5 p-4 rounded-xl backdrop-blur-sm border border-white/5">
+                        <div class="w-10 h-10 bg-brand-primary rounded-full flex items-center justify-center text-brand-accent">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Mock Exams</h4>
+                            <p class="text-xs text-gray-400">Submit papers for marking</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-white border-t border-gray-200 py-6 text-center text-sm text-gray-500">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2024 Excel Business School. All Rights Reserved.</p>
+            <div class="mt-2 space-x-4">
+                <a href="#" class="hover:text-brand-primary">Privacy Policy</a>
+                <a href="#" class="hover:text-brand-primary">Terms of Service</a>
+                <a href="#" class="hover:text-brand-primary">Support</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
