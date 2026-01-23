@@ -24,18 +24,21 @@
                     },
                     colors: {
                         brand: {
-                            dark: '#2D0A0A',    
-                            primary: '#691818', 
-                            accent: '#C5A059',  
-                            light: '#F9F5F0',   
+                            dark: '#2D0A0A',    // Executive Maroon
+                            primary: '#691818', // Heritage Maroon
+                            accent: '#C5A059',  // Gold Leaf
+                            light: '#F9F5F0',   // Cream White
                             gray: '#F3F4F6'
                         }
                     },
                     spacing: {
                         '30': '7.5rem',
                     },
+                    backgroundImage: {
+                        'grid-pattern': "linear-gradient(to right, #f0f0f0 1px, transparent 1px), linear-gradient(to bottom, #f0f0f0 1px, transparent 1px)",
+                    },
                     boxShadow: {
-                        'gold': '0 4px 20px -2px rgba(197, 160, 89, 0.4)',
+                        'gold': '0 10px 40px -10px rgba(197, 160, 89, 0.5)',
                         'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
                     }
                 }
@@ -48,7 +51,7 @@
         a, button, .cursor-pointer { cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24'><path fill='%23691818' stroke='%23C5A059' stroke-width='1.5' d='M12,2c-0.6,0-1,0.4-1,1v6h-2V6c0-0.6-0.4-1-1-1s-1,0.4-1,1v3H6V7c0-0.6-0.4-1-1-1S4,6.4,4,7v7.5c0,3.6,2.9,6.5,6.5,6.5s6.5-2.9,6.5-6.5V9c0-0.6-0.4-1-1-1s-1,0.4-1,1v4h-2V3C13,2.4,12.6,2,12,2z'/></svg>") 9 2, pointer; }
 
         /* GLASS MENU */
-        .glass-menu { background: rgba(45, 10, 10, 0.95); backdrop-filter: blur(20px); }
+        .glass-menu { background: rgba(45, 10, 10, 0.98); backdrop-filter: blur(20px); }
         .glass-btn { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.15); }
 
         /* VIDEO PLAYER */
@@ -67,7 +70,7 @@
         .card-hover-effect:hover { transform: translateY(-5px); box-shadow: 0 20px 40px -5px rgba(105, 24, 24, 0.1); transition: all 0.4s ease; }
     </style>
 </head>
-<body class="bg-brand-light text-slate-800 antialiased font-sans overflow-x-hidden relative">
+<body class="bg-white text-slate-800 antialiased font-sans overflow-x-hidden relative">
 
     <div id="preloader" class="fixed inset-0 bg-white z-[9999] flex items-center justify-center transition-opacity duration-500">
         <div class="flex flex-col items-center justify-center space-y-6">
@@ -84,10 +87,10 @@
         <i class="fab fa-whatsapp text-3xl"></i>
     </a>
 
-    <nav class="bg-brand-dark/95 backdrop-blur-md sticky top-0 z-50 border-b border-brand-accent/20 h-20 flex items-center text-white">
+    <nav class="bg-brand-dark sticky top-0 z-50 border-b border-brand-accent/20 h-20 flex items-center text-white shadow-lg">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-3 group shrink-0">
-                <img src="excel-logo.png" alt="Excel Business School" class="h-12 w-auto object-contain bg-white/10 rounded px-2">
+                <img src="excel-logo.png" alt="Excel Business School" class="h-12 w-auto object-contain brightness-0 invert">
             </a>
             
             <div class="hidden lg:flex items-center space-x-8 text-[14px] font-bold tracking-wide">
@@ -137,70 +140,75 @@
         </div>
     </div>
 
-    <section id="home" class="relative h-[85vh] flex items-center justify-center overflow-hidden bg-brand-dark">
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1600&auto=format&fit=crop" class="w-full h-full object-cover opacity-50">
-            <div class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/80 to-transparent"></div>
-        </div>
+    <section id="home" class="relative pt-16 pb-24 lg:pt-32 lg:pb-32 overflow-hidden bg-white">
+        <div class="absolute inset-0 bg-grid-pattern bg-[length:40px_40px] opacity-[0.05]"></div>
 
-        <div class="container mx-auto px-4 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="text-left">
-                <div class="inline-flex items-center gap-2 px-4 py-2 bg-brand-accent/10 border border-brand-accent/30 rounded-full mb-6">
-                    <span class="w-2 h-2 bg-brand-accent rounded-full animate-pulse"></span>
-                    <span class="text-brand-accent text-xs font-bold uppercase tracking-widest">Global ACCA Provider</span>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <span class="inline-block py-1 px-4 rounded-full bg-brand-light border border-brand-primary/20 text-brand-primary text-xs font-bold tracking-widest uppercase mb-6">
+                        Top Rated ACCA Tuition
+                    </span>
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-black font-display text-brand-dark mb-6 leading-tight">
+                        Forging the Next Generation of <br>
+                        <span class="text-brand-primary">Finance Leaders.</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
+                        At Excel Business School, we don't just teach the syllabus; we teach the profession. Join a global community achieving a <strong>98% pass rate</strong> through expert mentorship.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#contact" class="bg-brand-primary text-white font-bold py-4 px-10 rounded-lg shadow-gold hover:bg-brand-dark transition text-center w-full sm:w-auto">
+                            Start Your Journey
+                        </a>
+                        <a href="#sample-lectures" class="bg-white border-2 border-brand-dark text-brand-dark font-bold py-4 px-10 rounded-lg hover:bg-brand-dark hover:text-white transition text-center w-full sm:w-auto flex items-center justify-center gap-2">
+                            <i class="fas fa-play"></i> Watch Sample
+                        </a>
+                    </div>
                 </div>
                 
-                <h1 class="text-5xl md:text-7xl font-black font-display text-white mb-6 leading-tight">
-                    Forging the Next Generation of <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-yellow-200">Finance Leaders.</span>
-                </h1>
-                
-                <p class="text-lg text-gray-300 mb-10 max-w-xl leading-relaxed">
-                    At Excel Business School, we maximize your chances of exam success. Join a community that values application over theory and creates professional accountants, not just auditors.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#contact" class="bg-brand-accent text-brand-dark font-black py-4 px-8 rounded shadow-gold hover:bg-white transition flex items-center justify-center gap-2">
-                        Start Your Journey <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#sample-lectures" class="bg-white/10 backdrop-blur border border-white/20 text-white font-bold py-4 px-8 rounded hover:bg-white hover:text-brand-dark transition flex items-center justify-center gap-2">
-                        <i class="fas fa-play"></i> View Samples
-                    </a>
+                <div class="lg:w-1/2 w-full relative">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl h-[450px] lg:h-[600px] border-[10px] border-white ring-1 ring-gray-100">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Diverse Students" 
+                             class="w-full h-full object-cover">
+                        
+                        <div class="absolute bottom-10 -left-6 bg-brand-accent text-brand-dark p-6 rounded-lg shadow-xl hidden md:block">
+                            <p class="font-black font-display text-xl">#1 Choice</p>
+                            <p class="text-sm font-bold opacity-80">For Professional Accounting</p>
+                        </div>
+                    </div>
+                    <div class="absolute -top-10 -right-10 w-64 h-64 bg-brand-primary/5 rounded-full blur-3xl -z-10"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="bg-white text-brand-dark border-b border-gray-100 relative z-20 shadow-sm">
+    <div class="bg-brand-gray border-y border-gray-200">
         <div class="container mx-auto px-4">
-            <div class="flex flex-wrap justify-between items-center py-8 gap-6 text-center lg:text-left">
-                <div class="flex items-center gap-4 mx-auto lg:mx-0">
-                    <div class="w-12 h-12 bg-brand-light rounded-full flex items-center justify-center text-brand-primary text-xl font-bold"><i class="fas fa-check-circle"></i></div>
-                    <div>
-                        <p class="text-lg font-black font-display text-brand-dark">Proven Exam Success</p>
-                        <p class="text-xs text-gray-500 uppercase tracking-widest">Consistently High Pass Rates</p>
+            <div class="flex flex-wrap justify-around items-center py-8 gap-6 text-center">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-brand-primary text-xl font-bold shadow-sm"><i class="fas fa-check-circle"></i></div>
+                    <div class="text-left">
+                        <p class="text-lg font-black font-display text-brand-dark">Proven Success</p>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest">High Pass Rates</p>
                     </div>
                 </div>
-                <div class="hidden lg:block w-px h-12 bg-gray-200"></div>
-                <div class="flex items-center gap-4 mx-auto lg:mx-0">
-                    <div class="w-12 h-12 bg-brand-light rounded-full flex items-center justify-center text-brand-primary text-xl font-bold"><i class="fas fa-user-graduate"></i></div>
-                    <div>
+                <div class="hidden lg:block w-px h-12 bg-gray-300"></div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-brand-primary text-xl font-bold shadow-sm"><i class="fas fa-user-graduate"></i></div>
+                    <div class="text-left">
                         <p class="text-lg font-black font-display text-brand-dark">1500+ Alumni</p>
                         <p class="text-xs text-gray-500 uppercase tracking-widest">Global Network</p>
                     </div>
                 </div>
-                <div class="hidden lg:block w-px h-12 bg-gray-200"></div>
-                <div class="flex items-center gap-4 mx-auto lg:mx-0">
-                    <div class="w-12 h-12 bg-brand-light rounded-full flex items-center justify-center text-brand-primary text-xl font-bold"><i class="fas fa-globe"></i></div>
-                    <div>
-                        <p class="text-lg font-black font-display text-brand-dark">International Reach</p>
+                <div class="hidden lg:block w-px h-12 bg-gray-300"></div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-brand-primary text-xl font-bold shadow-sm"><i class="fas fa-globe"></i></div>
+                    <div class="text-left">
+                        <p class="text-lg font-black font-display text-brand-dark">International</p>
                         <p class="text-xs text-gray-500 uppercase tracking-widest">Studying from 4+ Countries</p>
                     </div>
-                </div>
-                <div class="hidden lg:flex">
-                    <a href="#contact" class="text-brand-primary font-black hover:text-brand-dark transition flex items-center gap-2 border-b-2 border-brand-primary pb-1">
-                        Enroll for March 2026 <i class="fas fa-long-arrow-alt-right"></i>
-                    </a>
                 </div>
             </div>
         </div>
@@ -209,12 +217,12 @@
     <section id="about" class="py-24 bg-white relative">
         <div class="container mx-auto px-4 max-w-4xl text-center relative z-10">
             <span class="text-brand-accent font-black tracking-widest uppercase text-sm font-display">Our Mission</span>
-            <h2 class="text-3xl md:text-5xl font-black mt-4 text-brand-dark font-display mb-10 leading-tight">More Than Just a Pass Mark</h2>
+            <h2 class="text-3xl md:text-5xl font-black mt-4 text-brand-dark font-display mb-10 leading-tight">Creating Professional Accountants</h2>
             <p class="text-2xl text-gray-700 leading-relaxed mb-8 font-light italic">
-                "We cultivate professional accountants, not just auditors. We exist to maximize your success in passing ACCA exams through strategic understanding."
+                "We don't just train auditors. We create well-rounded professional accountants. Our mission is to maximize your success in passing ACCA exams through strategic understanding."
             </p>
             <p class="text-lg text-gray-500 leading-relaxed">
-                By focusing on the "Why" and "How," we bridge the gap between technical knowledge and professional application.
+                By focusing on application and technique, we bridge the gap between the syllabus and the exam.
             </p>
         </div>
     </section>
@@ -269,7 +277,7 @@
                     </div>
                     <div class="p-6 border-t border-gray-100 bg-gray-50 group-hover:bg-white transition">
                         <a href="#contact" class="flex items-center justify-between w-full font-bold text-brand-primary hover:text-brand-dark transition group-hover:translate-x-2 duration-300">
-                            View Details <i class="fas fa-arrow-right"></i>
+                            View Details <i class="fas fa-plus"></i>
                         </a>
                     </div>
                 </div>
@@ -291,7 +299,7 @@
                     </div>
                     <div class="p-6 border-t border-gray-100 bg-gray-50 group-hover:bg-white transition">
                         <a href="#contact" class="flex items-center justify-between w-full font-bold text-brand-primary hover:text-brand-dark transition group-hover:translate-x-2 duration-300">
-                            View Details <i class="fas fa-arrow-right"></i>
+                            View Details <i class="fas fa-plus"></i>
                         </a>
                     </div>
                 </div>
@@ -378,7 +386,7 @@
                     <span class="text-brand-accent font-black tracking-widest uppercase text-sm font-display">World-Class Faculty</span>
                     <h2 class="text-4xl md:text-5xl font-black mt-4 text-brand-dark font-display mb-8 leading-tight">Expert Guidance.<br>Proven Results.</h2>
                     <p class="text-lg text-gray-600 leading-relaxed mb-8">
-                        Our faculty is comprised of experienced professionals dedicated to your success. Leading the department is <strong>Lloyd Shumba</strong>, an Expert Tutor and professional trainer with over a decade of experience in forensic auditing and financial reporting.
+                        Our faculty is comprised of experienced professionals dedicated to your success. Leading the department is <strong>Lloyd Shumba</strong>, an expert tutor and professional trainer with over a decade of experience in forensic auditing and financial reporting.
                     </p>
                     <div class="border-l-4 border-brand-accent pl-6 mb-8">
                         <p class="text-xl text-brand-dark italic font-serif">"My goal is to make the complex simple."</p>
