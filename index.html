@@ -118,7 +118,7 @@
 </head>
 <body class="bg-brand-light text-slate-800 antialiased font-sans overflow-x-hidden relative">
 
-    <div id="preloader" class="fixed inset-0 bg-white z-[9999] flex items-center justify-center transition-opacity duration-300">
+    <div id="preloader" class="fixed inset-0 bg-white z-[9999] flex items-center justify-center transition-opacity duration-500">
         <div class="flex flex-col items-center justify-center space-y-6">
             <div class="flex space-x-4">
                 <div class="w-3 h-3 bg-brand-primary rounded-full animate-bounce"></div>
@@ -632,11 +632,13 @@
     </footer>
 
     <script>
-        // PRELOADER FADE OUT
+        // PRELOADER FADE OUT (2.5s DELAY)
         window.addEventListener('load', () => {
             const preloader = document.getElementById('preloader');
-            preloader.style.opacity = '0';
-            setTimeout(() => preloader.style.display = 'none', 300);
+            setTimeout(() => {
+                preloader.style.opacity = '0';
+                setTimeout(() => preloader.style.display = 'none', 500);
+            }, 2500);
         });
 
         // MOBILE MENU TOGGLE
