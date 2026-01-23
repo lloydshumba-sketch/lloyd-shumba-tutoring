@@ -29,14 +29,8 @@
                             gray: '#F3F4F6'
                         }
                     },
-                    animation: {
-                        'fade-out': 'fadeOut 0.5s ease-out forwards',
-                    },
-                    keyframes: {
-                        fadeOut: {
-                            '0%': { opacity: '1' },
-                            '100%': { opacity: '0', visibility: 'hidden' },
-                        }
+                    backgroundImage: {
+                        'pattern': "url('https://www.transparenttextures.com/patterns/cubes.png')",
                     }
                 }
             }
@@ -54,6 +48,7 @@
         .modern-gradient {
             background: linear-gradient(135deg, #fdfbf7 0%, #fff 100%);
         }
+        
         .card-hover-effect {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -61,6 +56,7 @@
             transform: translateY(-5px);
             box-shadow: 0 20px 40px -5px rgba(105, 24, 24, 0.1);
         }
+
         .video-container {
             position: relative;
             overflow: hidden;
@@ -83,11 +79,25 @@
             to { transform: translateY(-15px); opacity: 1; }
         }
 
-        /* FAQ TRANSITION */
-        details > summary { list-style: none; }
-        details > summary::-webkit-details-marker { display: none; }
-        details[open] summary ~ * { animation: sweep .3s ease-in-out; }
-        @keyframes sweep { 0% {opacity: 0; transform: translateY(-10px)} 100% {opacity: 1; transform: translateY(0)} }
+        /* MENU ANIMATION */
+        .mobile-menu-enter {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        .mobile-menu-enter-active {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 300ms, transform 300ms;
+        }
+        .mobile-menu-exit {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .mobile-menu-exit-active {
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 300ms, transform 300ms;
+        }
     </style>
 </head>
 <body class="bg-brand-light text-slate-800 antialiased font-sans overflow-x-hidden relative">
@@ -131,18 +141,8 @@
             <div class="hidden lg:flex items-center space-x-8 text-[15px] font-medium text-slate-700">
                 <a href="#home" class="hover:text-brand-primary transition-colors">Home</a>
                 <a href="#about" class="hover:text-brand-primary transition-colors">About Us</a>
-                <a href="#services" class="hover:text-brand-primary transition-colors">Services</a>
+                <a href="#courses" class="hover:text-brand-primary transition-colors">Courses</a>
                 
-                <div class="relative group py-4">
-                    <button class="flex items-center space-x-1 hover:text-brand-primary transition-colors"><span>Courses</span><i class="fas fa-chevron-down text-xs opacity-50"></i></button>
-                    <div class="hidden group-hover:block absolute top-full left-0 w-96 bg-white shadow-xl rounded-xl border border-gray-100 p-2 z-50 mt-1">
-                        <div class="px-4 py-2 text-xs font-bold text-gray-400 uppercase tracking-wider">Professional Level</div>
-                        <a href="#courses" class="block px-4 py-3 rounded-lg hover:bg-brand-light hover:text-brand-primary text-sm transition">AAA - Advanced Audit and Assurance (INT & UK)</a>
-                        <a href="#courses" class="block px-4 py-3 rounded-lg hover:bg-brand-light hover:text-brand-primary text-sm transition">ATX - Advanced Taxation (UK)</a>
-                        <a href="#courses" class="block px-4 py-3 rounded-lg hover:bg-brand-light hover:text-brand-primary text-sm transition">SBR - Strategic Business Reporting (INT and UK)</a>
-                    </div>
-                </div>
-
                 <div class="relative group py-4">
                     <button class="flex items-center space-x-1 hover:text-brand-primary transition-colors"><span>Students</span><i class="fas fa-chevron-down text-xs opacity-50"></i></button>
                     <div class="hidden group-hover:block absolute top-full left-0 w-56 bg-white shadow-xl rounded-xl border border-gray-100 p-2 z-50 mt-1">
@@ -153,7 +153,7 @@
                     </div>
                 </div>
 
-                <a href="#contact" class="hover:text-brand-primary transition-colors">Contact Us</a>
+                <a href="#contact" class="hover:text-brand-primary transition-colors">Contact</a>
 
                 <button onclick="document.getElementById('search-modal').classList.remove('hidden')" class="w-8 h-8 rounded-full bg-gray-100 hover:bg-brand-light text-brand-dark flex items-center justify-center transition">
                     <i class="fas fa-search"></i>
@@ -164,33 +164,34 @@
                 <a href="#contact" class="bg-brand-dark hover:bg-brand-primary text-white font-semibold text-sm py-3 px-6 rounded-full transition duration-300 shadow-lg shadow-brand-dark/20">Apply Now</a>
             </div>
             
-            <button id="mobile-menu-btn" class="lg:hidden text-brand-primary text-2xl focus:outline-none p-2"><i class="fas fa-bars"></i></button>
-        </div>
-
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full left-0 top-full shadow-lg max-h-[80vh] overflow-y-auto">
-            <div class="flex flex-col p-4 space-y-4">
-                <a href="#home" class="text-sm font-semibold text-gray-700">Home</a>
-                <a href="#about" class="text-sm font-semibold text-gray-700">About Us</a>
-                <a href="#services" class="text-sm font-semibold text-gray-700">Services</a>
-                
-                <div class="border-t border-gray-100 pt-2">
-                    <p class="text-xs font-bold text-gray-400 uppercase mb-2">Courses</p>
-                    <a href="#courses" class="block text-sm text-gray-600 py-2">AAA - Audit</a>
-                    <a href="#courses" class="block text-sm text-gray-600 py-2">ATX - Taxation</a>
-                    <a href="#courses" class="block text-sm text-gray-600 py-2">SBR - Reporting</a>
-                </div>
-
-                <div class="border-t border-gray-100 pt-2">
-                    <p class="text-xs font-bold text-gray-400 uppercase mb-2">Student Hub</p>
-                    <a href="timetables.html" class="block text-sm text-brand-primary font-bold py-2">📅 View Timetables</a>
-                    <a href="portal.html" class="block text-sm text-gray-600 py-2">🔐 Student Portal</a>
-                    <a href="#blueprint" class="block text-sm text-gray-600 py-2">📘 Study Blueprint</a>
-                </div>
-
-                <a href="#contact" class="bg-brand-primary text-white text-center py-3 rounded-lg font-bold mt-4">Apply Now</a>
-            </div>
+            <button id="mobile-menu-btn" class="lg:hidden text-brand-dark text-2xl focus:outline-none p-2 hover:bg-brand-light rounded-full transition">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-brand-dark/98 backdrop-blur-xl z-[90] hidden transition-all duration-300 flex flex-col items-center justify-center text-center">
+        <button id="close-menu-btn" class="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 hover:bg-brand-accent text-white flex items-center justify-center transition duration-300">
+            <i class="fas fa-times text-xl"></i>
+        </button>
+
+        <div class="space-y-8 animate-fade-in-up">
+            <a href="#home" class="block text-4xl font-serif text-white hover:text-brand-accent transition duration-300" onclick="toggleMenu()">Home</a>
+            <a href="#about" class="block text-4xl font-serif text-white/90 hover:text-brand-accent transition duration-300" onclick="toggleMenu()">About Us</a>
+            <a href="#courses" class="block text-4xl font-serif text-white/90 hover:text-brand-accent transition duration-300" onclick="toggleMenu()">Courses</a>
+            <a href="portal.html" class="block text-4xl font-serif text-brand-accent hover:text-white transition duration-300"><i class="fas fa-lock text-2xl mr-2 align-middle"></i>Portal</a>
+            <a href="#contact" class="block text-4xl font-serif text-white/90 hover:text-brand-accent transition duration-300" onclick="toggleMenu()">Contact</a>
+        </div>
+
+        <div class="mt-12 flex space-x-6">
+            <a href="https://wa.me/260975899280" class="w-12 h-12 rounded-full border border-brand-accent text-brand-accent flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition"><i class="fab fa-whatsapp text-xl"></i></a>
+            <a href="mailto:lloyd.shumba@excelbusinessschool.uk" class="w-12 h-12 rounded-full border border-brand-accent text-brand-accent flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition"><i class="fas fa-envelope text-xl"></i></a>
+        </div>
+        
+        <div class="absolute bottom-10 text-white/20 text-xs tracking-widest uppercase">
+            Excel Business School
+        </div>
+    </div>
 
     <section id="home" class="relative pt-12 pb-16 md:pt-20 md:pb-20 overflow-hidden modern-gradient">
         <div class="container mx-auto px-4 relative z-10">
@@ -210,7 +211,7 @@
                         <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                             <i class="fas fa-search text-gray-400"></i>
                         </div>
-                        <input type="text" id="hero-search" placeholder="Find courses, topics, or timetables..." 
+                        <input type="text" id="hero-search" placeholder="Find courses, lecturers, or timetables..." 
                                class="block w-full pl-10 pr-4 py-4 border border-gray-200 rounded-xl leading-5 bg-white placeholder-gray-400 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent sm:text-sm shadow-lg shadow-brand-dark/5"
                                onkeyup="if(event.key === 'Enter') handleSearch()">
                         <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
@@ -236,6 +237,30 @@
             </div>
         </div>
     </section>
+
+    <div class="bg-brand-dark py-12 relative overflow-hidden border-t-4 border-brand-accent">
+        <div class="absolute inset-0 opacity-5" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg'); background-size: cover; background-position: center;"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
+                <div class="p-4">
+                    <div class="text-4xl md:text-5xl font-bold text-white mb-2 counter" data-target="98">0</div>
+                    <p class="text-brand-accent text-xs font-bold uppercase tracking-widest">% Pass Rate</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl md:text-5xl font-bold text-white mb-2 flex justify-center items-baseline"><span class="counter" data-target="1500">0</span><span>+</span></div>
+                    <p class="text-brand-accent text-xs font-bold uppercase tracking-widest">Graduates</p>
+                </div>
+                <div class="p-4">
+                    <div class="flex flex-col items-center justify-center">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="fas fa-globe-africa text-3xl text-brand-primary"></i>
+                            <span class="text-2xl font-bold text-white font-serif">Global Reach</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section id="about" class="py-20 bg-white relative overflow-hidden">
         <div class="absolute top-0 right-0 w-64 h-64 bg-brand-accent/5 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3"></div>
@@ -290,39 +315,38 @@
         </div>
     </section>
 
-    <section id="services" class="py-16 md:py-24 bg-white">
+    <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-12 md:mb-16">
-                <span class="text-brand-accent font-bold tracking-wider uppercase text-xs">Our Expertise</span>
-                <h2 class="text-3xl md:text-5xl font-bold mt-2 text-brand-dark font-serif">How We Support You</h2>
-                <div class="w-20 h-1.5 bg-brand-primary mx-auto mt-4 rounded-full opacity-20"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="p-8 bg-brand-light rounded-2xl hover:bg-white hover:shadow-xl transition duration-300 border border-transparent hover:border-brand-accent/20 group">
-                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 text-2xl text-brand-primary shadow-sm group-hover:scale-110 transition"><i class="fas fa-chalkboard-teacher"></i></div>
-                    <h3 class="font-bold text-xl text-brand-dark mb-3 font-serif">Live Tuition</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Interactive Zoom sessions scheduled perfectly for working professionals.</p>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/3">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-brand-primary transform translate-x-4 translate-y-4 rounded-2xl"></div>
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop" alt="Lloyd Shumba" class="relative rounded-2xl shadow-xl w-full object-cover h-[400px]">
+                        <div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-lg">
+                            <p class="font-bold text-brand-dark text-lg">Lloyd Shumba</p>
+                            <p class="text-brand-primary text-xs font-bold uppercase">Lead Tutor & Founder</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="p-8 bg-brand-light rounded-2xl hover:bg-white hover:shadow-xl transition duration-300 border border-transparent hover:border-brand-accent/20 group">
-                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 text-2xl text-brand-primary shadow-sm group-hover:scale-110 transition"><i class="fas fa-brain"></i></div>
-                    <h3 class="font-bold text-xl text-brand-dark mb-3 font-serif">Exam Revision</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Intensive past paper practice and technique mastery bootcamps.</p>
-                </div>
-                <div class="p-8 bg-brand-light rounded-2xl hover:bg-white hover:shadow-xl transition duration-300 border border-transparent hover:border-brand-accent/20 group">
-                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 text-2xl text-brand-primary shadow-sm group-hover:scale-100 transition"><i class="fas fa-user-tie"></i></div>
-                    <h3 class="font-bold text-xl text-brand-dark mb-3 font-serif">Mentorship</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">One-on-one career guidance from qualified advocates.</p>
-                </div>
-                <div class="p-8 bg-brand-light rounded-2xl hover:bg-white hover:shadow-xl transition duration-300 border border-transparent hover:border-brand-accent/20 group">
-                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 text-2xl text-brand-primary shadow-sm group-hover:scale-110 transition"><i class="fas fa-infinity"></i></div>
-                    <h3 class="font-bold text-xl text-brand-dark mb-3 font-serif">24/7 Support</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Continuous WhatsApp support. Your questions answered, anytime.</p>
+                <div class="w-full md:w-2/3">
+                    <span class="text-brand-accent font-bold tracking-wider uppercase text-xs">Meet Your Mentor</span>
+                    <h2 class="text-4xl font-bold mt-2 text-brand-dark font-serif mb-6">Expert Guidance. Proven Results.</h2>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        "My students will not just understand the syllabus; they will master the application."
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        As an <strong>ACCA Expert Tutor</strong> and <strong>Professional Trainer</strong>, Lloyd Shumba brings a wealth of experience in forensic auditing and financial reporting. His teaching methodology focuses on deconstructing complex examiner reports into actionable exam techniques.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-white px-4 py-2 rounded-full border border-gray-200 text-sm font-semibold text-gray-700">🏆 ACCA Expert</div>
+                        <div class="bg-white px-4 py-2 rounded-full border border-gray-200 text-sm font-semibold text-gray-700">📚 Author</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="blueprint" class="py-16 md:py-24 bg-gray-50 relative overflow-hidden">
+    <section id="blueprint" class="py-16 md:py-24 bg-white relative overflow-hidden">
         <div class="container mx-auto px-4 relative z-10">
             <div class="flex flex-col md:flex-row justify-between items-end mb-12">
                 <div>
@@ -332,49 +356,49 @@
                 <p class="text-gray-500 max-w-md mt-4 md:mt-0 text-sm md:text-base">Our proprietary 11-point system designed to ensure you qualify in record time.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover-effect group">
+                <div class="bg-brand-light p-8 rounded-2xl shadow-sm border border-gray-100 card-hover-effect group">
                     <div class="flex items-center justify-between mb-6">
-                        <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-brand-primary text-xl group-hover:bg-brand-primary group-hover:text-white transition-colors"><i class="fas fa-heart"></i></div>
+                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-brand-primary text-xl"><i class="fas fa-heart"></i></div>
                         <span class="text-xs font-bold text-gray-300">01</span>
                     </div>
                     <h3 class="font-bold text-lg text-brand-dark mb-2 font-serif">Passionately Committed</h3>
                     <p class="text-gray-600 text-sm">We are your cheerleaders. We are committed to helping you qualify as soon as possible.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover-effect group">
+                <div class="bg-brand-light p-8 rounded-2xl shadow-sm border border-gray-100 card-hover-effect group">
                     <div class="flex items-center justify-between mb-6">
-                        <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-brand-primary text-xl group-hover:bg-brand-primary group-hover:text-white transition-colors"><i class="fas fa-calendar-check"></i></div>
+                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-brand-primary text-xl"><i class="fas fa-calendar-check"></i></div>
                         <span class="text-xs font-bold text-gray-300">02</span>
                     </div>
                     <h3 class="font-bold text-lg text-brand-dark mb-2 font-serif">Frequent Sessions</h3>
                     <p class="text-gray-600 text-sm">Lecture sessions are held at least 3 times per week to keep momentum high.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover-effect group">
+                <div class="bg-brand-light p-8 rounded-2xl shadow-sm border border-gray-100 card-hover-effect group">
                     <div class="flex items-center justify-between mb-6">
-                        <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-brand-primary text-xl group-hover:bg-brand-primary group-hover:text-white transition-colors"><i class="fas fa-file-alt"></i></div>
+                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-brand-primary text-xl"><i class="fas fa-file-alt"></i></div>
                         <span class="text-xs font-bold text-gray-300">03</span>
                     </div>
                     <h3 class="font-bold text-lg text-brand-dark mb-2 font-serif">Concise Notes</h3>
                     <p class="text-gray-600 text-sm">Modern, draft lecture notes that are easy to digest and focus on exam relevance.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover-effect group">
+                <div class="bg-brand-light p-8 rounded-2xl shadow-sm border border-gray-100 card-hover-effect group">
                     <div class="flex items-center justify-between mb-6">
-                        <div class="w-12 h-12 rounded-full bg-brand-accent/10 flex items-center justify-center text-brand-accent text-xl group-hover:bg-brand-accent group-hover:text-white transition-colors"><i class="fas fa-laptop-code"></i></div>
+                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-brand-primary text-xl"><i class="fas fa-laptop-code"></i></div>
                         <span class="text-xs font-bold text-gray-300">04</span>
                     </div>
                     <h3 class="font-bold text-lg text-brand-dark mb-2 font-serif">Online Portal</h3>
                     <p class="text-gray-600 text-sm">Secure access to pre-recorded lectures 24/7. Never miss a beat.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover-effect group">
+                <div class="bg-brand-light p-8 rounded-2xl shadow-sm border border-gray-100 card-hover-effect group">
                     <div class="flex items-center justify-between mb-6">
-                        <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-brand-primary text-xl group-hover:bg-brand-primary group-hover:text-white transition-colors"><i class="fas fa-newspaper"></i></div>
+                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-brand-primary text-xl"><i class="fas fa-newspaper"></i></div>
                         <span class="text-xs font-bold text-gray-300">05</span>
                     </div>
                     <h3 class="font-bold text-lg text-brand-dark mb-2 font-serif">Technical Mastery</h3>
                     <p class="text-gray-600 text-sm">Guided walkthroughs of technical articles to ensure deep syllabus understanding.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 card-hover-effect group">
+                <div class="bg-brand-light p-8 rounded-2xl shadow-sm border border-gray-100 card-hover-effect group">
                     <div class="flex items-center justify-between mb-6">
-                        <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-brand-primary text-xl group-hover:bg-brand-primary group-hover:text-white transition-colors"><i class="fas fa-bullseye"></i></div>
+                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-brand-primary text-xl"><i class="fas fa-bullseye"></i></div>
                         <span class="text-xs font-bold text-gray-300">06</span>
                     </div>
                     <h3 class="font-bold text-lg text-brand-dark mb-2 font-serif">Focused Revision</h3>
@@ -433,7 +457,6 @@
 
     <section id="sample-lectures" class="py-16 md:py-24 bg-brand-dark relative overflow-hidden">
         <div class="absolute top-0 right-0 w-96 h-96 bg-brand-primary opacity-20 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
-        <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand-accent opacity-10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
         <div class="container mx-auto px-4 relative z-10">
             <div class="text-center mb-16">
                 <span class="text-brand-accent font-bold tracking-wider uppercase text-xs">Lecture Showcase</span>
@@ -447,7 +470,6 @@
                         <div class="w-14 h-14 bg-brand-accent rounded-full flex items-center justify-center text-brand-dark text-xl z-10 shadow-lg group-hover:scale-110 transition"><i class="fab fa-youtube ml-1"></i></div>
                     </div>
                     <div class="p-6">
-                        <div class="text-xs font-bold text-brand-accent mb-1">AUDIT & ASSURANCE</div>
                         <h3 class="text-xl font-bold text-white mb-4 font-serif">AAA Sample Lecture</h3>
                         <a href="https://youtu.be/FJ5maDLwTWw" target="_blank" class="text-white font-semibold text-sm border-b border-brand-accent/50 hover:text-brand-accent transition pb-1">Watch Now <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
                     </div>
@@ -458,7 +480,6 @@
                         <div class="w-14 h-14 bg-brand-accent rounded-full flex items-center justify-center text-brand-dark text-xl z-10 shadow-lg group-hover:scale-110 transition"><i class="fab fa-youtube ml-1"></i></div>
                     </div>
                     <div class="p-6">
-                        <div class="text-xs font-bold text-brand-accent mb-1">ADVANCED TAXATION</div>
                         <h3 class="text-xl font-bold text-white mb-4 font-serif">ATX (UK) Sample</h3>
                         <a href="https://youtu.be/AzD2vgtwl7o" target="_blank" class="text-white font-semibold text-sm border-b border-brand-accent/50 hover:text-brand-accent transition pb-1">Watch Now <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
                     </div>
@@ -469,7 +490,6 @@
                         <div class="w-14 h-14 bg-brand-accent rounded-full flex items-center justify-center text-brand-dark text-xl z-10 shadow-lg group-hover:scale-110 transition"><i class="fab fa-youtube ml-1"></i></div>
                     </div>
                     <div class="p-6">
-                        <div class="text-xs font-bold text-brand-accent mb-1">BUSINESS REPORTING</div>
                         <h3 class="text-xl font-bold text-white mb-4 font-serif">SBR Sample Lecture</h3>
                         <a href="https://youtu.be/DEO8dsAWi_w" target="_blank" class="text-white font-semibold text-sm border-b border-brand-accent/50 hover:text-brand-accent transition pb-1">Watch Now <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
                     </div>
@@ -478,143 +498,7 @@
         </div>
     </section>
 
-    <section id="insights" class="py-16 bg-brand-light">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <span class="text-brand-accent font-bold tracking-wider uppercase text-xs">Technical Hub</span>
-                <h2 class="text-3xl font-bold text-brand-dark mt-2 font-serif">Expert Insights</h2>
-                <div class="w-20 h-1.5 bg-brand-primary mx-auto mt-4 rounded-full opacity-20"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
-                    <div class="flex items-center mb-4">
-                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-600 mr-3"><i class="fas fa-exclamation-triangle"></i></div>
-                        <h3 class="text-xl font-bold text-brand-dark font-serif">Why Students Fail AAA</h3>
-                    </div>
-                    <p class="text-sm text-gray-500 mb-4 italic">Direct from recent Examiner Reports:</p>
-                    <ul class="space-y-3">
-                        <li class="flex items-start text-sm text-gray-600">
-                            <i class="fas fa-times-circle text-red-400 mt-1 mr-2"></i>
-                            <span><strong>Rote Learning:</strong> Stating generic risks (e.g., "new client") when the scenario indicates otherwise. Knowledge must be applied to the specific facts.</span>
-                        </li>
-                        <li class="flex items-start text-sm text-gray-600">
-                            <i class="fas fa-times-circle text-red-400 mt-1 mr-2"></i>
-                            <span><strong>Vague Procedures:</strong> Using empty phrases like "check relevant documentation" without specifying *which* document or *why*.</span>
-                        </li>
-                        <li class="flex items-start text-sm text-gray-600">
-                            <i class="fas fa-times-circle text-red-400 mt-1 mr-2"></i>
-                            <span><strong>Missing the Requirement:</strong> Answering "Business Risks" when asked for "Audit Risks".</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
-                    <div class="flex items-center mb-4">
-                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-3"><i class="fas fa-newspaper"></i></div>
-                        <h3 class="text-xl font-bold text-brand-dark font-serif">Current Issue: IFRS 18</h3>
-                    </div>
-                    <p class="text-sm text-gray-500 mb-4 italic">Examinable from September 2025:</p>
-                    <div class="space-y-3 text-sm text-gray-600 leading-relaxed">
-                        <p><strong>"Presentation and Disclosure in Financial Statements"</strong> replaces IAS 1. The key change is the new structure of the Statement of Profit or Loss, now categorised into:</p>
-                        <div class="flex gap-2">
-                            <span class="px-2 py-1 bg-gray-100 rounded text-xs font-bold">Operating</span>
-                            <span class="px-2 py-1 bg-gray-100 rounded text-xs font-bold">Investing</span>
-                            <span class="px-2 py-1 bg-gray-100 rounded text-xs font-bold">Financing</span>
-                        </div>
-                        <p class="mt-2">It also introduces mandatory disclosure of <strong>Management Performance Measures (MPMs)</strong> in a single note, ensuring transparency in non-GAAP reporting.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <span class="text-brand-accent font-bold tracking-wider uppercase text-xs">Success Stories</span>
-                <h2 class="text-3xl md:text-5xl font-bold mt-2 text-brand-dark font-serif">What Students Are Saying</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-brand-light p-8 rounded-2xl border border-gray-100 relative group hover:shadow-xl transition">
-                    <i class="fas fa-quote-left text-4xl text-brand-accent/20 absolute top-6 left-6"></i>
-                    <p class="text-gray-600 italic mb-6 relative z-10 pt-4">"The draft lecture notes for AAA were concise and easy to understand. I passed on my first attempt after struggling with other providers."</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-brand-dark rounded-full flex items-center justify-center text-white font-bold">JD</div>
-                        <div class="ml-3"><p class="font-bold text-brand-dark text-sm">John D.</p><p class="text-xs text-brand-primary">Audit Associate, UK</p></div>
-                    </div>
-                </div>
-                <div class="bg-brand-light p-8 rounded-2xl border border-gray-100 relative group hover:shadow-xl transition">
-                    <i class="fas fa-quote-left text-4xl text-brand-accent/20 absolute top-6 left-6"></i>
-                    <p class="text-gray-600 italic mb-6 relative z-10 pt-4">"Lloyd's mentorship is unmatched. He doesn't just teach the syllabus; he teaches exam technique. Highly recommended for ATX."</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-brand-dark rounded-full flex items-center justify-center text-white font-bold">TM</div>
-                        <div class="ml-3"><p class="font-bold text-brand-dark text-sm">Tariro M.</p><p class="text-xs text-brand-primary">Tax Consultant, Zimbabwe</p></div>
-                    </div>
-                </div>
-                <div class="bg-brand-light p-8 rounded-2xl border border-gray-100 relative group hover:shadow-xl transition">
-                    <i class="fas fa-quote-left text-4xl text-brand-accent/20 absolute top-6 left-6"></i>
-                    <p class="text-gray-600 italic mb-6 relative z-10 pt-4">"The flexibility of the online portal allowed me to study while working full time. SBR finally made sense to me."</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-brand-dark rounded-full flex items-center justify-center text-white font-bold">BK</div>
-                        <div class="ml-3"><p class="font-bold text-brand-dark text-sm">Blessing K.</p><p class="text-xs text-brand-primary">Financial Analyst, Zambia</p></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-16 bg-white border-t border-gray-50">
-        <div class="container mx-auto px-4 max-w-3xl">
-            <div class="text-center mb-10">
-                <h2 class="text-2xl font-bold text-brand-dark font-serif">Frequently Asked Questions</h2>
-            </div>
-            <div class="space-y-4">
-                <details class="group bg-brand-light rounded-xl cursor-pointer open:ring-1 open:ring-brand-primary/10">
-                    <summary class="flex justify-between items-center font-medium p-5 list-none text-brand-dark"><span>Do you offer installment plans?</span><span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-brand-accent"></i></span></summary>
-                    <div class="text-gray-600 p-5 pt-0 text-sm leading-relaxed">Yes, we offer a flexible 3-month installment plan for all our courses to help manage your finances while you study.</div>
-                </details>
-                <details class="group bg-brand-light rounded-xl cursor-pointer open:ring-1 open:ring-brand-primary/10">
-                    <summary class="flex justify-between items-center font-medium p-5 list-none text-brand-dark"><span>Are the classes recorded?</span><span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-brand-accent"></i></span></summary>
-                    <div class="text-gray-600 p-5 pt-0 text-sm leading-relaxed">Absolutely. All live sessions are recorded and uploaded to the Student Portal within 24 hours for revision purposes.</div>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <div class="bg-brand-dark py-12 relative overflow-hidden border-t-4 border-brand-accent">
-        <div class="absolute inset-0 opacity-5" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg'); background-size: cover; background-position: center;"></div>
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
-                <div class="p-4">
-                    <div class="text-4xl md:text-5xl font-bold text-white mb-2 counter" data-target="98">0</div>
-                    <p class="text-brand-accent text-xs font-bold uppercase tracking-widest">% Pass Rate</p>
-                    <p class="text-gray-400 text-xs mt-2">Consistent excellence across all papers</p>
-                </div>
-                <div class="p-4">
-                    <div class="text-4xl md:text-5xl font-bold text-white mb-2 flex justify-center items-baseline"><span class="counter" data-target="1500">0</span><span>+</span></div>
-                    <p class="text-brand-accent text-xs font-bold uppercase tracking-widest">Graduates</p>
-                    <p class="text-gray-400 text-xs mt-2">Helping you become an ACCA Affiliate</p>
-                </div>
-                <div class="p-4">
-                    <div class="flex flex-col items-center justify-center">
-                        <div class="flex items-center gap-2 mb-3">
-                            <i class="fas fa-globe-africa text-3xl text-brand-primary"></i>
-                            <span class="text-2xl font-bold text-white font-serif">Global Reach</span>
-                        </div>
-                        <div class="flex flex-wrap justify-center gap-2">
-                            <span class="text-[10px] bg-white/10 px-3 py-1 rounded-full text-gray-300 border border-white/5">Zimbabwe</span>
-                            <span class="text-[10px] bg-white/10 px-3 py-1 rounded-full text-gray-300 border border-white/5">UK</span>
-                            <span class="text-[10px] bg-white/10 px-3 py-1 rounded-full text-gray-300 border border-white/5">Zambia</span>
-                            <span class="text-[10px] bg-white/10 px-3 py-1 rounded-full text-gray-300 border border-white/5">Malawi</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <section id="contact" class="py-20 bg-brand-dark text-white relative">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-primary opacity-20 rounded-full blur-3xl transform translate-x-1/3 -translate-y-1/3"></div>
         <div class="container mx-auto px-4 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                 <div>
@@ -739,12 +623,28 @@
             else alert("We couldn't find a direct match. Scrolling to courses!");
         }
 
-        // Mobile Menu
-        const btn = document.getElementById('mobile-menu-btn');
+        // NEW Premium Mobile Menu Logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('close-menu-btn');
         const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
+
+        function toggleMenu() {
+            const isHidden = menu.classList.contains('hidden');
+            if (isHidden) {
+                menu.classList.remove('hidden');
+                setTimeout(() => {
+                    menu.classList.remove('opacity-0');
+                }, 10); // Trigger transition
+            } else {
+                menu.classList.add('opacity-0');
+                setTimeout(() => {
+                    menu.classList.add('hidden');
+                }, 300); // Wait for transition
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
 
         // Counter Animation
         const counters = document.querySelectorAll('.counter');
@@ -772,6 +672,5 @@
         }, { threshold: 0.5 });
         counters.forEach(counter => observer.observe(counter));
     </script>
-
 </body>
 </html>
