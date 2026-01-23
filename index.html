@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Excel Business School - The #1 Global Provider for ACCA Tuition. Expert AAA, ATX, and SBR mentorship for students in Zimbabwe, UK, and beyond.">
+    <meta name="description" content="Excel Business School - The #1 Global Provider for ACCA Tuition. Expert AAA, ATX, and SBR mentorship.">
     <title>Excel Business School | Global ACCA Tuition</title>
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -29,8 +29,8 @@
                             gray: '#F3F4F6'
                         }
                     },
-                    backgroundImage: {
-                        'pattern': "url('https://www.transparenttextures.com/patterns/cubes.png')",
+                    boxShadow: {
+                        'gold': '0 4px 20px -2px rgba(197, 160, 89, 0.4)',
                     }
                 }
             }
@@ -57,14 +57,6 @@
             box-shadow: 0 20px 40px -5px rgba(105, 24, 24, 0.1);
         }
 
-        .video-container {
-            position: relative;
-            overflow: hidden;
-            border-radius: 1.5rem;
-            border: 4px solid white;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        }
-        
         /* PRELOADER */
         .loader-circle {
             width: 12px; height: 12px;
@@ -80,23 +72,22 @@
         }
 
         /* MENU ANIMATION */
-        .mobile-menu-enter {
-            opacity: 0;
-            transform: translateY(-20px);
+        .mobile-link-hover {
+            position: relative;
         }
-        .mobile-menu-enter-active {
-            opacity: 1;
-            transform: translateY(0);
-            transition: opacity 300ms, transform 300ms;
+        .mobile-link-hover::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background-color: #C5A059;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
         }
-        .mobile-menu-exit {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .mobile-menu-exit-active {
-            opacity: 0;
-            transform: translateY(-20px);
-            transition: opacity 300ms, transform 300ms;
+        .mobile-link-hover:hover::after {
+            width: 100%;
         }
     </style>
 </head>
@@ -170,25 +161,35 @@
         </div>
     </nav>
 
-    <div id="mobile-menu" class="fixed inset-0 bg-brand-dark/98 backdrop-blur-xl z-[90] hidden transition-all duration-300 flex flex-col items-center justify-center text-center">
+    <div id="mobile-menu" class="fixed inset-0 bg-brand-dark z-[90] hidden transition-all duration-300 flex flex-col items-center justify-center text-center">
         <button id="close-menu-btn" class="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 hover:bg-brand-accent text-white flex items-center justify-center transition duration-300">
             <i class="fas fa-times text-xl"></i>
         </button>
 
-        <div class="space-y-8 animate-fade-in-up">
-            <a href="#home" class="block text-4xl font-serif text-white hover:text-brand-accent transition duration-300" onclick="toggleMenu()">Home</a>
-            <a href="#about" class="block text-4xl font-serif text-white/90 hover:text-brand-accent transition duration-300" onclick="toggleMenu()">About Us</a>
-            <a href="#courses" class="block text-4xl font-serif text-white/90 hover:text-brand-accent transition duration-300" onclick="toggleMenu()">Courses</a>
-            <a href="portal.html" class="block text-4xl font-serif text-brand-accent hover:text-white transition duration-300"><i class="fas fa-lock text-2xl mr-2 align-middle"></i>Portal</a>
-            <a href="#contact" class="block text-4xl font-serif text-white/90 hover:text-brand-accent transition duration-300" onclick="toggleMenu()">Contact</a>
+        <div class="space-y-10 animate-fade-in-up">
+            <div class="border-b border-brand-accent/20 pb-4 w-64 mx-auto">
+                <a href="#home" class="block text-3xl font-serif font-bold text-white tracking-wide mobile-link-hover" onclick="toggleMenu()">Home</a>
+            </div>
+            <div class="border-b border-brand-accent/20 pb-4 w-64 mx-auto">
+                <a href="#about" class="block text-3xl font-serif font-bold text-white tracking-wide mobile-link-hover" onclick="toggleMenu()">About Us</a>
+            </div>
+            <div class="border-b border-brand-accent/20 pb-4 w-64 mx-auto">
+                <a href="#courses" class="block text-3xl font-serif font-bold text-white tracking-wide mobile-link-hover" onclick="toggleMenu()">Courses</a>
+            </div>
+            <div class="border-b border-brand-accent/20 pb-4 w-64 mx-auto">
+                <a href="portal.html" class="block text-3xl font-serif font-bold text-brand-accent tracking-wide mobile-link-hover"><i class="fas fa-lock text-xl mr-2"></i>Portal</a>
+            </div>
+            <div class="w-64 mx-auto">
+                <a href="#contact" class="block text-3xl font-serif font-bold text-white tracking-wide mobile-link-hover" onclick="toggleMenu()">Contact</a>
+            </div>
         </div>
 
-        <div class="mt-12 flex space-x-6">
-            <a href="https://wa.me/260975899280" class="w-12 h-12 rounded-full border border-brand-accent text-brand-accent flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition"><i class="fab fa-whatsapp text-xl"></i></a>
-            <a href="mailto:lloyd.shumba@excelbusinessschool.uk" class="w-12 h-12 rounded-full border border-brand-accent text-brand-accent flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition"><i class="fas fa-envelope text-xl"></i></a>
+        <div class="mt-12 flex space-x-8">
+            <a href="https://wa.me/260975899280" class="w-14 h-14 rounded-full border-2 border-brand-accent text-brand-accent flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition text-2xl"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:lloyd.shumba@excelbusinessschool.uk" class="w-14 h-14 rounded-full border-2 border-brand-accent text-brand-accent flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition text-2xl"><i class="fas fa-envelope"></i></a>
         </div>
         
-        <div class="absolute bottom-10 text-white/20 text-xs tracking-widest uppercase">
+        <div class="absolute bottom-10 text-white/40 text-xs tracking-[0.3em] uppercase font-bold">
             Excel Business School
         </div>
     </div>
@@ -226,12 +227,18 @@
                 </div>
                 <div class="lg:w-1/2 w-full relative">
                     <div class="absolute -inset-4 bg-gradient-to-r from-brand-accent to-brand-primary opacity-10 rounded-3xl blur-2xl"></div>
-                    <div class="video-container h-[300px] md:h-[500px] w-full relative z-10 bg-white">
-                        <video autoplay loop muted playsinline class="w-full h-full object-cover" poster="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80">
-                            <source src="graduation.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="absolute inset-0 bg-brand-dark/10 pointer-events-none"></div>
+                    <div class="relative z-10 rounded-2xl overflow-hidden border-4 border-white shadow-2xl h-[300px] md:h-[500px] group">
+                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b955?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Students Learning" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-brand-dark/20 group-hover:bg-brand-dark/10 transition"></div>
+                        
+                        <div class="absolute bottom-6 right-6 bg-white/95 backdrop-blur-md p-4 rounded-xl shadow-xl max-w-xs border-l-4 border-brand-accent transform hover:scale-105 transition duration-300">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center text-brand-primary"><i class="fas fa-chart-pie"></i></div>
+                                <span class="text-xs font-bold text-gray-400 uppercase">Tutor Insight</span>
+                            </div>
+                            <p class="text-sm font-bold text-brand-dark">Audit Risk: Materiality</p>
+                            <p class="text-xs text-gray-500 mt-1">"Always link the risk to the specific account balance and assertion."</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -260,7 +267,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <section id="about" class="py-20 bg-white relative overflow-hidden">
         <div class="absolute top-0 right-0 w-64 h-64 bg-brand-accent/5 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3"></div>
@@ -319,27 +326,42 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="w-full md:w-1/3">
-                    <div class="relative">
-                        <div class="absolute inset-0 bg-brand-primary transform translate-x-4 translate-y-4 rounded-2xl"></div>
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop" alt="Lloyd Shumba" class="relative rounded-2xl shadow-xl w-full object-cover h-[400px]">
-                        <div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-lg">
-                            <p class="font-bold text-brand-dark text-lg">Lloyd Shumba</p>
-                            <p class="text-brand-primary text-xs font-bold uppercase">Lead Tutor & Founder</p>
+                    <div class="relative group">
+                        <div class="absolute inset-0 bg-brand-primary transform translate-x-4 translate-y-4 rounded-2xl group-hover:translate-x-2 group-hover:translate-y-2 transition duration-500"></div>
+                        
+                        <img src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Lloyd Shumba" class="relative rounded-2xl shadow-xl w-full object-cover h-[400px] grayscale group-hover:grayscale-0 transition duration-500">
+                        
+                        <div class="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg border-l-4 border-brand-accent">
+                            <p class="font-bold text-brand-dark text-lg font-serif">Lloyd Shumba</p>
+                            <p class="text-brand-primary text-xs font-bold uppercase tracking-widest">Lead Tutor & Founder</p>
                         </div>
                     </div>
                 </div>
                 <div class="w-full md:w-2/3">
                     <span class="text-brand-accent font-bold tracking-wider uppercase text-xs">Meet Your Mentor</span>
                     <h2 class="text-4xl font-bold mt-2 text-brand-dark font-serif mb-6">Expert Guidance. Proven Results.</h2>
-                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6 italic border-l-2 border-brand-accent pl-4">
                         "My students will not just understand the syllabus; they will master the application."
                     </p>
-                    <p class="text-gray-600 mb-6">
-                        As an <strong>ACCA Expert Tutor</strong> and <strong>Professional Trainer</strong>, Lloyd Shumba brings a wealth of experience in forensic auditing and financial reporting. His teaching methodology focuses on deconstructing complex examiner reports into actionable exam techniques.
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        As a professional trainer, Lloyd Shumba brings a wealth of experience in forensic auditing and financial reporting. His teaching methodology focuses on deconstructing complex examiner reports into actionable exam techniques.
                     </p>
+                    
                     <div class="flex flex-wrap gap-4">
-                        <div class="bg-white px-4 py-2 rounded-full border border-gray-200 text-sm font-semibold text-gray-700">🏆 ACCA Expert</div>
-                        <div class="bg-white px-4 py-2 rounded-full border border-gray-200 text-sm font-semibold text-gray-700">📚 Author</div>
+                        <div class="flex items-center gap-3 bg-brand-dark text-white px-6 py-3 rounded-lg border border-brand-accent shadow-gold">
+                            <i class="fas fa-medal text-brand-accent text-xl"></i>
+                            <div>
+                                <p class="text-xs text-brand-accent font-bold uppercase">Certified</p>
+                                <p class="font-bold leading-none">ACCA Expert</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 bg-brand-dark text-white px-6 py-3 rounded-lg border border-brand-accent shadow-gold">
+                            <i class="fas fa-feather-alt text-brand-accent text-xl"></i>
+                            <div>
+                                <p class="text-xs text-brand-accent font-bold uppercase">Published</p>
+                                <p class="font-bold leading-none">Author</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
