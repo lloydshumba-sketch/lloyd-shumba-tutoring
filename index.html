@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Excel Business School - The Global Standard for ACCA Tuition.">
+    <meta name="description" content="Excel Business School - Expert Tuition for ACCA.">
     <title>Excel Business School | Master ACCA</title>
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -35,7 +35,7 @@
                         '30': '7.5rem',
                     },
                     boxShadow: {
-                        'gold': '0 4px 20px -2px rgba(197, 160, 89, 0.4)',
+                        'gold': '0 10px 40px -10px rgba(197, 160, 89, 0.5)',
                         'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
                     }
                 }
@@ -67,7 +67,7 @@
         .card-hover-effect:hover { transform: translateY(-5px); box-shadow: 0 20px 40px -5px rgba(105, 24, 24, 0.1); transition: all 0.4s ease; }
     </style>
 </head>
-<body class="bg-brand-light text-slate-800 antialiased font-sans overflow-x-hidden relative">
+<body class="bg-white text-slate-800 antialiased font-sans overflow-x-hidden relative">
 
     <div id="preloader" class="fixed inset-0 bg-white z-[9999] flex items-center justify-center transition-opacity duration-500">
         <div class="flex flex-col items-center justify-center space-y-6">
@@ -84,7 +84,7 @@
         <i class="fab fa-whatsapp text-3xl"></i>
     </a>
 
-    <nav class="bg-white sticky top-0 z-50 border-b border-gray-100 h-24 flex items-center shadow-lg">
+    <nav class="bg-white sticky top-0 z-50 border-b border-gray-100 h-24 flex items-center shadow-md">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-3 group shrink-0">
                 <img src="excel-logo.png" alt="Excel Business School" class="h-16 w-auto object-contain">
@@ -137,53 +137,69 @@
         </div>
     </div>
 
-    <section id="home" class="relative h-[85vh] flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop" 
-                 alt="Diverse Group of Students" 
-                 class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black/60"></div> 
-        </div>
-
-        <div class="container mx-auto px-4 relative z-10 text-center">
-            
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black font-display text-white mb-8 leading-none tracking-tight">
-                designed to make <br> 
-                you excel<span class="text-brand-accent">.</span>
-            </h1>
-            
-            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-4xl mx-auto leading-relaxed font-medium">
-                The future ACCA Qualification will equip the next generation to look beyond the bottom line, be catalysts for positive change, and bring more value than ever to businesses and organisations across the world.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                <a href="#contact" class="bg-brand-primary text-white font-bold py-4 px-10 rounded transition duration-300 hover:bg-brand-dark flex items-center justify-center gap-3 text-lg border border-brand-primary">
-                    Discover the future ACCA Qualification <i class="fas fa-arrow-right"></i>
-                </a>
+    <section id="home" class="relative pt-16 pb-24 lg:pt-28 lg:pb-28 bg-white overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-black font-display text-brand-dark mb-6 leading-tight">
+                        Excellence in <br>
+                        <span class="text-brand-primary">ACCA Tuition.</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
+                        Our mission is to maximize your success in passing ACCA exams through strategic understanding. We bridge the gap between the syllabus and the exam.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#contact" class="bg-brand-primary text-white font-bold py-4 px-10 rounded-lg shadow-gold hover:bg-brand-dark transition text-center w-full sm:w-auto">
+                            Start Your Journey
+                        </a>
+                        <a href="#sample-lectures" class="bg-white border-2 border-brand-dark text-brand-dark font-bold py-4 px-10 rounded-lg hover:bg-brand-dark hover:text-white transition text-center w-full sm:w-auto flex items-center justify-center gap-2">
+                            <i class="fas fa-play"></i> Watch Sample
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 w-full relative">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl h-[450px] lg:h-[600px] border-8 border-brand-gray">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Diverse Students" 
+                             class="w-full h-full object-cover">
+                        
+                        <div class="absolute bottom-8 -left-8 bg-brand-accent text-brand-dark p-6 rounded-lg shadow-xl hidden md:block border-l-8 border-brand-primary">
+                            <p class="font-black font-display text-lg">Fostering a Culture</p>
+                            <p class="text-sm font-bold opacity-90">of Ethics & Excellence</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <div class="bg-brand-light text-brand-dark border-b border-gray-200">
+    <div class="bg-brand-gray border-y border-gray-200">
         <div class="container mx-auto px-4">
-            <div class="flex flex-wrap justify-around items-center py-10 gap-8 text-center">
-                <div class="flex items-center gap-3">
-                    <div class="text-brand-primary text-4xl font-black font-display"><i class="fas fa-check-circle"></i></div>
-                    <div class="text-left text-xs font-bold uppercase tracking-widest">Proven<br>Success</div>
+            <div class="flex flex-wrap justify-around items-center py-8 gap-6 text-center">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-brand-primary text-xl font-bold shadow-sm"><i class="fas fa-check-circle"></i></div>
+                    <div class="text-left">
+                        <p class="text-lg font-black font-display text-brand-dark">Proven Success</p>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest">High Pass Rates</p>
+                    </div>
                 </div>
-                <div class="w-px h-10 bg-gray-300 hidden md:block"></div>
-                <div class="flex items-center gap-3">
-                    <div class="text-brand-primary text-4xl font-black font-display">1500+</div>
-                    <div class="text-left text-xs font-bold uppercase tracking-widest">Graduates<br>Alumni</div>
+                <div class="hidden lg:block w-px h-12 bg-gray-300"></div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-brand-primary text-xl font-bold shadow-sm"><i class="fas fa-user-graduate"></i></div>
+                    <div class="text-left">
+                        <p class="text-lg font-black font-display text-brand-dark">1500+ Alumni</p>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest">Global Network</p>
+                    </div>
                 </div>
-                <div class="w-px h-10 bg-gray-300 hidden md:block"></div>
-                <div class="flex items-center gap-3">
-                    <i class="fas fa-globe-africa text-brand-accent text-3xl"></i>
-                    <div class="text-left text-xs font-bold uppercase tracking-widest">Global<br>Reach</div>
-                </div>
-                <div class="hidden md:flex items-center gap-3 bg-white px-6 py-3 rounded-full border border-gray-200 shadow-sm">
-                    <span class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
-                    <span class="text-xs font-bold text-brand-dark uppercase tracking-wider">2026 Admissions Open</span>
+                <div class="hidden lg:block w-px h-12 bg-gray-300"></div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-brand-primary text-xl font-bold shadow-sm"><i class="fas fa-globe"></i></div>
+                    <div class="text-left">
+                        <p class="text-lg font-black font-display text-brand-dark">International</p>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest">Studying from 4+ Countries</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -192,7 +208,7 @@
     <section id="about" class="py-24 bg-white relative">
         <div class="container mx-auto px-4 max-w-4xl text-center relative z-10">
             <span class="text-brand-accent font-black tracking-widest uppercase text-sm font-display">Our Mission</span>
-            <h2 class="text-3xl md:text-5xl font-black mt-4 text-brand-dark font-display mb-10 leading-tight">Expert Tuition for ACCA</h2>
+            <h2 class="text-3xl md:text-5xl font-black mt-4 text-brand-dark font-display mb-10 leading-tight">Expert Tuition Providers</h2>
             <p class="text-2xl text-gray-700 leading-relaxed mb-8 font-light italic">
                 "We don't just train auditors. We create well-rounded professional accountants. Our mission is to maximize your success in passing ACCA exams through strategic understanding."
             </p>
@@ -208,9 +224,8 @@
                 <h2 class="text-4xl font-black text-brand-dark font-display">Professional Papers</h2>
                 <div class="w-24 h-1.5 bg-brand-accent mx-auto mt-6"></div>
             </div>
-            
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white group overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col h-full card-hover-effect">
+                <div class="bg-white group overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col h-full card-hover-effect border-t-4 border-brand-accent">
                     <div class="h-64 relative overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Audit">
                         <div class="absolute inset-0 bg-brand-dark/60 group-hover:bg-brand-dark/40 transition"></div>
@@ -222,57 +237,46 @@
                     </div>
                     <div class="p-8 flex-grow">
                         <p class="text-gray-600 text-sm mb-6 leading-relaxed font-medium">Master audit risk, ethics, and reporting. We focus heavily on exam technique.</p>
-                        <div class="flex gap-2">
-                            <span class="px-3 py-1 bg-brand-light text-brand-dark rounded text-xs font-bold border border-brand-accent/20">INT & UK Variants</span>
-                        </div>
                     </div>
-                    <div class="p-6 border-t border-gray-100">
+                    <div class="p-6 border-t border-gray-100 bg-gray-50 group-hover:bg-white transition">
                         <a href="#contact" class="flex items-center justify-between w-full font-bold text-brand-primary hover:text-brand-dark transition group-hover:translate-x-2 duration-300">
                             View Details <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
-
-                <div class="bg-white group overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col h-full card-hover-effect">
+                <div class="bg-white group overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col h-full card-hover-effect border-t-4 border-brand-primary">
                     <div class="h-64 relative overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Finance">
-                        <div class="absolute inset-0 bg-brand-dark/60 group-hover:bg-brand-dark/40 transition"></div>
-                        <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 to-transparent">
-                            <h3 class="text-3xl font-black text-white font-display">SBR</h3>
-                            <p class="text-white/90 text-sm font-bold">Strategic Business Reporting</p>
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent opacity-90"></div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h3 class="text-3xl font-black font-display">SBR</h3>
+                            <p class="font-medium">Strategic Business Reporting</p>
                         </div>
                     </div>
                     <div class="p-8 flex-grow">
                         <p class="text-gray-600 text-sm mb-6 leading-relaxed font-medium">Go beyond the numbers. Understand IFRS principles and stakeholder communication.</p>
-                        <div class="flex gap-2">
-                            <span class="px-3 py-1 bg-brand-light text-brand-dark rounded text-xs font-bold border border-brand-accent/20">INT & UK Variants</span>
-                        </div>
                     </div>
-                    <div class="p-6 border-t border-gray-100">
+                    <div class="p-6 border-t border-gray-100 bg-gray-50 group-hover:bg-white transition">
                         <a href="#contact" class="flex items-center justify-between w-full font-bold text-brand-primary hover:text-brand-dark transition group-hover:translate-x-2 duration-300">
-                            View Details <i class="fas fa-arrow-right"></i>
+                            View Details <i class="fas fa-plus"></i>
                         </a>
                     </div>
                 </div>
-
-                <div class="bg-white group overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col h-full card-hover-effect">
+                <div class="bg-white group overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col h-full card-hover-effect border-t-4 border-gray-800">
                     <div class="h-64 relative overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Tax">
-                        <div class="absolute inset-0 bg-brand-dark/60 group-hover:bg-brand-dark/40 transition"></div>
-                        <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 to-transparent">
-                            <h3 class="text-3xl font-black text-white font-display">ATX</h3>
-                            <p class="text-white/90 text-sm font-bold">Advanced Taxation (UK)</p>
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent opacity-90"></div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h3 class="text-3xl font-black font-display">ATX</h3>
+                            <p class="font-medium">Advanced Taxation (UK)</p>
                         </div>
                     </div>
                     <div class="p-8 flex-grow">
                         <p class="text-gray-600 text-sm mb-6 leading-relaxed font-medium">Specialized tuition for the UK tax system. Simplify complex tax planning.</p>
-                        <div class="flex gap-2">
-                            <span class="px-3 py-1 bg-brand-light text-brand-dark rounded text-xs font-bold border border-brand-accent/20">UK Variant Only</span>
-                        </div>
                     </div>
-                    <div class="p-6 border-t border-gray-100">
+                    <div class="p-6 border-t border-gray-100 bg-gray-50 group-hover:bg-white transition">
                         <a href="#contact" class="flex items-center justify-between w-full font-bold text-brand-primary hover:text-brand-dark transition group-hover:translate-x-2 duration-300">
-                            View Details <i class="fas fa-arrow-right"></i>
+                            View Details <i class="fas fa-plus"></i>
                         </a>
                     </div>
                 </div>
@@ -359,7 +363,7 @@
                     <span class="text-brand-accent font-black tracking-widest uppercase text-sm font-display">World-Class Faculty</span>
                     <h2 class="text-4xl md:text-5xl font-black mt-4 text-brand-dark font-display mb-8 leading-tight">Expert Guidance.<br>Proven Results.</h2>
                     <p class="text-lg text-gray-600 leading-relaxed mb-8">
-                        Our faculty is comprised of experienced professionals dedicated to your success. Leading the department is <strong>Lloyd Shumba</strong>, an expert tutor and professional trainer with over a decade of experience in forensic auditing and financial reporting.
+                        Our faculty is comprised of experienced professionals dedicated to your success. Leading the department is <strong>Lloyd Shumba</strong>, an expert tutor with over a decade of experience in forensic auditing and financial reporting.
                     </p>
                     <div class="border-l-4 border-brand-accent pl-6 mb-8">
                         <p class="text-xl text-brand-dark italic font-serif">"My goal is to make the complex simple."</p>
@@ -385,7 +389,7 @@
                             <div class="play-btn"><i class="fas fa-play text-brand-dark text-2xl ml-1"></i></div>
                         </div>
                     </div>
-                    <p class="mt-4 font-bold text-center text-brand-accent uppercase tracking-wider text-sm">Advanced Audit and Assurance Sample Lecture</p>
+                    <p class="mt-4 font-bold text-center text-brand-accent uppercase tracking-wider text-sm">Advanced Audit and Assurance</p>
                 </div>
                 <div class="group">
                     <div class="video-container rounded-none shadow-2xl border border-white/10" onclick="playVideo(this, 'AzD2vgtwl7o')">
@@ -394,7 +398,7 @@
                             <div class="play-btn"><i class="fas fa-play text-brand-dark text-2xl ml-1"></i></div>
                         </div>
                     </div>
-                    <p class="mt-4 font-bold text-center text-brand-accent uppercase tracking-wider text-sm">Advanced Taxation UK Sample Lecture</p>
+                    <p class="mt-4 font-bold text-center text-brand-accent uppercase tracking-wider text-sm">Advanced Taxation UK</p>
                 </div>
                 <div class="group">
                     <div class="video-container rounded-none shadow-2xl border border-white/10" onclick="playVideo(this, 'DEO8dsAWi_w')">
@@ -403,7 +407,7 @@
                             <div class="play-btn"><i class="fas fa-play text-brand-dark text-2xl ml-1"></i></div>
                         </div>
                     </div>
-                    <p class="mt-4 font-bold text-center text-brand-accent uppercase tracking-wider text-sm">Strategic Business Reporting Sample Lecture</p>
+                    <p class="mt-4 font-bold text-center text-brand-accent uppercase tracking-wider text-sm">Strategic Business Reporting</p>
                 </div>
             </div>
         </div>
