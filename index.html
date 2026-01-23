@@ -45,10 +45,10 @@
     <style>
         /* --- BRANDED CURSORS --- */
         body {
-            cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24'><path fill='%23691818' stroke='%23C5A059' stroke-width='1.5' d='M2,2l6.4,19.2l3.2-8l8-3.2L2,2z'/></svg>") 0 0, auto;
+            cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg%22 width='20' height='20' viewBox='0 0 24 24'><path fill='%23691818' stroke='%23C5A059' stroke-width='1.5' d='M2,2l6.4,19.2l3.2-8l8-3.2L2,2z'/></svg>") 0 0, auto;
         }
         a, button, select, input, .cursor-pointer, summary {
-            cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24'><path fill='%23691818' stroke='%23C5A059' stroke-width='1.5' d='M12,2c-0.6,0-1,0.4-1,1v6h-2V6c0-0.6-0.4-1-1-1s-1,0.4-1,1v3H6V7c0-0.6-0.4-1-1-1S4,6.4,4,7v7.5c0,3.6,2.9,6.5,6.5,6.5s6.5-2.9,6.5-6.5V9c0-0.6-0.4-1-1-1s-1,0.4-1,1v4h-2V3C13,2.4,12.6,2,12,2z'/></svg>") 9 2, pointer;
+            cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg%22 width='22' height='22' viewBox='0 0 24 24'><path fill='%23691818' stroke='%23C5A059' stroke-width='1.5' d='M12,2c-0.6,0-1,0.4-1,1v6h-2V6c0-0.6-0.4-1-1-1s-1,0.4-1,1v3H6V7c0-0.6-0.4-1-1-1S4,6.4,4,7v7.5c0,3.6,2.9,6.5,6.5,6.5s6.5-2.9,6.5-6.5V9c0-0.6-0.4-1-1-1s-1,0.4-1,1v4h-2V3C13,2.4,12.6,2,12,2z'/></svg>") 9 2, pointer;
         }
 
         .modern-gradient {
@@ -83,7 +83,7 @@
         }
 
         /* VIDEO LAZY LOADER */
-        .video-facade {
+        .video-container {
             position: relative;
             cursor: pointer;
             background-size: cover;
@@ -93,13 +93,14 @@
             justify-content: center;
             transition: transform 0.3s ease;
         }
-        .video-facade:hover { transform: scale(1.02); }
-        .video-facade::before {
+        .video-container:hover { transform: scale(1.02); }
+        .video-container::before {
             content: ''; position: absolute; inset: 0;
             background: rgba(0,0,0,0.4); transition: background 0.3s;
         }
-        .video-facade:hover::before { background: rgba(0,0,0,0.2); }
+        .video-container:hover::before { background: rgba(0,0,0,0.2); }
         
+        /* PLAY BUTTON ANIMATION */
         .play-btn {
             width: 64px; height: 64px;
             background: rgba(197, 160, 89, 0.9);
@@ -600,3 +601,104 @@
                     <summary class="font-bold text-brand-dark">What if I miss a live class?</summary>
                     <p class="text-gray-600 mt-2 text-sm">All live classes are recorded and uploaded to the portal within 24 hours.</p>
                 </details>
+                <details class="bg-white p-4 rounded-lg border border-gray-200 cursor-pointer">
+                    <summary class="font-bold text-brand-dark">Are study materials provided?</summary>
+                    <p class="text-gray-600 mt-2 text-sm">Yes, we provide our own comprehensive lecture notes and exam kits.</p>
+                </details>
+                <details class="bg-white p-4 rounded-lg border border-gray-200 cursor-pointer">
+                    <summary class="font-bold text-brand-dark">What is the refund policy?</summary>
+                    <p class="text-gray-600 mt-2 text-sm">Refunds are available within the first 7 days if unsatisfied.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark text-gray-400 py-16 text-sm border-t border-white/10">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="md:col-span-2">
+                <img src="excel-logo.png" alt="Excel Business School" class="h-12 w-auto grayscale opacity-80 mb-4">
+                <p class="leading-relaxed max-w-sm">Global leaders in ACCA tuition. Combining technical expertise with personal mentorship.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase tracking-widest text-xs">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="#courses" class="hover:text-brand-accent">Courses</a></li>
+                    <li><a href="#methodology" class="hover:text-brand-accent">Methodology</a></li>
+                    <li><a href="timetables.html" class="hover:text-brand-accent">Timetables</a></li>
+                    <li><a href="portal.html" class="hover:text-brand-accent">Student Portal</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase tracking-widest text-xs">Contact</h4>
+                <ul class="space-y-2">
+                    <li><i class="fab fa-whatsapp mr-2"></i> +260 975 899 280</li>
+                    <li><i class="fas fa-envelope mr-2"></i> lloyd.shumba@excelbusinessschool.uk</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center mt-12 pt-8 border-t border-white/5 text-xs text-gray-600">
+            &copy; 2026 Excel Business School. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        // PRELOADER
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            setTimeout(() => {
+                preloader.style.opacity = '0';
+                setTimeout(() => preloader.style.display = 'none', 500);
+            }, 2500);
+        });
+
+        // MENU TOGGLE
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('close-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        function toggleMenu() {
+            const isHidden = menu.classList.contains('hidden');
+            if (isHidden) {
+                menu.classList.remove('hidden');
+                setTimeout(() => menu.classList.remove('opacity-0'), 10);
+            } else {
+                menu.classList.add('opacity-0');
+                setTimeout(() => menu.classList.add('hidden'), 300);
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+
+        // SEND EMAIL
+        function sendEmail(e) {
+            e.preventDefault();
+            const name = document.getElementById('appName').value;
+            const paper = document.getElementById('appPaper').value;
+            const subject = encodeURIComponent(`Application for ${paper} - 2026 Intake`);
+            const body = encodeURIComponent(`Dear Excel Team,\n\nI would like to apply for the ${paper} course for the 2026 session.\n\nMy Details:\nName: ${name}\n\nLooking forward to hearing from you.`);
+            window.location.href = `mailto:lloyd.shumba@excelbusinessschool.uk?subject=${subject}&body=${body}`;
+        }
+
+        // VIDEO PLAYER LOGIC (Robust Fix)
+        function playVideo(container, videoId) {
+            // Wipe content
+            container.innerHTML = '';
+            // Remove styling classes causing interference
+            container.classList.remove('group', 'cursor-pointer');
+            // Create iframe
+            const iframe = document.createElement('iframe');
+            iframe.setAttribute('src', `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`);
+            iframe.setAttribute('width', '100%');
+            iframe.setAttribute('height', '100%');
+            iframe.setAttribute('frameborder', '0');
+            iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+            iframe.setAttribute('allowfullscreen', 'true');
+            // Append
+            container.appendChild(iframe);
+            // disable future clicks
+            container.removeAttribute('onclick');
+        }
+    </script>
+</body>
+</html>
