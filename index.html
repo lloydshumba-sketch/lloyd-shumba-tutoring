@@ -11,7 +11,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <script>
@@ -20,7 +20,7 @@
                 extend: {
                     fontFamily: {
                         sans: ['"Inter"', 'sans-serif'],
-                        display: ['"Montserrat"', 'sans-serif'], // New heavy font for headers
+                        display: ['"Montserrat"', 'sans-serif'], // Heavy font for headers
                     },
                     colors: {
                         brand: {
@@ -61,14 +61,18 @@
 
         /* LIQUID GLASS MOBILE MENU */
         .glass-menu {
-            background: rgba(45, 10, 10, 0.95); 
+            background: rgba(45, 10, 10, 0.95); /* High opacity maroon */
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
         }
         .glass-btn {
             background: rgba(255,255,255,0.1);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.1);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+        .glass-btn:active {
+            background: rgba(197, 160, 89, 0.3);
         }
 
         /* VIDEO FIXES */
@@ -77,8 +81,7 @@
             background-color: #000;
             overflow: hidden;
             width: 100%;
-            /* Forces 16:9 aspect ratio so it doesn't collapse on mobile */
-            aspect-ratio: 16 / 9; 
+            aspect-ratio: 16 / 9; /* Mobile fix */
         }
         
         .play-btn {
@@ -86,10 +89,10 @@
             background: rgba(197, 160, 89, 0.9);
             border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
-            position: relative; z-index: 20; /* Ensure it's clickable */
+            position: relative; z-index: 20;
             box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.7);
             animation: pulse-gold 2s infinite;
-            pointer-events: none; /* Let clicks pass through to container */
+            pointer-events: none; 
         }
         
         @keyframes pulse-gold {
@@ -200,29 +203,29 @@
 
     <section id="home" class="relative h-[85vh] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop" 
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1600&auto=format&fit=crop" 
                  alt="Students Learning" 
                  class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-black/70"></div> 
         </div>
 
         <div class="container mx-auto px-4 relative z-10 text-center">
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black font-display text-white mb-6 leading-tight max-w-5xl mx-auto">
-                A redesigned qualification for a <br>
-                <span class="text-brand-accent">redefined profession.</span>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black font-display text-white mb-6 leading-tight max-w-6xl mx-auto">
+                Forging the Next Generation of <br>
+                <span class="text-brand-accent">Finance Leaders.</span>
             </h1>
             
             <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed font-medium">
-                The future ACCA Qualification will equip the next generation to look beyond the bottom line, be catalysts for positive change, and bring more value than ever to businesses and organisations across the world.
+                At Excel Business School, we don't just teach the syllabus; we teach the profession. Join a global community achieving a <strong>98% pass rate</strong> through expert mentorship and our unique "Application First" methodology.
             </p>
             
             <div class="flex flex-col sm:flex-row gap-6 justify-center">
                 <a href="#contact" class="bg-brand-primary text-white font-bold py-4 px-10 rounded transition duration-300 hover:bg-brand-dark flex items-center justify-center gap-3 text-lg">
-                    Discover the future ACCA Qualification <i class="fas fa-arrow-right"></i>
+                    Don't just pass. Excel. <i class="fas fa-arrow-right"></i>
                 </a>
                 
                 <a href="#sample-lectures" class="bg-transparent border-2 border-white text-white font-bold py-4 px-10 rounded transition duration-300 hover:bg-white hover:text-brand-dark flex items-center justify-center gap-3 text-lg">
-                    <i class="fas fa-play"></i> Watch Sample
+                    <i class="fas fa-play"></i> Watch Sample Class
                 </a>
             </div>
         </div>
@@ -256,7 +259,7 @@
     <section id="about" class="py-24 bg-white">
         <div class="container mx-auto px-4 max-w-4xl text-center">
             <span class="text-brand-accent font-black tracking-widest uppercase text-sm font-display">About Us</span>
-            <h2 class="text-3xl md:text-5xl font-black mt-4 text-brand-dark font-display mb-10 leading-tight">Why Excel Business School?</h2>
+            <h2 class="text-3xl md:text-5xl font-black mt-4 text-brand-dark font-display mb-10 leading-tight">Why Choose Excel?</h2>
             <p class="text-2xl text-gray-700 leading-relaxed mb-8 font-light italic">
                 "We are a multidisciplinary team dedicated to education, mentorship, and professional excellence. Our mission is to shape future auditors, accountants, and professionals by blending technical expertise with empathetic guidance."
             </p>
