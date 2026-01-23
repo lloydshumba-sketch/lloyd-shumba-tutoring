@@ -20,7 +20,7 @@
                 extend: {
                     fontFamily: {
                         sans: ['"Inter"', 'sans-serif'],
-                        display: ['"Montserrat"', 'sans-serif'], // Heavy font for headers
+                        display: ['"Montserrat"', 'sans-serif'],
                     },
                     colors: {
                         brand: {
@@ -31,59 +31,37 @@
                             gray: '#F3F4F6'
                         }
                     },
-                    spacing: {
-                        '30': '7.5rem',
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                        'hero-pattern': "url('https://www.transparenttextures.com/patterns/cubes.png')",
                     },
                     boxShadow: {
-                        'gold': '0 4px 20px -2px rgba(197, 160, 89, 0.4)',
-                        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
+                        'gold': '0 10px 30px -5px rgba(197, 160, 89, 0.3)',
+                        'float': '0 20px 40px -10px rgba(45, 10, 10, 0.2)',
                     }
                 }
             }
         }
     </script>
     <style>
-        /* --- BRANDED CURSORS --- */
-        body {
-            cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24'><path fill='%23691818' stroke='%23C5A059' stroke-width='1.5' d='M2,2l6.4,19.2l3.2-8l8-3.2L2,2z'/></svg>") 0 0, auto;
-        }
-        a, button, select, input, .cursor-pointer, summary {
-            cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24'><path fill='%23691818' stroke='%23C5A059' stroke-width='1.5' d='M12,2c-0.6,0-1,0.4-1,1v6h-2V6c0-0.6-0.4-1-1-1s-1,0.4-1,1v3H6V7c0-0.6-0.4-1-1-1S4,6.4,4,7v7.5c0,3.6,2.9,6.5,6.5,6.5s6.5-2.9,6.5-6.5V9c0-0.6-0.4-1-1-1s-1,0.4-1,1v4h-2V3C13,2.4,12.6,2,12,2z'/></svg>") 9 2, pointer;
-        }
+        /* BRANDED CURSOR */
+        body { cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24'><path fill='%23691818' stroke='%23C5A059' stroke-width='1.5' d='M2,2l6.4,19.2l3.2-8l8-3.2L2,2z'/></svg>") 0 0, auto; }
+        a, button, .cursor-pointer { cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24'><path fill='%23691818' stroke='%23C5A059' stroke-width='1.5' d='M12,2c-0.6,0-1,0.4-1,1v6h-2V6c0-0.6-0.4-1-1-1s-1,0.4-1,1v3H6V7c0-0.6-0.4-1-1-1S4,6.4,4,7v7.5c0,3.6,2.9,6.5,6.5,6.5s6.5-2.9,6.5-6.5V9c0-0.6-0.4-1-1-1s-1,0.4-1,1v4h-2V3C13,2.4,12.6,2,12,2z'/></svg>") 9 2, pointer; }
 
-        .card-hover-effect {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .card-hover-effect:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px -5px rgba(105, 24, 24, 0.1);
-        }
-
-        /* LIQUID GLASS MOBILE MENU */
+        /* GLASS MOBILE MENU */
         .glass-menu {
-            background: rgba(45, 10, 10, 0.95); /* High opacity maroon */
+            background: rgba(45, 10, 10, 0.95);
             backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-        }
-        .glass-btn {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.15);
-        }
-        .glass-btn:active {
-            background: rgba(197, 160, 89, 0.3);
         }
 
-        /* VIDEO FIXES */
+        /* VIDEO PLAYER */
         .video-container {
             position: relative;
             background-color: #000;
             overflow: hidden;
             width: 100%;
-            aspect-ratio: 16 / 9; /* Mobile fix */
+            aspect-ratio: 16 / 9;
         }
-        
         .play-btn {
             width: 64px; height: 64px;
             background: rgba(197, 160, 89, 0.9);
@@ -92,13 +70,19 @@
             position: relative; z-index: 20;
             box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.7);
             animation: pulse-gold 2s infinite;
-            pointer-events: none; 
+            pointer-events: none;
         }
-        
         @keyframes pulse-gold {
             0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.7); }
             70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(197, 160, 89, 0); }
             100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(197, 160, 89, 0); }
+        }
+
+        /* TEXTURE OVERLAY */
+        .texture-dots {
+            background-image: radial-gradient(#C5A059 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.1;
         }
     </style>
 </head>
@@ -132,18 +116,9 @@
                     <button class="flex items-center space-x-1 hover:text-brand-accent transition-colors focus:outline-none"><span>Courses</span><i class="fas fa-chevron-down text-xs opacity-50 ml-1"></i></button>
                     <div class="hidden group-hover:block absolute top-full left-0 w-80 bg-white text-slate-800 shadow-xl rounded-xl border border-gray-100 p-2 z-50 mt-0 animate-fade-in-up">
                         <div class="px-4 py-2 text-xs font-bold text-gray-400 uppercase tracking-wider border-b border-gray-50 mb-1">Professional Level</div>
-                        <a href="#courses" class="block px-4 py-3 rounded-lg hover:bg-brand-light hover:text-brand-primary text-sm transition">
-                            <span class="font-bold block font-display">AAA</span>
-                            <span class="text-xs text-gray-500">Advanced Audit & Assurance</span>
-                        </a>
-                        <a href="#courses" class="block px-4 py-3 rounded-lg hover:bg-brand-light hover:text-brand-primary text-sm transition">
-                            <span class="font-bold block font-display">SBR</span>
-                            <span class="text-xs text-gray-500">Strategic Business Reporting</span>
-                        </a>
-                        <a href="#courses" class="block px-4 py-3 rounded-lg hover:bg-brand-light hover:text-brand-primary text-sm transition">
-                            <span class="font-bold block font-display">ATX</span>
-                            <span class="text-xs text-gray-500">Advanced Taxation (UK)</span>
-                        </a>
+                        <a href="#courses" class="block px-4 py-3 rounded-lg hover:bg-brand-light hover:text-brand-primary text-sm transition"><span class="font-bold block font-display">AAA</span><span class="text-xs text-gray-500">Advanced Audit & Assurance</span></a>
+                        <a href="#courses" class="block px-4 py-3 rounded-lg hover:bg-brand-light hover:text-brand-primary text-sm transition"><span class="font-bold block font-display">SBR</span><span class="text-xs text-gray-500">Strategic Business Reporting</span></a>
+                        <a href="#courses" class="block px-4 py-3 rounded-lg hover:bg-brand-light hover:text-brand-primary text-sm transition"><span class="font-bold block font-display">ATX</span><span class="text-xs text-gray-500">Advanced Taxation (UK)</span></a>
                     </div>
                 </div>
 
@@ -181,165 +156,171 @@
 
     <div id="mobile-menu" class="fixed inset-0 glass-menu z-[90] hidden transition-all duration-300 flex flex-col items-center justify-center">
         <button id="close-menu-btn" class="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 text-white flex items-center justify-center z-50"><i class="fas fa-times text-2xl"></i></button>
-        
         <div class="space-y-6 w-full px-8 relative z-40 max-w-sm">
-            <a href="#home" class="glass-btn block w-full py-4 rounded-xl text-center text-xl font-bold font-display text-white hover:text-brand-accent transition duration-300" onclick="toggleMenu()">
-                Home
-            </a>
-            <a href="#courses" class="glass-btn block w-full py-4 rounded-xl text-center text-xl font-bold font-display text-white hover:text-brand-accent transition duration-300" onclick="toggleMenu()">
-                Courses
-            </a>
-            <a href="portal.html" class="glass-btn block w-full py-4 rounded-xl text-center text-xl font-bold font-display text-white hover:text-brand-accent transition duration-300">
-                Student Portal
-            </a>
-            <a href="timetables.html" class="glass-btn block w-full py-4 rounded-xl text-center text-xl font-bold font-display text-white hover:text-brand-accent transition duration-300">
-                Timetables
-            </a>
-            <a href="#contact" class="bg-brand-accent block w-full py-4 rounded-xl text-center text-xl font-black font-display text-brand-dark shadow-gold mt-8" onclick="toggleMenu()">
-                APPLY NOW
-            </a>
+            <a href="#home" class="glass-btn block w-full py-4 rounded-xl text-center text-xl font-bold font-display text-white hover:text-brand-accent transition duration-300" onclick="toggleMenu()">Home</a>
+            <a href="#courses" class="glass-btn block w-full py-4 rounded-xl text-center text-xl font-bold font-display text-white hover:text-brand-accent transition duration-300" onclick="toggleMenu()">Courses</a>
+            <a href="portal.html" class="glass-btn block w-full py-4 rounded-xl text-center text-xl font-bold font-display text-white hover:text-brand-accent transition duration-300">Student Portal</a>
+            <a href="timetables.html" class="glass-btn block w-full py-4 rounded-xl text-center text-xl font-bold font-display text-white hover:text-brand-accent transition duration-300">Timetables</a>
+            <a href="#contact" class="bg-brand-accent block w-full py-4 rounded-xl text-center text-xl font-black font-display text-brand-dark shadow-gold mt-8" onclick="toggleMenu()">APPLY NOW</a>
         </div>
     </div>
 
-    <section id="home" class="relative h-[85vh] flex items-center justify-center overflow-hidden">
+    <section id="home" class="relative min-h-[90vh] flex items-center bg-brand-dark overflow-hidden">
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1600&auto=format&fit=crop" 
                  alt="Students Learning" 
-                 class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black/70"></div> 
+                 class="w-full h-full object-cover opacity-60">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/90 to-transparent"></div>
         </div>
 
-        <div class="container mx-auto px-4 relative z-10 text-center">
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black font-display text-white mb-6 leading-tight max-w-6xl mx-auto">
-                Forging the Next Generation of <br>
-                <span class="text-brand-accent">Finance Leaders.</span>
-            </h1>
+        <div class="container mx-auto px-4 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             
-            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed font-medium">
-                At Excel Business School, we don't just teach the syllabus; we teach the profession. Join a global community achieving a <strong>98% pass rate</strong> through expert mentorship and our unique "Application First" methodology.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                <a href="#contact" class="bg-brand-primary text-white font-bold py-4 px-10 rounded transition duration-300 hover:bg-brand-dark flex items-center justify-center gap-3 text-lg">
-                    Don't just pass. Excel. <i class="fas fa-arrow-right"></i>
-                </a>
+            <div class="text-left py-20">
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-brand-accent/20 border border-brand-accent/40 rounded-full mb-6">
+                    <span class="w-2 h-2 bg-brand-accent rounded-full animate-pulse"></span>
+                    <span class="text-brand-accent text-xs font-bold uppercase tracking-widest">Global ACCA Provider</span>
+                </div>
                 
-                <a href="#sample-lectures" class="bg-transparent border-2 border-white text-white font-bold py-4 px-10 rounded transition duration-300 hover:bg-white hover:text-brand-dark flex items-center justify-center gap-3 text-lg">
-                    <i class="fas fa-play"></i> Watch Sample Class
-                </a>
+                <h1 class="text-5xl md:text-7xl font-black font-display text-white mb-6 leading-tight">
+                    Your Ambition.<br>
+                    Our Expertise.<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-yellow-200">Global Success.</span>
+                </h1>
+                
+                <p class="text-lg text-gray-300 mb-10 max-w-xl leading-relaxed border-l-4 border-brand-accent pl-6">
+                    Excel Business School isn't just about passing exams. It's about mastering the art of finance. Join the elite <strong>98%</strong> who don't just qualify—they lead.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="bg-brand-accent text-brand-dark font-black py-4 px-8 rounded shadow-gold hover:bg-white transition flex items-center justify-center gap-2">
+                        START YOUR JOURNEY <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#sample-lectures" class="bg-white/10 backdrop-blur border border-white/20 text-white font-bold py-4 px-8 rounded hover:bg-white hover:text-brand-dark transition flex items-center justify-center gap-2">
+                        <i class="fas fa-play"></i> View Samples
+                    </a>
+                </div>
+            </div>
+
+            <div></div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full z-20">
+            <div class="container mx-auto px-4">
+                <div class="bg-white shadow-float rounded-t-2xl p-8 flex flex-wrap justify-between items-center relative top-2">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-brand-light rounded-full flex items-center justify-center text-brand-primary text-2xl font-bold">98</div>
+                        <div class="text-sm font-bold text-gray-600 uppercase tracking-wider">Pass<br>Rate</div>
+                    </div>
+                    <div class="w-px h-12 bg-gray-200 hidden md:block"></div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-brand-light rounded-full flex items-center justify-center text-brand-primary text-xl font-bold"><i class="fas fa-user-graduate"></i></div>
+                        <div class="text-sm font-bold text-gray-600 uppercase tracking-wider">1500+<br>Alumni</div>
+                    </div>
+                    <div class="w-px h-12 bg-gray-200 hidden md:block"></div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-brand-light rounded-full flex items-center justify-center text-brand-primary text-xl font-bold"><i class="fas fa-globe"></i></div>
+                        <div class="text-sm font-bold text-gray-600 uppercase tracking-wider">Global<br>Reach</div>
+                    </div>
+                    <div class="hidden lg:block">
+                        <a href="#contact" class="text-brand-primary font-black hover:text-brand-dark transition flex items-center gap-2">
+                            Apply for 2026 Intake <i class="fas fa-long-arrow-alt-right"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <div class="bg-brand-light text-brand-dark border-b border-gray-200">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-wrap justify-around items-center py-10 gap-8 text-center">
-                <div class="flex items-center gap-3">
-                    <div class="text-brand-primary text-4xl font-black font-display">98%</div>
-                    <div class="text-left text-xs font-bold uppercase tracking-widest">Pass<br>Rate</div>
-                </div>
-                <div class="w-px h-10 bg-gray-300 hidden md:block"></div>
-                <div class="flex items-center gap-3">
-                    <div class="text-brand-primary text-4xl font-black font-display">1500+</div>
-                    <div class="text-left text-xs font-bold uppercase tracking-widest">Graduates<br>Alumni</div>
-                </div>
-                <div class="w-px h-10 bg-gray-300 hidden md:block"></div>
-                <div class="flex items-center gap-3">
-                    <i class="fas fa-globe-africa text-brand-accent text-3xl"></i>
-                    <div class="text-left text-xs font-bold uppercase tracking-widest">Global<br>Reach</div>
-                </div>
-                <div class="hidden md:flex items-center gap-3 bg-white px-6 py-3 rounded-full border border-gray-200 shadow-sm">
-                    <span class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
-                    <span class="text-xs font-bold text-brand-dark uppercase tracking-wider">2026 Admissions Open</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <section id="about" class="py-24 bg-white">
-        <div class="container mx-auto px-4 max-w-4xl text-center">
-            <span class="text-brand-accent font-black tracking-widest uppercase text-sm font-display">About Us</span>
-            <h2 class="text-3xl md:text-5xl font-black mt-4 text-brand-dark font-display mb-10 leading-tight">Why Choose Excel?</h2>
+    <section id="about" class="py-24 bg-white relative">
+        <div class="absolute inset-0 texture-dots"></div> <div class="container mx-auto px-4 max-w-4xl text-center relative z-10">
+            <span class="text-brand-accent font-black tracking-widest uppercase text-sm font-display">Our Mission</span>
+            <h2 class="text-3xl md:text-5xl font-black mt-4 text-brand-dark font-display mb-10">Beyond the Syllabus</h2>
             <p class="text-2xl text-gray-700 leading-relaxed mb-8 font-light italic">
-                "We are a multidisciplinary team dedicated to education, mentorship, and professional excellence. Our mission is to shape future auditors, accountants, and professionals by blending technical expertise with empathetic guidance."
+                "We don't just create auditors. We create decision-makers."
             </p>
             <p class="text-lg text-gray-500 leading-relaxed">
-                Tired of confusing examiner reports? We bridge the gap between technical knowledge and what the marker is actually looking for.
+                At Excel, we bridge the gap between technical knowledge and professional application. Our methodology is designed to strip away complexity and reveal the logic behind the numbers.
             </p>
         </div>
     </section>
 
-    <section id="courses" class="py-24 bg-brand-gray">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-black text-brand-dark font-display">Professional Papers</h2>
-                <div class="w-24 h-1.5 bg-brand-accent mx-auto mt-6"></div>
+    <section id="courses" class="py-24 bg-brand-gray relative">
+        <div class="absolute inset-0 bg-hero-pattern opacity-5"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                <div>
+                    <h2 class="text-4xl font-black text-brand-dark font-display">Professional Papers</h2>
+                    <div class="w-24 h-1.5 bg-brand-accent mt-4"></div>
+                </div>
+                <a href="#contact" class="hidden md:block text-brand-primary font-bold hover:underline">View Enrollment Requirements</a>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white group overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col h-full card-hover-effect">
+                <div class="bg-white group overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col h-full card-hover-effect border-t-4 border-brand-accent">
                     <div class="h-64 relative overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Audit">
-                        <div class="absolute inset-0 bg-brand-dark/60 group-hover:bg-brand-dark/40 transition"></div>
-                        <div class="absolute top-4 right-4 bg-brand-accent text-brand-dark text-xs font-bold px-3 py-1 uppercase tracking-wider">Flagship</div>
-                        <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 to-transparent">
-                            <h3 class="text-3xl font-black text-white font-display">AAA</h3>
-                            <p class="text-white/90 text-sm font-bold">Advanced Audit & Assurance</p>
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent opacity-90"></div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <span class="bg-brand-accent text-brand-dark text-xs font-bold px-2 py-1 uppercase mb-2 inline-block">Flagship</span>
+                            <h3 class="text-3xl font-black font-display">AAA</h3>
+                            <p class="font-medium">Advanced Audit & Assurance</p>
                         </div>
                     </div>
                     <div class="p-8 flex-grow">
                         <p class="text-gray-600 text-sm mb-6 leading-relaxed font-medium">Master audit risk, ethics, and reporting. We focus heavily on exam technique.</p>
                         <div class="flex gap-2">
-                            <span class="px-3 py-1 bg-brand-light text-brand-dark rounded text-xs font-bold border border-brand-accent/20">INT & UK Variants</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded text-xs font-bold">INT</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded text-xs font-bold">UK</span>
                         </div>
                     </div>
-                    <div class="p-6 border-t border-gray-100">
-                        <a href="#contact" class="flex items-center justify-between w-full font-bold text-brand-primary hover:text-brand-dark transition group-hover:translate-x-2 duration-300">
-                            View Details <i class="fas fa-arrow-right"></i>
+                    <div class="p-6 border-t border-gray-100 bg-gray-50 group-hover:bg-white transition">
+                        <a href="#contact" class="flex items-center justify-between w-full font-bold text-brand-primary hover:text-brand-dark transition">
+                            View Details <i class="fas fa-plus"></i>
                         </a>
                     </div>
                 </div>
 
-                <div class="bg-white group overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col h-full card-hover-effect">
+                <div class="bg-white group overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col h-full card-hover-effect border-t-4 border-brand-primary">
                     <div class="h-64 relative overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Finance">
-                        <div class="absolute inset-0 bg-brand-dark/60 group-hover:bg-brand-dark/40 transition"></div>
-                        <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 to-transparent">
-                            <h3 class="text-3xl font-black text-white font-display">SBR</h3>
-                            <p class="text-white/90 text-sm font-bold">Strategic Business Reporting</p>
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent opacity-90"></div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h3 class="text-3xl font-black font-display">SBR</h3>
+                            <p class="font-medium">Strategic Business Reporting</p>
                         </div>
                     </div>
                     <div class="p-8 flex-grow">
                         <p class="text-gray-600 text-sm mb-6 leading-relaxed font-medium">Go beyond the numbers. Understand IFRS principles and stakeholder communication.</p>
                         <div class="flex gap-2">
-                            <span class="px-3 py-1 bg-brand-light text-brand-dark rounded text-xs font-bold border border-brand-accent/20">INT & UK Variants</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded text-xs font-bold">INT</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded text-xs font-bold">UK</span>
                         </div>
                     </div>
-                    <div class="p-6 border-t border-gray-100">
-                        <a href="#contact" class="flex items-center justify-between w-full font-bold text-brand-primary hover:text-brand-dark transition group-hover:translate-x-2 duration-300">
-                            View Details <i class="fas fa-arrow-right"></i>
+                    <div class="p-6 border-t border-gray-100 bg-gray-50 group-hover:bg-white transition">
+                        <a href="#contact" class="flex items-center justify-between w-full font-bold text-brand-primary hover:text-brand-dark transition">
+                            View Details <i class="fas fa-plus"></i>
                         </a>
                     </div>
                 </div>
 
-                <div class="bg-white group overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col h-full card-hover-effect">
+                <div class="bg-white group overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col h-full card-hover-effect border-t-4 border-gray-800">
                     <div class="h-64 relative overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Tax">
-                        <div class="absolute inset-0 bg-brand-dark/60 group-hover:bg-brand-dark/40 transition"></div>
-                        <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 to-transparent">
-                            <h3 class="text-3xl font-black text-white font-display">ATX</h3>
-                            <p class="text-white/90 text-sm font-bold">Advanced Taxation (UK)</p>
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent opacity-90"></div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h3 class="text-3xl font-black font-display">ATX</h3>
+                            <p class="font-medium">Advanced Taxation (UK)</p>
                         </div>
                     </div>
                     <div class="p-8 flex-grow">
                         <p class="text-gray-600 text-sm mb-6 leading-relaxed font-medium">Specialized tuition for the UK tax system. Simplify complex tax planning.</p>
                         <div class="flex gap-2">
-                            <span class="px-3 py-1 bg-brand-light text-brand-dark rounded text-xs font-bold border border-brand-accent/20">UK Variant Only</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded text-xs font-bold">UK Only</span>
                         </div>
                     </div>
-                    <div class="p-6 border-t border-gray-100">
-                        <a href="#contact" class="flex items-center justify-between w-full font-bold text-brand-primary hover:text-brand-dark transition group-hover:translate-x-2 duration-300">
-                            View Details <i class="fas fa-arrow-right"></i>
+                    <div class="p-6 border-t border-gray-100 bg-gray-50 group-hover:bg-white transition">
+                        <a href="#contact" class="flex items-center justify-between w-full font-bold text-brand-primary hover:text-brand-dark transition">
+                            View Details <i class="fas fa-plus"></i>
                         </a>
                     </div>
                 </div>
@@ -347,62 +328,57 @@
         </div>
     </section>
 
-    <section id="methodology" class="py-30 bg-white">
+    <section id="methodology" class="py-24 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <span class="text-brand-accent font-black tracking-widest uppercase text-sm font-display">The Blueprint</span>
                 <h2 class="text-4xl font-black mt-4 text-brand-dark font-display">11 Steps to Qualification</h2>
+                <p class="text-gray-500 mt-4">The proven Excel Blueprint used by thousands of students.</p>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="p-8 border border-gray-100 rounded-none hover:shadow-lg transition bg-white group hover:border-brand-primary/20">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 border border-gray-200">
+                <div class="p-10 border-r border-b border-gray-200 hover:bg-gray-50 transition group">
                     <i class="fas fa-heart text-brand-primary text-3xl mb-4 group-hover:scale-110 transition"></i>
                     <h4 class="font-bold text-brand-dark font-display text-lg">Passionately Committed</h4>
-                    <p class="text-sm text-gray-500 mt-2 leading-relaxed">We are your biggest cheerleaders.</p>
+                    <p class="text-sm text-gray-500 mt-2">We are your biggest cheerleaders.</p>
                 </div>
-                <div class="p-8 border border-gray-100 rounded-none hover:shadow-lg transition bg-white group hover:border-brand-primary/20">
+                <div class="p-10 border-r border-b border-gray-200 hover:bg-gray-50 transition group">
                     <i class="fas fa-video text-brand-primary text-3xl mb-4 group-hover:scale-110 transition"></i>
                     <h4 class="font-bold text-brand-dark font-display text-lg">Frequent Live Sessions</h4>
-                    <p class="text-sm text-gray-500 mt-2 leading-relaxed">3x Weekly to keep momentum.</p>
+                    <p class="text-sm text-gray-500 mt-2">3x Weekly to keep momentum.</p>
                 </div>
-                <div class="p-8 border border-gray-100 rounded-none hover:shadow-lg transition bg-white group hover:border-brand-primary/20">
+                <div class="p-10 border-r border-b border-gray-200 hover:bg-gray-50 transition group">
                     <i class="fas fa-file-alt text-brand-primary text-3xl mb-4 group-hover:scale-110 transition"></i>
                     <h4 class="font-bold text-brand-dark font-display text-lg">Concise Notes</h4>
-                    <p class="text-sm text-gray-500 mt-2 leading-relaxed">No fluff. Just what you need.</p>
+                    <p class="text-sm text-gray-500 mt-2">No fluff. Just what you need.</p>
                 </div>
-                <div class="p-8 border border-gray-100 rounded-none hover:shadow-lg transition bg-white group hover:border-brand-primary/20">
+                <div class="p-10 border-b border-gray-200 hover:bg-gray-50 transition group">
                     <i class="fas fa-brain text-brand-primary text-3xl mb-4 group-hover:scale-110 transition"></i>
                     <h4 class="font-bold text-brand-dark font-display text-lg">Technical Mastery</h4>
-                    <p class="text-sm text-gray-500 mt-2 leading-relaxed">Deep dives into difficult standards.</p>
+                    <p class="text-sm text-gray-500 mt-2">Deep dives into standards.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="tutor" class="py-30 bg-brand-gray">
-        <div class="container mx-auto px-4">
+    <section id="tutor" class="py-30 bg-brand-gray relative overflow-hidden">
+        <div class="absolute right-0 top-0 w-1/3 h-full bg-brand-primary/5 skew-x-12 transform origin-top-right"></div>
+        <div class="container mx-auto px-4 relative z-10">
             <div class="flex flex-col md:flex-row items-center gap-16">
                 <div class="w-full md:w-1/2">
                      <div class="relative group">
-                         <div class="absolute inset-0 bg-brand-primary transform translate-x-4 translate-y-4 transition duration-500 group-hover:translate-x-2 group-hover:translate-y-2"></div>
-                         <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1000&auto=format&fit=crop" alt="Diverse Class" class="relative shadow-xl w-full object-cover h-[500px] grayscale group-hover:grayscale-0 transition duration-500">
-                         
-                         <div class="absolute bottom-8 right-8 bg-white p-6 shadow-xl max-w-xs border-l-8 border-brand-accent">
-                            <div class="flex items-center gap-3 mb-2">
-                                <div class="w-10 h-10 bg-brand-dark flex items-center justify-center text-white"><i class="fas fa-chart-pie"></i></div>
-                                <span class="text-xs font-black text-gray-400 uppercase tracking-widest font-display">Insight</span>
-                            </div>
-                            <p class="text-lg font-bold text-brand-dark font-display">Audit Risk: Materiality</p>
-                            <p class="text-sm text-gray-500 mt-1">"Link risk to the specific assertion."</p>
-                        </div>
+                         <div class="absolute inset-0 bg-brand-primary transform -translate-x-4 translate-y-4 transition duration-500 group-hover:translate-x-0 group-hover:translate-y-0"></div>
+                         <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1000&auto=format&fit=crop" alt="Diverse Class" class="relative shadow-2xl w-full object-cover h-[500px] grayscale group-hover:grayscale-0 transition duration-500">
                     </div>
                 </div>
                 <div class="w-full md:w-1/2">
                     <span class="text-brand-accent font-black tracking-widest uppercase text-sm font-display">World-Class Faculty</span>
                     <h2 class="text-4xl md:text-5xl font-black mt-4 text-brand-dark font-display mb-8 leading-tight">Expert Guidance.<br>Proven Results.</h2>
-                    <p class="text-xl text-gray-600 mb-8 italic border-l-4 border-gray-300 pl-6">"My goal is to make the complex simple."</p>
-                    <p class="text-lg text-gray-600 leading-relaxed mb-10">
-                        Our faculty is comprised of experienced professionals dedicated to your success. Led by <strong>Lloyd Shumba</strong>, an expert tutor and professional trainer with over a decade of experience in forensic auditing and financial reporting.
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        Our faculty is comprised of experienced professionals dedicated to your success. Leading the department is <strong>Lloyd Shumba</strong>, an expert tutor and professional trainer with over a decade of experience in forensic auditing and financial reporting.
                     </p>
+                    <div class="border-l-4 border-brand-accent pl-6 mb-8">
+                        <p class="text-xl text-brand-dark italic font-serif">"My goal is to make the complex simple."</p>
+                        <p class="text-sm text-brand-primary font-bold mt-2">— Lloyd Shumba, Lead Tutor</p>
+                    </div>
                     <div class="flex gap-4">
                         <span class="inline-flex items-center gap-3 px-6 py-3 bg-brand-dark text-white font-bold text-sm uppercase tracking-wider">
                             <i class="fas fa-check-circle text-brand-accent"></i> ACCA Expert
@@ -419,42 +395,37 @@
     <section id="sample-lectures" class="py-30 bg-brand-dark text-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-black font-display">See the Methodology in Action</h2>
-                <p class="text-gray-400 mt-4 text-lg">Click to watch sample lectures.</p>
+                <h2 class="text-4xl font-black font-display">Experience the Classroom</h2>
+                <p class="text-gray-400 mt-4 text-lg">Watch actual lectures from our latest intake.</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="group">
-                    <div class="video-container rounded-none shadow-2xl border border-white/10" 
-                         onclick="playVideo(this, 'FJ5maDLwTWw')">
+                    <div class="video-container rounded-none shadow-2xl border border-white/10" onclick="playVideo(this, 'FJ5maDLwTWw')">
                         <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition">
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div class="play-btn"><i class="fas fa-play text-brand-dark text-2xl ml-1"></i></div>
                         </div>
                     </div>
-                    <p class="mt-4 font-bold text-center text-brand-accent uppercase tracking-wider text-sm">Advanced Audit and Assurance Sample Lecture</p>
+                    <p class="mt-4 font-bold text-center text-brand-accent uppercase tracking-wider text-sm">Advanced Audit and Assurance</p>
                 </div>
-
                 <div class="group">
-                    <div class="video-container rounded-none shadow-2xl border border-white/10" 
-                         onclick="playVideo(this, 'AzD2vgtwl7o')">
+                    <div class="video-container rounded-none shadow-2xl border border-white/10" onclick="playVideo(this, 'AzD2vgtwl7o')">
                         <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition">
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div class="play-btn"><i class="fas fa-play text-brand-dark text-2xl ml-1"></i></div>
                         </div>
                     </div>
-                    <p class="mt-4 font-bold text-center text-brand-accent uppercase tracking-wider text-sm">Advanced Taxation UK Sample Lecture</p>
+                    <p class="mt-4 font-bold text-center text-brand-accent uppercase tracking-wider text-sm">Advanced Taxation UK</p>
                 </div>
-
                 <div class="group">
-                    <div class="video-container rounded-none shadow-2xl border border-white/10" 
-                         onclick="playVideo(this, 'DEO8dsAWi_w')">
+                    <div class="video-container rounded-none shadow-2xl border border-white/10" onclick="playVideo(this, 'DEO8dsAWi_w')">
                         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition">
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div class="play-btn"><i class="fas fa-play text-brand-dark text-2xl ml-1"></i></div>
                         </div>
                     </div>
-                    <p class="mt-4 font-bold text-center text-brand-accent uppercase tracking-wider text-sm">Strategic Business Reporting Sample Lecture</p>
+                    <p class="mt-4 font-bold text-center text-brand-accent uppercase tracking-wider text-sm">Strategic Business Reporting</p>
                 </div>
             </div>
         </div>
@@ -463,7 +434,7 @@
     <section id="contact" class="py-30 bg-white relative">
         <div class="container mx-auto px-4 text-center max-w-4xl">
             <h2 class="text-5xl font-black text-brand-dark font-display mb-6">Ready to Qualify?</h2>
-            <p class="text-xl text-gray-600 mb-12">Admissions for 2026 are currently open. Secure your spot today.</p>
+            <p class="text-xl text-gray-600 mb-12">Admissions for 2026 are currently open.</p>
             
             <div class="bg-brand-gray p-10 shadow-2xl mb-16 border-t-8 border-brand-primary">
                 <form class="space-y-6 text-left" onsubmit="sendEmail(event)">
@@ -562,10 +533,9 @@
 
         // VIDEO PLAYER LOGIC (ROBUST MOBILE FIX)
         function playVideo(container, videoId) {
-            container.innerHTML = ''; // Wipe overlay
-            container.classList.remove('group', 'cursor-pointer'); // Remove hover effects
+            container.innerHTML = ''; 
+            container.classList.remove('group', 'cursor-pointer'); 
             
-            // Create iframe with Playsinline for mobile support
             const iframe = document.createElement('iframe');
             iframe.setAttribute('src', `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&playsinline=1`);
             iframe.setAttribute('width', '100%');
@@ -573,10 +543,10 @@
             iframe.setAttribute('frameborder', '0');
             iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
             iframe.setAttribute('allowfullscreen', 'true');
-            iframe.setAttribute('playsinline', 'true'); // Critical for mobile
+            iframe.setAttribute('playsinline', 'true'); 
             
             container.appendChild(iframe);
-            container.removeAttribute('onclick'); // Prevent double clicks
+            container.removeAttribute('onclick'); 
         }
     </script>
 </body>
